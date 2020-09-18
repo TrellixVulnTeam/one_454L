@@ -1,34 +1,6 @@
 {% extends "www/base.html" %}
 {% load static %}
 
-{% block extra_script %}
-    <script>
-        window.onload = function() {
-            var menu = document.getElementById('menu');
-            var hamburger = document.getElementById('hamburger');
-            hamburger.addEventListener('click', navStatus);
-
-            function navStatus() {
-                if ((hamburger).classList.contains('nav__hamburger-icon-active')) {
-                    navClose();
-                } else {
-                    navOpen();
-                }
-            }
-
-            function navClose() {
-                (hamburger).classList.remove('nav__hamburger-icon-active');
-                (menu).classList.remove('nav__items-is-open');
-            }
-
-            function navOpen() {
-                (hamburger).classList.add('nav__hamburger-icon-active');
-                (menu).classList.add('nav__items-is-open');
-            }
-        }
-    </script>
-{% endblock %}
-
 {% block content %}
 
 {% endblock %}
