@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'BigJohnBold';
+  src: url('../fonts/BigJohnPRO-Bold.otf') format('OpenType');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BigJohnRegular';
+  src: url('../fonts/BigJohnPRO-Regular.otf') format('OpenType');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BigJohnLight';
+  src: url('../fonts/BigJohnPRO-Light.otf') format('OpenType');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik-Bold";
+  src: url("../fonts/Rubik-Bold.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Karla-Regular";
+  src: url("../fonts/Karla-Regular.ttf") format('TrueType');
+}
+
+.map {
+  $this: ".map";
+
+  padding: 60px 25px;
+  position: relative;
+
+  h1 {
+    font-family: "Rubik-Bold";
+    text-transform: uppercase;
+    line-height: 3.5rem;
+  }
+
+  p {
+    font-family: "Karla-Regular";
+  }
+
+  &__googlemap {
+    width: 99%; // Fixes slight overflow problem
+    right: 1px; // see above
+    top: -20px;
+    position: absolute;
+    height: 100%;
+  }
+
+  &__shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    box-shadow: inset 0 -30px 50px 70px #fff;
+    z-index: 2;
+  }
+
+  &__container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    pointer-events: none;
+    overflow: hidden;
+    padding: 60px 36px;
+    max-width: 1300px;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    &__container {
+      height: 400px;
+      margin: 50px 0;
+    }
+
+    &__googlemap {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;
+    }
+
+    &__shadow {
+      height: 400px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;
+    }
+
+    &__text {
+      max-width: 85%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
