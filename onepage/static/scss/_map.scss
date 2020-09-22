@@ -31,8 +31,18 @@
 .map {
   $this: ".map";
 
-  padding: 60px 25px;
+  padding: 60px 45px;
   position: relative;
+
+  &__text {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+
+    &__container {
+      position: relative;
+    }
+  }
 
   h1 {
     font-family: "Rubik-Bold";
