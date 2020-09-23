@@ -3,19 +3,20 @@ window.onload = function() {
     let hamburger = document.getElementById('hamburger');
     let menu_item = document.getElementsByClassName('nav__desktop__items__item');
     let mobile_menu_item = document.getElementsByClassName('nav__mobile__items__item');
+    let mobile_background = document.getElementsByClassName('nav__mobile__background');
 
     hamburger.addEventListener('click', navStatus);
 
-     for (let i = 0; i < menu_item.length; i++) {
+    for (let i = 0; i < menu_item.length; i++) {
         menu_item[i].addEventListener('click', navUnderline);
     }
 
-     for (let i = 0; i < mobile_menu_item.length; i++) {
-         mobile_menu_item[i].addEventListener('click', mobileNavUnderline);
-     }
+    for (let i = 0; i < mobile_menu_item.length; i++) {
+        mobile_menu_item[i].addEventListener('click', mobileNavUnderline);
+    }
 
     function navStatus() {
-        if ((hamburger).classList.contains('nav__mobile__hamburger-icon-container-active')) {
+        if ((hamburger).classList.contains('active')) {
             navClose();
         } else {
             navOpen();
@@ -23,22 +24,24 @@ window.onload = function() {
     }
 
     function navClose() {
-        $(hamburger).removeClass('nav__mobile__hamburger-icon-container-active');
-        $(menu).removeClass('nav__mobile__items-is-open');
+        $(mobile_background).removeClass('active');
+        $(hamburger).removeClass('active');
+        $(menu).removeClass('active');
     }
 
     function navOpen() {
-        $(hamburger).addClass('nav__mobile__hamburger-icon-container-active');
-        $(menu).addClass('nav__mobile__items-is-open');
+        $(mobile_background).addClass('active');
+        $(hamburger).addClass('active');
+        $(menu).addClass('active');
     }
 
     function navUnderline() {
-            $(menu_item).removeClass('active');
-            $(this).addClass('active');
-        }
+        $(menu_item).removeClass('active');
+        $(this).addClass('active');
+    }
 
-     function mobileNavUnderline() {
-         $(mobile_menu_item).removeClass('active');
-         $(this).addClass('active');
-     }
+    function mobileNavUnderline() {
+        $(mobile_menu_item).removeClass('active');
+        $(this).addClass('active');
+    }
 };
