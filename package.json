@@ -17,12 +17,15 @@
   },
   "homepage": "https://github.com/sixtysixcode/one#readme",
   "devDependencies": {
+    "@types/googlemaps": "^3.39.13",
     "gulp": "^4.0.2",
-    "sass": "^1.26.10",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "jquery": "^3.5.1",
+    "sass": "^1.26.10"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "load-google-maps-api": "^2.0.2",
     "npm-upgrade": "^2.0.4"
   }
 }

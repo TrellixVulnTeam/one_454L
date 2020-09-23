@@ -23,13 +23,13 @@ window.onload = function() {
     }
 
     function navClose() {
-        (hamburger).classList.remove('nav__mobile__hamburger-icon-container-active');
-        (menu).classList.remove('nav__mobile__items-is-open');
+        $(hamburger).removeClass('nav__mobile__hamburger-icon-container-active');
+        $(menu).removeClass('nav__mobile__items-is-open');
     }
 
     function navOpen() {
-        (hamburger).classList.add('nav__mobile__hamburger-icon-container-active');
-        (menu).classList.add('nav__mobile__items-is-open');
+        $(hamburger).addClass('nav__mobile__hamburger-icon-container-active');
+        $(menu).addClass('nav__mobile__items-is-open');
     }
 
     function navUnderline() {

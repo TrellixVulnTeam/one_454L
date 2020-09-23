@@ -18,6 +18,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Rubik-Medium";
+  src: url("../fonts/Rubik-Medium.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Rubik-Light";
+  src: url("../fonts/Rubik-Light.ttf") format('TrueType');
+}
+
 $black: #2d2d2a;
 $blue: #5e4ae3;
 $linkedin: #0e76a8;
@@ -29,7 +39,7 @@ $linkedin: #0e76a8;
   position: relative;
   padding: 20px 40px;
   font-size: 14px;
-  font-family: "BigJohnRegular";
+  font-family: "Rubik-Light";
 
   &__logo {
 
@@ -146,7 +156,7 @@ $linkedin: #0e76a8;
           transition: all .5s ease-in-out;
 
           &:after {
-            width: 35%;
+            width: 25%;
             --webkit-transition: all .3s ease-in-out;
             -moz-transition: all .3s ease-in-out;
             -o-transition: all .3s ease-in-out;

@@ -6,4 +6,20 @@ def base(request):
 
 
 def index(request):
-    return render(request, 'www/index.html')
+
+    if request.POST:
+        miles = request.POST['miles']
+        usercity = request.POST['city']
+
+        context = {
+            "miles": miles,
+            "usercity": usercity
+        }
+
+        print(miles)
+        print(usercity)
+
+        return render(request, 'www/index.html', context)
+
+    else:
+        return render(request, 'www/index.html')
