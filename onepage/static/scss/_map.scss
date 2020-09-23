@@ -56,10 +56,10 @@
 
   &__googlemap {
     width: 99%; // Fixes slight overflow problem
-    right: 1px; // see above
-    top: -20px;
+    right: 2px; // see above
     position: absolute;
-    height: 100%;
+    height: 99%;
+    top: 2px;
   }
 
   &__shadow {
@@ -92,7 +92,7 @@
     &__googlemap {
       left: 50%;
       transform: translateX(-50%);
-      width: 85%;
+      width: 84%;
     }
 
     &__shadow {

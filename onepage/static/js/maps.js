@@ -3,17 +3,67 @@ let marker;
 let response;
 let json;
 let userLoc;
+let myLoc;
+let distance;
+let mk1;
+let mk2;
+let miles;
+let roundedMiles;
+let url;
+let city;
 
 function initMap() {
 
     $.ajax({
         type: "GET",
-        url: "https://api.ipdata.co/?api-key=test&fields=latitude,longitude",
+        url: "https://api.ipdata.co/?api-key=88efa1db26660441437069405a466e096d82a071a8b090043ee60618&fields=latitude,longitude,city",
         success: function (response) {
+
             userLoc = {
                 lat: response['latitude'],
                 lng: response['longitude'],
             };
+
+            city = response['city'];
+
+            myLoc = {
+                lat: 49.4438,
+                lng: -3.576,
+            };
+
+            mk1 = new google.maps.LatLng(userLoc);
+            mk2 = new google.maps.LatLng(myLoc);
+
+            distance = google.maps.geometry.spherical.computeDistanceBetween(mk1, mk2);
+
+            function getMiles(i) {
+                return i*0.000621371192;
+            }
+
+            miles = getMiles(distance);
+
+            roundedMiles = Math.round(miles * 100) / 100;
+            url = '';
+
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+            $.ajax({
+                "context": this,
+                "url": url,
+                "headers": {'X-CSRFToken': csrftoken},
+                "mode": 'same-origin',
+                "type": "POST",
+                "data": { 'miles': roundedMiles, 'city': city },
+                success: function(response) {
+                    console.log("success");
+                },
+                complete: function(response) {
+                    console.log("complete");
+                },
+                error: (error) => {
+                    console.log(JSON.stringify(error));
+                }
+            });
 
             map = new google.maps.Map(document.getElementById('map'), {
                 center: userLoc,

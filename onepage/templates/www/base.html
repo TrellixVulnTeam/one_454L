@@ -13,12 +13,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <script type="text/javascript" src="{% static "js/index.js" %}"></script>
           <script type="text/javascript" src="{% static "js/maps.js" %}"></script>
-        <script
-                type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfL2R__omFVFlxOVyizYyv73e6e--5mls&callback=initMap&libraries=&v=weekly"
-                defer
-        ></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfL2R__omFVFlxOVyizYyv73e6e--5mls&callback=initMap&libraries=geometry&v=weekly"></script>
     {% endblock %}
-
 </head>
 <body>
 {% block body %}
