@@ -16,6 +16,9 @@ def index(request):
             "usercity": usercity
         }
 
+        print(miles)
+        print(usercity)
+
         return render(request, 'www/index.html', context)
 
     else:
