@@ -92,20 +92,30 @@
     &__googlemap {
       left: 50%;
       transform: translateX(-50%);
-      width: 84%;
+      width: 95%;
     }
 
     &__shadow {
       height: 400px;
       left: 50%;
       transform: translateX(-50%);
-      width: 85%;
+      width: 97%;
     }
 
     &__text {
-      max-width: 85%;
+      max-width: 100%;
       margin: 0 auto;
       text-align: center;
+    }
+
+      h1 {
+      line-height: 5.5rem;
+      font-size: 85px;
+      margin: 50px 0 20px;
+    }
+
+    p {
+      font-size: 26px;
     }
   }
 }

@@ -50,14 +50,16 @@ $linkedin: #0e76a8;
 
     &__item {
       i {
-        color: $black;
+        color: #fff;
         font-size: 16px;
+        padding: 4px;
+        border-radius: 2px;
+        background: $linkedin;
 
         &:hover {
           cursor: pointer;
           animation: shake 700ms infinite;
           animation-timing-function: linear;
-          color: $linkedin;
         }
       }
     }
@@ -66,23 +68,39 @@ $linkedin: #0e76a8;
   &__mobile {
     display: none;
 
+    &__background {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: $blue;
+      transition: all .7s ease-in-out;
+      top:-100vh;
+      z-index: 3;
+      display: none;
+
+      &.active {
+        top: 0;
+        transition: all .4s ease-in-out;
+      }
+    }
+
     &__hamburger-icon {
       transform: translateY(-50%);
       top: 50%;
       content: '';
       position: absolute;
-      height: 4px;
+      height: 5px;
       width: 100%;
       background: black;
-      transition: all .2s ease;
+      transition: all .7s ease;
 
       &:before, &:after {
         content: '';
         position: absolute;
-        height: 4px;
+        height: 5px;
         width: 100%;
         background: black;
-        transition: all .2s ease;
+        transition: all .5s ease;
       }
 
       &:before {
@@ -97,17 +115,21 @@ $linkedin: #0e76a8;
         position: absolute;
         right: 4%;
         cursor: pointer;
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
         display: inline-block;
+        z-index: 5;
 
-        &-active {
+        &.active {
 
           .nav__mobile__hamburger-icon {
             transform: rotate(45deg) translate(-3px, -3px);
+            transition: all .2s ease;
 
             &:before, &:after {
               top: 0;
+              background: white;
+              transition: all .2s ease;
             }
 
             &:before {
@@ -121,42 +143,58 @@ $linkedin: #0e76a8;
     &__items {
       position: relative;
       width: 100%;
-      top: -40px;
+      top: -180px;
       height: 0;
       opacity: 0;
-      z-index: -10; /* So the menu doesn't cover the hamburger icon when it's hidden */
-      --webkit-transition: all 1s ease-in-out;
-      -moz-transition: all 1s ease-in-out;
-      -o-transition: all 1s ease-in-out;
-      transition: all 1s ease-in-out;
+      z-index: 3; /* So the menu doesn't cover the hamburger icon when it's hidden */
+      --webkit-transition: all .7s ease-in-out;
+      -moz-transition: all .7s ease-in-out;
+      -o-transition: all .7s ease-in-out;
+      transition: all .7s ease-in-out;
 
       &__item {
         text-align: right;
         margin: 5px 0;
+        font-size: 45px;
+        color: #fff;
+
+        &__social {
+          position: absolute;
+          right: 0;
+
+          i {
+            background: #fff;
+            color: $blue;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 50px;
+            margin: 30px 0;
+          }
+        }
 
         &:after {
           content: '';
-          background: $blue;
+          background: #fff;
           width: 0;
           position: absolute;
           right: -5px;
           z-index: -10;
-          height: 20px;
+          height: 65px;
           --webkit-transition: all .3s ease-in-out;
-          -moz-transition: all .3s ease-in-out;
+          -moz-transition: all 3s ease-in-out;
           -o-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
         }
 
         &.active {
-          color: #fff;
-          --webkit-transition: all .5 ease-in-out;
-          -moz-transition: all .5s ease-in-out;
-          -o-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+          color: $blue;
+          --webkit-transition: all .7s ease-in-out;
+          -moz-transition: all .7s ease-in-out;
+          -o-transition: all .7s ease-in-out;
+          transition: all .7s ease-in-out;
 
           &:after {
-            width: 25%;
+            width: 80%;
             --webkit-transition: all .3s ease-in-out;
             -moz-transition: all .3s ease-in-out;
             -o-transition: all .3s ease-in-out;
@@ -165,14 +203,14 @@ $linkedin: #0e76a8;
         }
       }
 
-      &-is-open {
+      &.active {
         opacity: 1;
-        top: 75px;
-        z-index: 1;
-        --webkit-transition: all .7s ease-in-out;
-        -moz-transition: all .7s ease-in-out;
-        -o-transition: all .7s ease-in-out;
-        transition: all .7s ease-in-out;
+        top: 120px;
+        z-index: 3;
+        --webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
       }
 
       ul {
@@ -212,9 +250,10 @@ $linkedin: #0e76a8;
 
       &__item {
         display: inline-block;
-        padding: 0 5px;
+        padding: 0 10px;
         position: relative;
         color: #888888;
+        font-size: 16px;
 
         &:after {
           content: '';
@@ -248,6 +287,23 @@ $linkedin: #0e76a8;
   @media only screen and (max-width: 1023px) {
     &__mobile {
       display: block;
+
+      &__background {
+        display: block;
+      }
+
+      &__hamburger-icon {
+        height: 7px;
+
+        &-container {
+          height: 85px;
+          width: 70px;
+        }
+
+        &:before, &:after {
+          height: 7px;
+        }
+      }
     }
 
     &__social {
