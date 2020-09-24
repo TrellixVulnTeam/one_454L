@@ -147,15 +147,15 @@ $linkedin: #0e76a8;
       height: 0;
       opacity: 0;
       z-index: 3; /* So the menu doesn't cover the hamburger icon when it's hidden */
-      --webkit-transition: all .7s ease-in-out;
-      -moz-transition: all .7s ease-in-out;
-      -o-transition: all .7s ease-in-out;
-      transition: all .7s ease-in-out;
+      --webkit-transition: all .6s ease-in-out;
+      -moz-transition: all .6s ease-in-out;
+      -o-transition: all .6s ease-in-out;
+      transition: all .6s ease-in-out;
 
       &__item {
         text-align: right;
         margin: 5px 0;
-        font-size: 45px;
+        font-size: 80px;
         color: #fff;
 
         &__social {
@@ -179,7 +179,7 @@ $linkedin: #0e76a8;
           position: absolute;
           right: -5px;
           z-index: -10;
-          height: 65px;
+          height: 115px;
           --webkit-transition: all .3s ease-in-out;
           -moz-transition: all 3s ease-in-out;
           -o-transition: all .3s ease-in-out;

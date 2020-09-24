@@ -31,13 +31,14 @@
 .map {
   $this: ".map";
 
-  padding: 60px 45px;
+  padding: 60px 0;
   position: relative;
 
   &__text {
     position: relative;
     top: 40%;
     transform: translateY(-50%);
+    padding: 0 45px;
 
     &__container {
       position: relative;
@@ -92,14 +93,14 @@
     &__googlemap {
       left: 50%;
       transform: translateX(-50%);
-      width: 95%;
+      width: 149%;
     }
 
     &__shadow {
-      height: 400px;
+      height: 450px;
       left: 50%;
       transform: translateX(-50%);
-      width: 97%;
+      width: 150%;
     }
 
     &__text {
