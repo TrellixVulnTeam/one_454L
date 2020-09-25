@@ -37,16 +37,40 @@ $linkedin: #0e76a8;
 
   width: 100%;
   position: relative;
-  padding: 20px 40px;
+  padding: 30px 40px;
   font-size: 14px;
   font-family: "Rubik-Light";
 
-  &__logo {
+  &__lottie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 100;
+    transition: all .2s ease-out;
+  }
 
+  &__logo {
+    top: 60%;
+    transform: translateY(-50%);
+    position: absolute;
+    display: inline;
+    font-family: "Oswald-Regular";
+    left: 40px;
+
+    svg {
+      height: 50px;
+      width: 50px;
+    }
   }
 
   &__social {
     float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 
     &__item {
       i {
@@ -244,6 +268,8 @@ $linkedin: #0e76a8;
 
   &__desktop {
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 
     &__items {
       text-align: center;
@@ -285,6 +311,16 @@ $linkedin: #0e76a8;
   }
 
   @media only screen and (max-width: 1023px) {
+
+    &__logo {
+      transform: none;
+
+      svg {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
     &__mobile {
       display: block;
 

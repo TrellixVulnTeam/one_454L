@@ -45,3 +45,15 @@ window.onload = function() {
         $(this).addClass('active');
     }
 };
+
+$(document).ready(function() {
+   setTimeout(fadeOutPlayer, 1500);
+});
+
+function fadeOutPlayer() {
+     let player = document.getElementById("lottieLogo");
+      player.addEventListener('complete', function(){
+        $(this).css('opacity', '0');
+        $(this).css('display', 'none');
+    });
+}
