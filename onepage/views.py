@@ -11,9 +11,12 @@ def index(request):
         miles = request.POST['miles']
         usercity = request.POST['city']
 
+        test = "VIEW IS WORKING"
+
         context = {
             "miles": miles,
-            "usercity": usercity
+            "usercity": usercity,
+            "test": test
         }
 
         print(miles)
