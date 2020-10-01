@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Rubik-Bold";
+  src: url("../fonts/Rubik-Bold.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Karla-Regular";
+  src: url("../fonts/Karla-Regular.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Rubik-Black";
+  src: url("../fonts/Rubik-Black.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Karla-Bold";
+  src: url("../fonts/Karla-Bold.ttf") format('TrueType');
+}
+
+.cursor {
+  $this: ".cursor";
+  position: relative;
+  height: 300px;
+
+  &__bigtext {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Karla-Bold";
+    color: transparent;
+    background-color: rgba(0,0,0,.2);
+    font-size: 120px;
+    -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+  }
+
+  h2 {
+    font-family: "Rubik-Bold";
+  }
+
+  p {
+    font-family: "Karla-Regular";
+  }
+
+  &__circle, &__circle__inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,.0175);
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    box-shadow: inset 0 5px 9px -8px rgba(0,0,0,.8);
+
+    &__container {
+      position: relative;
+      height: 400px;
+    }
+
+    &__inner {
+      background-color: #fff;
+      box-shadow: 0 5px 9px -8px rgba(0,0,0,.8);
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__container {
+      position: relative;
+    }
+  }
+
+}

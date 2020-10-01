@@ -24,7 +24,7 @@ function initMap() {
         };
 
         myLoc = {
-            lat: 49.4438,
+            lat: 65.88,
             lng: -3.576,
         };
 

@@ -44,16 +44,36 @@ window.onload = function() {
         $(mobile_menu_item).removeClass('active');
         $(this).addClass('active');
     }
+
+    let bigTextContainer = document.getElementById('textElementContainer');
+    let bigText = document.getElementById('textElement');
+
+    bigTextContainer.addEventListener("mousemove", (e) => {
+
+        let mouseX = -e.offsetX / 50;
+        let mouseY = -e.offsetY / 50;
+
+        bigText.setAttribute('style', "text-shadow:" +  mouseX + "px " + mouseY + "px 5px rgba(255,255,255,0.5)");
+
+        let style = bigText.style.textShadow;
+
+        console.log(style);
+    });
 };
 
 $(document).ready(function() {
-   setTimeout(fadeOutPlayer, 1500);
+    setTimeout(fadeOutPlayer, 1500);
+    setTimeout(displayNone, 3000);
 });
 
 function fadeOutPlayer() {
-     let player = document.getElementById("lottieLogo");
-      player.addEventListener('complete', function(){
+    let player = document.getElementById("lottieLogo");
+    player.addEventListener('complete', function(){
         $(this).css('opacity', '0');
-        $(this).css('display', 'none');
     });
+}
+
+function displayNone() {
+    let player = document.getElementById("lottieLogo");
+    $(player).css('display', 'none');
 }
