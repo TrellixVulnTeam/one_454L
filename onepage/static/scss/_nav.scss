@@ -42,14 +42,14 @@ $linkedin: #0e76a8;
   font-family: "Rubik-Light";
 
   &__lottie {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background: #fff;
     z-index: 100;
-    transition: all .2s ease-out;
+    transition: all .5s ease-out;
   }
 
   &__logo {
