@@ -45,17 +45,19 @@ window.onload = function() {
         $(this).addClass('active');
     }
 
-    let bigTextContainer = document.getElementById('textElementContainer');
-    let bigText = document.getElementById('textElement');
+    let circle = document.getElementById('circle');
+    let innerCircle = document.getElementById('innerCircle');
+    let body = document.getElementById('body');
 
-    bigTextContainer.addEventListener("mousemove", (e) => {
+    body.addEventListener("mousemove", (e) => {
 
-        let mouseX = -e.offsetX / 50;
-        let mouseY = -e.offsetY / 50;
+        let mouseX = -e.offsetX / 120;
+        let mouseY = -e.offsetY / 120;
 
-        bigText.setAttribute('style', "text-shadow:" +  mouseX + "px " + mouseY + "px 5px rgba(255,255,255,0.5)");
+        circle.setAttribute('style', "box-shadow: inset " +  mouseX + "px " + mouseY + "px 8px -8px rgba(0,0,0,.8);");
+        innerCircle.setAttribute('style', "box-shadow: " +  mouseX + "px " + mouseY + "px 8px -8px rgba(0,0,0,.8);");
 
-        let style = bigText.style.textShadow;
+        let style = innerCircle.style.boxShadow;
 
         console.log(style);
     });

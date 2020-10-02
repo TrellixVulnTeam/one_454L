@@ -24,8 +24,8 @@ function initMap() {
         };
 
         myLoc = {
-            lat: 65.88,
-            lng: -3.576,
+            lat: 70.88,
+            lng: -7.576,
         };
 
         mk1 = new google.maps.LatLng(userLoc);
