@@ -44,23 +44,6 @@ window.onload = function() {
         $(mobile_menu_item).removeClass('active');
         $(this).addClass('active');
     }
-
-    let circle = document.getElementById('circle');
-    let innerCircle = document.getElementById('innerCircle');
-    let body = document.getElementById('body');
-
-    body.addEventListener("mousemove", (e) => {
-
-        let mouseX = -e.offsetX / 120;
-        let mouseY = -e.offsetY / 120;
-
-        circle.setAttribute('style', "box-shadow: inset " +  mouseX + "px " + mouseY + "px 8px -8px rgba(0,0,0,.8);");
-        innerCircle.setAttribute('style', "box-shadow: " +  mouseX + "px " + mouseY + "px 8px -8px rgba(0,0,0,.8);");
-
-        let style = innerCircle.style.boxShadow;
-
-        console.log(style);
-    });
 };
 
 $(document).ready(function() {
