@@ -55,16 +55,6 @@ function fadeOutPlayer() {
     let player = document.getElementById("lottieLogo");
     player.addEventListener('complete', function(){
         $(this).css('opacity', '0');
-
-        let cityElement = document.querySelector("#cityElement");
-        console.log(cityElement);
-
-        $(cityElement).html(city);
-
-        let distanceElement = document.querySelector("#distanceElement");
-        console.log(distanceElement);
-
-        $(distanceElement).html(roundedMiles);
     });
 }
 
