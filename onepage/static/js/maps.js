@@ -24,8 +24,8 @@ function initMap() {
         };
 
         myLoc = {
-            lat: 70.88,
-            lng: -7.576,
+            lat: 51.18918,
+            lng: -0.78982,
         };
 
         mk1 = new google.maps.LatLng(userLoc);
@@ -52,25 +52,7 @@ function initMap() {
                 city = response['results'][7]['address_components'][0]['short_name'];
                 console.log(city);
 
-                const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-
-                $.ajax({
-                    "context": this,
-                    "url": url,
-                    "headers": {'X-CSRFToken': csrftoken},
-                    "mode": 'same-origin',
-                    "type": "POST",
-                    "data": {'miles': roundedMiles, 'city': city},
-                    success: function (response) {
-                        console.log("success");
-                    },
-                    complete: function (response) {
-                        console.log("complete");
-                    },
-                    error: (error) => {
-                        console.log(error);
-                    }
-                });
+                // const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: userLoc,
