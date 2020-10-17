@@ -8,7 +8,7 @@
             <div class="cell large-6 medium-12 small-12 map__text__container">
                 <div class="map__text">
                     <h1>Need a creative web developer?</h1>
-                    <p>Looks like you're based in {{ test }}, we're {{ miles }} from eachother</p>
+                    <p>Looks like you're based in <span id="cityElement"></span>, we're <span id="distanceElement"></span> miles from eachother</p>
                 </div>
             </div>
             <div class="cell large-6 medium-12 small-12 map__container">
@@ -20,14 +20,4 @@
         </div>
     </section>
 
-    <section class="cursor">
-        <div id="circle" class="cursor__circle" style="box-shadow: inset 0 5px 9px -8px rgba(0,0,0,.8);">
-            <div id="innerCircle" class="cursor__circle__inner" style="box-shadow: 0 5px 9px -8px rgba(0,0,0,.8);"></div>
-        </div>
-
-        <div class="cursor__text">
-            <h2>INTERACTIVITY</h2>
-            <p>Check dis interactiv shizzz yeAh</p>
-        </div>
-    </section>
 {% endblock %}

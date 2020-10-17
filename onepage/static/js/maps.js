@@ -24,8 +24,8 @@ function initMap() {
         };
 
         myLoc = {
-            lat: 70.88,
-            lng: -7.576,
+            lat: 51.18918,
+            lng: -0.78982,
         };
 
         mk1 = new google.maps.LatLng(userLoc);
@@ -47,30 +47,15 @@ function initMap() {
             url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=AIzaSyDfL2R__omFVFlxOVyizYyv73e6e--5mls",
             success: function (response) {
 
-                console.log(response);
-
                 city = response['results'][7]['address_components'][0]['short_name'];
-                console.log(city);
 
-                const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                let cityElement = document.querySelector("#cityElement");
+                $(cityElement).html(city);
 
-                $.ajax({
-                    "context": this,
-                    "url": url,
-                    "headers": {'X-CSRFToken': csrftoken},
-                    "mode": 'same-origin',
-                    "type": "POST",
-                    "data": {'miles': roundedMiles, 'city': city},
-                    success: function (response) {
-                        console.log("success");
-                    },
-                    complete: function (response) {
-                        console.log("complete");
-                    },
-                    error: (error) => {
-                        console.log(error);
-                    }
-                });
+                let distanceElement = document.querySelector("#distanceElement");
+                $(distanceElement).html(roundedMiles);
+
+                // const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: userLoc,
