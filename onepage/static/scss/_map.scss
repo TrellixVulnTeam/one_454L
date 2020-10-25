@@ -1,32 +1,4 @@
-@font-face {
-  font-family: 'BigJohnBold';
-  src: url('../fonts/BigJohnPRO-Bold.otf') format('OpenType');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BigJohnRegular';
-  src: url('../fonts/BigJohnPRO-Regular.otf') format('OpenType');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BigJohnLight';
-  src: url('../fonts/BigJohnPRO-Light.otf') format('OpenType');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Rubik-Bold";
-  src: url("../fonts/Rubik-Bold.ttf") format('TrueType');
-}
-
-@font-face {
-  font-family: "Karla-Regular";
-  src: url("../fonts/Karla-Regular.ttf") format('TrueType');
-}
+@use 'core' as *;
 
 .map {
   $this: ".map";
@@ -48,13 +20,13 @@
   }
 
   h1 {
-    font-family: "Rubik-Bold";
+    font-family: "Rubik-Bold", serif;
     text-transform: uppercase;
     line-height: 3.5rem;
   }
 
   p {
-    font-family: "Karla-Regular";
+    font-family: "Karla-Regular", serif;
     font-size: 20px;
   }
 

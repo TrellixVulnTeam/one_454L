@@ -1,36 +1,4 @@
-@font-face {
-  font-family: 'BigJohnBold';
-  src: url('../fonts/BigJohnPRO-Bold.otf') format('OpenType');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BigJohnRegular';
-  src: url('../fonts/BigJohnPRO-Regular.otf') format('OpenType');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BigJohnLight';
-  src: url('../fonts/BigJohnPRO-Light.otf') format('OpenType');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Rubik-Medium";
-  src: url("../fonts/Rubik-Medium.ttf") format('TrueType');
-}
-
-@font-face {
-  font-family: "Rubik-Light";
-  src: url("../fonts/Rubik-Light.ttf") format('TrueType');
-}
-
-$black: #2d2d2a;
-$blue: #5e4ae3;
-$linkedin: #0e76a8;
+@use 'core' as *;
 
 .nav {
   $this: ".nav";
@@ -39,25 +7,13 @@ $linkedin: #0e76a8;
   position: relative;
   padding: 30px 40px;
   font-size: 14px;
-  font-family: "Rubik-Light";
-
-  &__lottie {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #fff;
-    z-index: 100;
-    transition: all .5s ease-out;
-  }
+  font-family: "Rubik-Light", serif;
 
   &__logo {
     top: 60%;
     transform: translateY(-50%);
     position: absolute;
     display: inline;
-    font-family: "Oswald-Regular";
     left: 40px;
 
     svg {
@@ -184,8 +140,7 @@ $linkedin: #0e76a8;
           right: 0;
 
           i {
-            background: #fff;
-            color: $blue;
+            color: #fff;
             border-radius: 5px;
             padding: 8px;
             font-size: 50px;

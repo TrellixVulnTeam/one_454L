@@ -1,10 +1,36 @@
+@font-face {
+  font-family: "Rubik-Bold";
+  src: url("../fonts/Rubik-Bold.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Rubik-Medium";
+  src: url("../fonts/Rubik-Medium.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Rubik-Light";
+  src: url("../fonts/Rubik-Light.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "Karla-Regular";
+  src: url("../fonts/Karla-Regular.ttf") format('TrueType');
+}
+
+$black: #2d2d2a;
+$blue: #5e4ae3;
+$linkedin: #0e76a8;
+$green: #6DDCBD;
+
 .core {
+  position: relative;
 
   &__scroll-top {
     position: fixed;
     bottom: 5%;
     left: 5%;
-    color: #6DDCBD;
+    color: $green;
     font-size: 40px;
     cursor: pointer;
     z-index: 10;
@@ -15,5 +41,16 @@
       bottom: 6%;
       transition: all .2s ease;
     }
+  }
+
+  &__lottie {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 100;
+    transition: all .5s ease-out;
   }
 }

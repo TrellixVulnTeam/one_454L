@@ -1,5 +1,4 @@
-@import 'nav';
-@import 'map';
-@import 'cursor';
-@import 'binary';
-@import 'core';
+@use 'nav';
+@use 'map';
+@use 'binary';
+@use 'core';
