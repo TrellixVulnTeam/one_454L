@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "Karla-Regular";
-  src: url("../fonts/Karla-Regular.ttf") format('TrueType');
-}
+@use 'core' as *;
 
 .binary {
   height: 500px;
@@ -13,7 +10,7 @@
     color: #8A78FF;
     font-size: 22px;
     margin: 0 0 20px 20px;
-    font-family: Rubik-Bold, serif;
+    font-family: "Rubik-Bold", serif;
   }
 
   form {

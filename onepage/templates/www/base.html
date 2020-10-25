@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Alexander Barnes</title>
+    <link rel="icon" type="image/png" href="{% static "images/logo2.svg" %}"/>
     {% block css %}
         <link rel="stylesheet" href="{% static 'css/www.css' %}">
     {% endblock %}
@@ -19,10 +20,10 @@
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
     {% endblock %}
 </head>
-<body style="position: relative;" id="body">
+<body class="core" id="body">
 {% block body %}
 
-    <lottie-player id="lottieLogo" class="nav__lottie"
+    <lottie-player id="lottieLogo" class="core__lottie"
                    autoplay
                    mode="normal"
                    src="https://assets10.lottiefiles.com/packages/lf20_ydpiias7.json"
@@ -66,7 +67,7 @@
                             <div class="nav__mobile__items__item">EDUCATION</div>
                             <div class="nav__mobile__items__item">EXPERIENCE</div>
                             <div class="nav__mobile__items__item">WHAT'S NEXT</div>
-                            <div class="nav__mobile__items__item__social"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fa fa-linkedin"></i></a></div>
+                            <div class="nav__mobile__items__item__social"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
                         </div>
                         <div id="hamburger" class="nav__mobile__hamburger-icon-container">
                             <span class="nav__mobile__hamburger-icon"></span>
