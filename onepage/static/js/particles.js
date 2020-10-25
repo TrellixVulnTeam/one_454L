@@ -1,8 +1,11 @@
-var NUM_PARTICLES = ( ( ROWS = 100 ) * ( COLS = 300 ) ),
+var ROWS;
+var COLS;
+
+var NUM_PARTICLES = ( ( ROWS = 150 ) * ( COLS = 300 ) ),
     THICKNESS = Math.pow( 45, 2 ),
     SPACING = 3,
     MARGIN = 100,
-    COLOR = 220,
+    COLOR = 0,
     DRAG = 0.95,
     EASE = 0.25,
 
@@ -54,7 +57,7 @@ function init() {
 
   list = [];
 
-  w = canvas.width = COLS * SPACING + MARGIN * 4;
+  w = canvas.width = COLS * SPACING + MARGIN * 2;
   h = canvas.height = ROWS * SPACING + MARGIN * 4;
 
   container.style.width = '100%';

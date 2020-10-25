@@ -1,7 +1,26 @@
+@use 'core' as *;
+
 .particles {
 
-  height: 500px;
+  height: 700px;
   width: 100vw;
-  background: #0a0a0a;
+  background: #fff;
   position: relative;
+
+  &__text {
+    position: absolute;
+    right: 10%;
+    top: 45%;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    h3 {
+      font-family: "Rubik-Bold", serif;
+    }
+
+    p {
+      font-family: "Karla-Regular", serif;
+      font-size: 20px;
+    }
+  }
 }
