@@ -4,6 +4,7 @@ window.onload = function() {
     let menu_item = document.getElementsByClassName('nav__desktop__items__item');
     let mobile_menu_item = document.getElementsByClassName('nav__mobile__items__item');
     let mobile_background = document.getElementsByClassName('nav__mobile__background');
+    let upChevron = document.getElementById('upChevron');
 
     hamburger.addEventListener('click', navStatus);
 
@@ -44,6 +45,21 @@ window.onload = function() {
         $(mobile_menu_item).removeClass('active');
         $(this).addClass('active');
     }
+
+    $(upChevron).on('click', function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#nav").offset().top
+        }, 500);
+    });
+
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 300) {
+            $(upChevron).css('opacity', '100%');
+        } else {
+            $(upChevron).css('opacity', '0');
+        }
+    });
 };
 
 $(document).ready(function() {
