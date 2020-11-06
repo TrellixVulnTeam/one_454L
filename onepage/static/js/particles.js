@@ -1,3 +1,5 @@
+import {ResizeObserver} from "@juggle/resize-observer";
+
 var ROWS;
 var COLS;
 
@@ -48,7 +50,7 @@ particle = {
 
 function init() {
 
-  container = document.getElementById( 'particles-container' );
+  container = document.querySelector( '#particles-container' );
   canvas = document.createElement( 'canvas' );
 
   ctx = canvas.getContext( '2d' );
@@ -57,8 +59,8 @@ function init() {
 
   list = [];
 
-  w = canvas.width = COLS * SPACING + MARGIN * 2;
-  h = canvas.height = ROWS * SPACING + MARGIN * 4;
+  w = canvas.width = COLS * SPACING;
+  h = canvas.height = ROWS * SPACING;
 
   container.style.width = '100%';
 
@@ -138,3 +140,14 @@ function step() {
 
 init();
 step();
+
+const resObs = new ResizeObserver(entries => {
+    for (let entry of entries) {
+        canvas.style.width = entry.borderBoxSize[0]['inlineSize'];
+    }
+});
+
+let body = document.querySelector('#body');
+
+resObs.observe(body);
+

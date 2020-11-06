@@ -27,7 +27,7 @@ SECRET_KEY = '6^b3+m#kmy0f9epnno22h=5gn-%%fy7eu)#k^h75p3cfw)h&ge'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'd197aadfeb6c.ngrok.io',
+    '4920c54ccb48.ngrok.io',
     '127.0.0.1'
 ]
 
@@ -126,4 +126,5 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     "onepage/dist/",
+    "dist/",
 ]

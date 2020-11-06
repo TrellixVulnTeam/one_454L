@@ -12,7 +12,7 @@ let roundedMiles;
 let url;
 let city;
 
-function initMap() {
+window.initMap = function() {
 
     function success(position) {
         const latitude = position.coords.latitude;
@@ -55,7 +55,7 @@ function initMap() {
                 let distanceElement = document.querySelector("#distanceElement");
                 $(distanceElement).html(roundedMiles);
 
-                // const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: userLoc,

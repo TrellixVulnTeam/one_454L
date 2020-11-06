@@ -3,14 +3,15 @@
 .particles {
 
   height: 700px;
-  width: 100vw;
+  width: 100%;
+  left: -100px;
   background: #fff;
   position: relative;
 
   &__text {
     position: absolute;
-    right: 10%;
-    top: 45%;
+    right: -5%;
+    top: 40%;
     transform: translateY(-50%);
     pointer-events: none;
 
