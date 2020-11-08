@@ -28,7 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '4920c54ccb48.ngrok.io',
-    '127.0.0.1'
+    '127.0.0.1',
+    '0.0.0.0'
 ]
 
 
@@ -125,9 +126,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    "onepage/dist/",
-    "dist/",
+    "onepage/dist/css",
+    "onepage/static/js"
 ]
+
+STATIC_ROOT = 'dist'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
