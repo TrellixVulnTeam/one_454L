@@ -5,7 +5,6 @@
   height: 700px;
   width: 100%;
   left: -100px;
-  background: #fff;
   position: relative;
 
   &__text {
@@ -14,6 +13,10 @@
     top: 40%;
     transform: translateY(-50%);
     pointer-events: none;
+
+    &.dark {
+      color: #fff;
+    }
 
     h3 {
       font-family: "Rubik-Bold", serif;

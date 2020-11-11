@@ -127,4 +127,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     "onepage/dist/",
     "dist/",
+    "onepage/static/"
 ]
