@@ -51,6 +51,13 @@ export function init() {
     canvas = document.createElement( 'canvas' );
     canvas.setAttribute('id', 'particles-canvas');
 
+    let body = document.getElementById('body');
+    if ($(body).hasClass('dark')) {
+        COLOR = 255;
+    } else {
+        COLOR = 0;
+    }
+
     ctx = canvas.getContext( '2d' );
     man = false;
     tog = true;
@@ -88,13 +95,6 @@ export function init() {
 }
 
 export function step() {
-
-    let body = document.getElementById('body');
-    if ($(body).hasClass('dark')) {
-        COLOR = 255;
-    } else {
-        COLOR = 0;
-    }
 
     if ( stats ) stats.begin();
 

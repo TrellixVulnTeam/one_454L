@@ -45,5 +45,5 @@ $(document).ready(function() {
             drops[i]++;
         }
     }
-    setInterval(draw, 85);
+    setInterval(draw, 100);
 });
