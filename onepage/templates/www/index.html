@@ -34,16 +34,18 @@
         <div class="binary__blurred-box">
             <div class="binary__blurred-box__inner">
             <h3>Want to drop me a few lines?</h3>
-            <form>
-                <div class="binary__blurred-box__inner__input">
-                <textarea rows="1" id="name"></textarea>
-                <label for="name" data-label>Your Name</label>
-                </div>
-                <div class="binary__blurred-box__inner__input">
-                <textarea rows="4" id="message"></textarea>
-                <label id="messageLabel" for="message" data-label>Your message</label>
-                </div>
-                <div class="binary__blurred-box__button">Send</div>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+{#                <div class="binary__blurred-box__inner__input">#}
+{#                <textarea rows="1" id="name"></textarea>#}
+{#                <label for="name" data-label>Your Name</label>#}
+{#                </div>#}
+{#                <div class="binary__blurred-box__inner__input">#}
+{#                <textarea rows="4" id="message"></textarea>#}
+{#                <label id="messageLabel" for="message" data-label>Your message</label>#}
+{#                </div>#}
+                <button type="submit" class="binary__blurred-box__button">Send</button>
             </form>
             </div>
         </div>
