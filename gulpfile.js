@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var src_files = "./onepage/static/scss/*.scss";
-var file_dest = "dist/";
+var file_dest = "/onepage/dist/";
 
 sass.compiler = require('sass');
 
