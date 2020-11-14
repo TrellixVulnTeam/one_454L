@@ -126,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    "dist/css",
+    "onepage/dist/css",
     "onepage/static/js"
 ]
 
