@@ -126,11 +126,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    "onepage/dist/css",
-    "onepage/static/js"
+    "onepage/workspace/dist/css",
+    "onepage/workspace/dist/js"
 ]
 
-STATIC_ROOT = 'onepage/dist/'
+STATIC_ROOT = 'onepage/workspace/dist/'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
