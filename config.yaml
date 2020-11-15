@@ -563,7 +563,6 @@ node-pool:
     tag: []
     taint: []
 output: text
-outputdir: "/dist"
 pool:
   create:
     db: ""
@@ -911,3 +910,4 @@ vpcs:
     default: false
     description: ""
     name: ""
+outputdir: "/dist"
