@@ -1,17 +1,140 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is not neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-/******/ (() => { // webpackBootstrap
-/*!****************************************!*\
-  !*** ./onepage/static/js/particles.js ***!
-  \****************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
-eval("var ROWS;\nvar COLS;\n\nvar NUM_PARTICLES = ( ( ROWS = 150 ) * ( COLS = 300 ) ),\n    THICKNESS = Math.pow( 45, 2 ),\n    SPACING = 3,\n    MARGIN = 100,\n    COLOR = 0,\n    DRAG = 0.95,\n    EASE = 0.25,\n\n    /*\n\n  used for sine approximation, but Math.sin in Chrome is still fast enough :)http://jsperf.com/math-sin-vs-sine-approximation\n\n  B = 4 / Math.PI,\n  C = -4 / Math.pow( Math.PI, 2 ),\n  P = 0.225,\n\n  */\n\n    container,\n    particle,\n    canvas,\n    mouse,\n    stats,\n    list,\n    ctx,\n    tog,\n    man,\n    dx, dy,\n    mx, my,\n    d, t, f,\n    a, b,\n    i, n,\n    w, h,\n    p, s,\n    r, c\n;\n\nparticle = {\n    vx: 0,\n    vy: 0,\n    x: 0,\n    y: 0\n};\n\n\nfunction init() {\n\n    container = document.querySelector( '#particles-container' );\n    canvas = document.createElement( 'canvas' );\n\n    ctx = canvas.getContext( '2d' );\n    man = false;\n    tog = true;\n\n    list = [];\n\n    w = canvas.width = COLS * SPACING;\n    h = canvas.height = ROWS * SPACING;\n\n    container.style.width = '100%';\n\n    for ( i = 0; i < NUM_PARTICLES; i++ ) {\n\n        p = Object.create( particle );\n        p.x = p.ox = MARGIN + SPACING * ( i % COLS );\n        p.y = p.oy = MARGIN + SPACING * Math.floor( i / COLS );\n\n        list[i] = p;\n    }\n\n    container.addEventListener( 'mousemove', function(e) {\n\n        var bounds = container.getBoundingClientRect();\n        mx = e.clientX - bounds.left;\n        my = e.clientY - bounds.top;\n        man = true;\n\n    });\n\n    if ( typeof Stats === 'function' ) {\n        document.body.appendChild( ( stats = new Stats() ).domElement );\n    }\n\n    container.appendChild( canvas );\n}\n\nfunction step() {\n\n    if ( stats ) stats.begin();\n\n    if ( tog = !tog ) {\n\n        if ( !man ) {\n\n            t = +new Date() * 0.001;\n            mx = w * 0.5 + ( Math.cos( t * 2.1 ) * Math.cos( t * 0.9 ) * w * 0.45 );\n            my = h * 0.5 + ( Math.sin( t * 3.2 ) * Math.tan( Math.sin( t * 0.8 ) ) * h * 0.45 );\n        }\n\n        for ( i = 0; i < NUM_PARTICLES; i++ ) {\n\n            p = list[i];\n\n            d = ( dx = mx - p.x ) * dx + ( dy = my - p.y ) * dy;\n            f = -THICKNESS / d;\n\n            if ( d < THICKNESS ) {\n                t = Math.atan2( dy, dx );\n                p.vx += f * Math.cos(t);\n                p.vy += f * Math.sin(t);\n            }\n\n            p.x += ( p.vx *= DRAG ) + (p.ox - p.x) * EASE;\n            p.y += ( p.vy *= DRAG ) + (p.oy - p.y) * EASE;\n\n        }\n\n    } else {\n\n        b = ( a = ctx.createImageData( w, h ) ).data;\n\n        for ( i = 0; i < NUM_PARTICLES; i++ ) {\n\n            p = list[i];\n            b[n = ( ~~p.x + ( ~~p.y * w ) ) * 4] = b[n+1] = b[n+2] = COLOR, b[n+3] = 255;\n        }\n\n        ctx.putImageData( a, 0, 0 );\n    }\n\n    if ( stats ) stats.end();\n\n    requestAnimationFrame( step );\n}\n\ninit();\nstep();\n\n\n//# sourceURL=webpack://onepage/./onepage/static/js/particles.js?");
-/******/ })()
+var ROWS;
+var COLS;
+
+var NUM_PARTICLES = ( ( ROWS = 150 ) * ( COLS = 300 ) ),
+    THICKNESS = Math.pow( 45, 2 ),
+    SPACING = 3,
+    MARGIN = 100,
+    COLOR = 0,
+    DRAG = 0.95,
+    EASE = 0.25,
+
+    /*
+
+  used for sine approximation, but Math.sin in Chrome is still fast enough :)http://jsperf.com/math-sin-vs-sine-approximation
+
+  B = 4 / Math.PI,
+  C = -4 / Math.pow( Math.PI, 2 ),
+  P = 0.225,
+
+  */
+
+    container,
+    particle,
+    canvas,
+    mouse,
+    stats,
+    list,
+    ctx,
+    tog,
+    man,
+    dx, dy,
+    mx, my,
+    d, t, f,
+    a, b,
+    i, n,
+    w, h,
+    p, s,
+    r, c
 ;
+
+particle = {
+    vx: 0,
+    vy: 0,
+    x: 0,
+    y: 0
+};
+
+
+function init() {
+
+    container = document.querySelector( '#particles-container' );
+    canvas = document.createElement( 'canvas' );
+
+    ctx = canvas.getContext( '2d' );
+    man = false;
+    tog = true;
+
+    list = [];
+
+    w = canvas.width = COLS * SPACING;
+    h = canvas.height = ROWS * SPACING;
+
+    container.style.width = '100%';
+
+    for ( i = 0; i < NUM_PARTICLES; i++ ) {
+
+        p = Object.create( particle );
+        p.x = p.ox = MARGIN + SPACING * ( i % COLS );
+        p.y = p.oy = MARGIN + SPACING * Math.floor( i / COLS );
+
+        list[i] = p;
+    }
+
+    container.addEventListener( 'mousemove', function(e) {
+
+        var bounds = container.getBoundingClientRect();
+        mx = e.clientX - bounds.left;
+        my = e.clientY - bounds.top;
+        man = true;
+
+    });
+
+    if ( typeof Stats === 'function' ) {
+        document.body.appendChild( ( stats = new Stats() ).domElement );
+    }
+
+    container.appendChild( canvas );
+}
+
+function step() {
+
+    if ( stats ) stats.begin();
+
+    if ( tog = !tog ) {
+
+        if ( !man ) {
+
+            t = +new Date() * 0.001;
+            mx = w * 0.5 + ( Math.cos( t * 2.1 ) * Math.cos( t * 0.9 ) * w * 0.45 );
+            my = h * 0.5 + ( Math.sin( t * 3.2 ) * Math.tan( Math.sin( t * 0.8 ) ) * h * 0.45 );
+        }
+
+        for ( i = 0; i < NUM_PARTICLES; i++ ) {
+
+            p = list[i];
+
+            d = ( dx = mx - p.x ) * dx + ( dy = my - p.y ) * dy;
+            f = -THICKNESS / d;
+
+            if ( d < THICKNESS ) {
+                t = Math.atan2( dy, dx );
+                p.vx += f * Math.cos(t);
+                p.vy += f * Math.sin(t);
+            }
+
+            p.x += ( p.vx *= DRAG ) + (p.ox - p.x) * EASE;
+            p.y += ( p.vy *= DRAG ) + (p.oy - p.y) * EASE;
+
+        }
+
+    } else {
+
+        b = ( a = ctx.createImageData( w, h ) ).data;
+
+        for ( i = 0; i < NUM_PARTICLES; i++ ) {
+
+            p = list[i];
+            b[n = ( ~~p.x + ( ~~p.y * w ) ) * 4] = b[n+1] = b[n+2] = COLOR, b[n+3] = 255;
+        }
+
+        ctx.putImageData( a, 0, 0 );
+    }
+
+    if ( stats ) stats.end();
+
+    requestAnimationFrame( step );
+}
+
+init();
+step();

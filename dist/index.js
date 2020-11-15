@@ -1,17 +1,80 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is not neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-/******/ (() => { // webpackBootstrap
-/*!************************************!*\
-  !*** ./onepage/static/js/index.js ***!
-  \************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
-eval("window.onload = function() {\n    let menu = document.getElementById('menu');\n    let hamburger = document.getElementById('hamburger');\n    let menu_item = document.getElementsByClassName('nav__desktop__items__item');\n    let mobile_menu_item = document.getElementsByClassName('nav__mobile__items__item');\n    let mobile_background = document.getElementsByClassName('nav__mobile__background');\n    let upChevron = document.getElementById('upChevron');\n\n    hamburger.addEventListener('click', navStatus);\n\n    for (let i = 0; i < menu_item.length; i++) {\n        menu_item[i].addEventListener('click', navUnderline);\n    }\n\n    for (let i = 0; i < mobile_menu_item.length; i++) {\n        mobile_menu_item[i].addEventListener('click', mobileNavUnderline);\n    }\n\n    function navStatus() {\n        if ((hamburger).classList.contains('active')) {\n            navClose();\n        } else {\n            navOpen();\n        }\n    }\n\n    function navClose() {\n        $(mobile_background).removeClass('active');\n        $(hamburger).removeClass('active');\n        $(menu).removeClass('active');\n    }\n\n    function navOpen() {\n        $(mobile_background).addClass('active');\n        $(hamburger).addClass('active');\n        $(menu).addClass('active');\n    }\n\n    function navUnderline() {\n        $(menu_item).removeClass('active');\n        $(this).addClass('active');\n    }\n\n    function mobileNavUnderline() {\n        $(mobile_menu_item).removeClass('active');\n        $(this).addClass('active');\n    }\n\n    $(upChevron).on('click', function() {\n        $([document.documentElement, document.body]).animate({\n            scrollTop: $(\"#nav\").offset().top\n        }, 500);\n    });\n\n    $(document).scroll(function() {\n        var y = $(this).scrollTop();\n        if (y > 300) {\n            $(upChevron).css('opacity', '100%');\n        } else {\n            $(upChevron).css('opacity', '0');\n        }\n    });\n};\n\n$(document).ready(function() {\n    setTimeout(fadeOutPlayer, 1500);\n    setTimeout(displayNone, 3000);\n});\n\nfunction fadeOutPlayer() {\n    let player = document.getElementById(\"lottieLogo\");\n    player.addEventListener('complete', function(){\n        $(this).css('opacity', '0');\n    });\n}\n\nfunction displayNone() {\n    let player = document.getElementById(\"lottieLogo\");\n    $(player).css('display', 'none');\n}\n\n\n//# sourceURL=webpack://onepage/./onepage/static/js/index.js?");
-/******/ })()
-;
+window.onload = function() {
+    let menu = document.getElementById('menu');
+    let hamburger = document.getElementById('hamburger');
+    let menu_item = document.getElementsByClassName('nav__desktop__items__item');
+    let mobile_menu_item = document.getElementsByClassName('nav__mobile__items__item');
+    let mobile_background = document.getElementsByClassName('nav__mobile__background');
+    let upChevron = document.getElementById('upChevron');
+
+    hamburger.addEventListener('click', navStatus);
+
+    for (let i = 0; i < menu_item.length; i++) {
+        menu_item[i].addEventListener('click', navUnderline);
+    }
+
+    for (let i = 0; i < mobile_menu_item.length; i++) {
+        mobile_menu_item[i].addEventListener('click', mobileNavUnderline);
+    }
+
+    function navStatus() {
+        if ((hamburger).classList.contains('active')) {
+            navClose();
+        } else {
+            navOpen();
+        }
+    }
+
+    function navClose() {
+        $(mobile_background).removeClass('active');
+        $(hamburger).removeClass('active');
+        $(menu).removeClass('active');
+    }
+
+    function navOpen() {
+        $(mobile_background).addClass('active');
+        $(hamburger).addClass('active');
+        $(menu).addClass('active');
+    }
+
+    function navUnderline() {
+        $(menu_item).removeClass('active');
+        $(this).addClass('active');
+    }
+
+    function mobileNavUnderline() {
+        $(mobile_menu_item).removeClass('active');
+        $(this).addClass('active');
+    }
+
+    $(upChevron).on('click', function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#nav").offset().top
+        }, 500);
+    });
+
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 300) {
+            $(upChevron).css('opacity', '100%');
+        } else {
+            $(upChevron).css('opacity', '0');
+        }
+    });
+};
+
+$(document).ready(function() {
+    setTimeout(fadeOutPlayer, 1500);
+    setTimeout(displayNone, 3000);
+});
+
+function fadeOutPlayer() {
+    let player = document.getElementById("lottieLogo");
+    player.addEventListener('complete', function(){
+        $(this).css('opacity', '0');
+    });
+}
+
+function displayNone() {
+    let player = document.getElementById("lottieLogo");
+    $(player).css('display', 'none');
+}
