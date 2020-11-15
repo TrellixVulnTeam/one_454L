@@ -130,6 +130,8 @@ STATICFILES_DIRS = [
     "onepage/workspace/dist/js"
 ]
 
+OUTPUTDIR = 'onepage/workspace/dist/'
+
 STATIC_ROOT = 'onepage/workspace/dist/'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
