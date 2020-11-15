@@ -131,6 +131,7 @@ STATICFILES_DIRS = [
 ]
 
 OUTPUTDIR = 'onepage/workspace/dist/'
+OUTPUT_DIR = 'onepage/workspace/dist'
 
 STATIC_ROOT = 'onepage/workspace/dist/'
 

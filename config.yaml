@@ -564,6 +564,7 @@ node-pool:
     taint: []
 output:
     outputdir: "/workspace/dist/"
+outputdir: "/workspace/dist/"
 pool:
   create:
     db: ""
