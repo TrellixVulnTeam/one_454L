@@ -130,7 +130,7 @@ STATICFILES_DIRS = [
     "dist/js"
 ]
 
-STATIC_ROOT = 'dist/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'dist/')
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
