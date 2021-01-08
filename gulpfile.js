@@ -1,9 +1,10 @@
+
 'use strict';
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var src_files = "./onepage/static/scss/*.scss";
-var file_dest = "./onepage/dist/css/";
+var file_dest = "./dist/css/";
 
 sass.compiler = require('sass');
 
@@ -17,4 +18,3 @@ gulp.task('sass', function() {
 gulp.task('watch', function() {
     gulp.watch(src_files, gulp.series('sass'));
 });
-
