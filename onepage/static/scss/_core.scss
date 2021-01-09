@@ -26,6 +26,10 @@ $green: #6DDCBD;
 .core {
   position: relative;
 
+  &.dark {
+    background: #000;
+  }
+
   &__scroll-top {
     position: fixed;
     bottom: 5%;
@@ -53,4 +57,135 @@ $green: #6DDCBD;
     z-index: 100;
     transition: all .5s ease-out;
   }
+
+  &__toggle {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    transform: rotate(90deg);
+    width: 50px;
+    height: 26px;
+    opacity: 0;
+    transition: .4s ease;
+
+    &.active {
+      opacity: 1;
+      transition: .4s ease;
+    }
+
+    &__box {
+      position: fixed;
+      right: -65px;
+      width: 90px;
+      height: 185px;
+      background: $blue;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      transition: .4s ease;
+
+      &__outer {
+        color: #fff;
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 8px;
+
+        i {
+          transition: .4s ease;
+
+          &.active {
+            transform: rotate(180deg);
+            transition: .4s ease;
+          }
+        }
+
+        &.dark {
+          color: $blue;
+        }
+      }
+
+      &.active {
+        right: -25px;
+        transition: .4s ease;
+      }
+
+      &.dark {
+        background: #fff;
+        border-color: $blue;
+
+        &__outer {
+          color: $blue;
+        }
+      }
+    }
+
+    input[type=checkbox] {
+        opacity: 0;
+        width: 50px;
+        height: 20px;
+
+        &:checked + .core__toggle__slider {
+          &:before {
+            -webkit-transform: translateX(24px);
+            -ms-transform: translateX(24px);
+            transform: translateX(24px);
+          }
+        }
+      }
+
+    &__slider {
+      position: absolute;
+      cursor: pointer;
+      border-radius: 34px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #f1f1f1;
+      transition: .4s;
+      --webkit-transition: .4s;
+
+      &:before {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        box-shadow: 0 0 1px #fafafa;
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background-color: $blue;
+        transition: .4s;
+        --webkit-transition: .4s;
+      }
+
+      &:after {
+        content: 'THEME TOGGLE';
+        position: absolute;
+        right: -105px;
+        line-height: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 12px;
+      }
+
+      &.dark {
+        background-color: $blue;
+
+        &:before {
+          background: #fff;
+        }
+
+        &:after {
+          color: $blue;
+        }
+      }
+    }
+  }
 }
+

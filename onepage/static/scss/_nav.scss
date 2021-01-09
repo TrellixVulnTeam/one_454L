@@ -23,12 +23,14 @@
   }
 
   &__social {
-    float: right;
+    text-align: right;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 
     &__item {
+      display: inline-block;
+
       i {
         color: $linkedin;
         font-size: 24px;
@@ -58,6 +60,10 @@
       &.active {
         top: 0;
         transition: all .4s ease-in-out;
+      }
+
+      &.dark {
+        background: #fff;
       }
     }
 
@@ -111,6 +117,25 @@
 
             &:before {
               transform: rotate(90deg);
+            }
+          }
+        }
+
+        &.dark {
+
+          .nav__mobile__hamburger-icon {
+            background: #fff;
+
+            &:before, &:after {
+              background: #fff;
+            }
+          }
+
+          &.active {
+            .nav__mobile__hamburger-icon {
+              &:before, &:after {
+                background: $blue;
+              }
             }
           }
         }
@@ -177,6 +202,18 @@
             transition: all .3s ease-in-out;
           }
         }
+
+        &.dark {
+          color: $blue;
+
+          &.active {
+            color: #fff;
+
+            &:after {
+              background: $blue;
+            }
+          }
+        }
       }
 
       &.active {
@@ -236,12 +273,12 @@
         &:after {
           content: '';
           position: absolute;
-          height: 3px;
-          width: 0;
+          height: 0;
+          width: 100%;
           background: $blue;
-          bottom: -8px;
-          left: 50%;
-          transform: translateX(-50%);
+          bottom: 0;
+          left: 0;
+          z-index: -1;
           transition: .2s ease-in-out;
         }
 
@@ -251,10 +288,10 @@
         }
 
         &.active {
-          color: $black;
+          color: #fff;
 
           &:after {
-            width: 75%;
+            height: 100%;
             transition: all .2s ease-in;
           }
         }
@@ -290,6 +327,16 @@
 
         &:before, &:after {
           height: 7px;
+        }
+      }
+
+      &__items {
+        &__item {
+          &.active {
+            &:after {
+              width: 100%;
+            }
+          }
         }
       }
     }

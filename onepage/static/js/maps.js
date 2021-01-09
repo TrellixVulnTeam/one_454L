@@ -23,6 +23,8 @@ window.initMap = function() {
             lng: longitude,
         };
 
+        console.log(userLoc);
+
         myLoc = {
             lat: 51.18918,
             lng: -0.78982,
@@ -46,6 +48,8 @@ window.initMap = function() {
             type: "GET",
             url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=AIzaSyDfL2R__omFVFlxOVyizYyv73e6e--5mls",
             success: function (response) {
+
+                console.log(response);
 
                 city = response['results'][7]['address_components'][0]['short_name'];
 

@@ -46,10 +46,17 @@ particle = {
 };
 
 
-function init() {
-
+export function init() {
     container = document.querySelector( '#particles-container' );
     canvas = document.createElement( 'canvas' );
+    canvas.setAttribute('id', 'particles-canvas');
+
+    let body = document.getElementById('body');
+    if ($(body).hasClass('dark')) {
+        COLOR = 255;
+    } else {
+        COLOR = 0;
+    }
 
     ctx = canvas.getContext( '2d' );
     man = false;
@@ -87,7 +94,7 @@ function init() {
     container.appendChild( canvas );
 }
 
-function step() {
+export function step() {
 
     if ( stats ) stats.begin();
 
@@ -136,5 +143,11 @@ function step() {
     requestAnimationFrame( step );
 }
 
-init();
-step();
+export function resetCanvas() {
+
+    var oldCanvas = document.getElementById('particles-canvas');
+    container.removeChild(oldCanvas);
+
+    init();
+    step();
+}
