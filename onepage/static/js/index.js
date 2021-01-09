@@ -1,4 +1,4 @@
-import {init, resetCanvas, step} from "./particles";
+import {init, resetCanvas, step} from "./particles.js";
 
 let body = document.getElementsByClassName('core');
 let mapText = document.getElementsByClassName('map__text');
@@ -103,22 +103,22 @@ window.onload = function() {
     step();
 };
 
-$(document).ready(function() {
-    setTimeout(fadeOutPlayer, 1500);
-    setTimeout(displayNone, 3000);
-});
+// $(document).ready(function() {
+    // setTimeout(fadeOutPlayer, 1500);
+    // setTimeout(displayNone, 3000);
+// });
 
-function fadeOutPlayer() {
-    let player = document.getElementById("lottieLogo");
-    player.addEventListener('complete', function(){
-        $(this).css('opacity', '0');
-    });
-}
+// function fadeOutPlayer() {
+    // let player = document.getElementById("lottieLogo");
+    // player.addEventListener('complete', function(){
+        // $(this).css('opacity', '0');
+    // });
+// }
 
-function displayNone() {
-    let player = document.getElementById("lottieLogo");
-    $(player).css('display', 'none');
-}
+// function displayNone() {
+    // let player = document.getElementById("lottieLogo");
+    // $(player).css('display', 'none');
+// }
 
 function themeClassChanges() {
     if ($(themeToggleInput).is(":checked")) {
