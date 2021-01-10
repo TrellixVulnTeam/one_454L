@@ -19,6 +19,7 @@ let themeToggleInput = document.getElementById('themeToggleInput');
 let themeToggleSlider = document.getElementById('themeToggleSlider');
 let themeChevron = document.getElementById('themeChevron');
 let themeChevronContainer = document.getElementById('themeChevronContainer');
+let binaryForeground = document.querySelector('path');
 
 window.onload = function() {
 
@@ -133,6 +134,7 @@ function themeClassChanges() {
         $(mobileNav).addClass('dark');
         $(mobileNavBg).addClass('dark');
         $(mobileNavItems).addClass('dark');
+        $(binaryForeground).addClass('dark');
         resetCanvas();
     } else {
         $(themeBox).removeClass('dark');
@@ -143,9 +145,10 @@ function themeClassChanges() {
         $(mapShadow).removeClass('dark');
         $(mapText).removeClass('dark');
         $(particlesText).removeClass('dark');
-        $(mobileNav).addClass('dark');
+        $(mobileNav).removeClass('dark');
         $(mobileNavBg).removeClass('dark');
         $(mobileNavItems).removeClass('dark');
+        $(binaryForeground).removeClass('dark');
         resetCanvas();
     }
 }
