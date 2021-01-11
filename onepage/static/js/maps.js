@@ -46,7 +46,7 @@ window.initMap = function() {
 
         $.ajax({
             type: "GET",
-            url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=AIzaSyDfL2R__omFVFlxOVyizYyv73e6e--5mls",
+            url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI",
             success: function (response) {
 
                 console.log(response);
@@ -59,7 +59,7 @@ window.initMap = function() {
                 let distanceElement = document.querySelector("#distanceElement");
                 $(distanceElement).html(roundedMiles);
 
-                const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                // const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: userLoc,

@@ -14,7 +14,7 @@
     height: 800px;
     width: 100%;
     overflow: hidden;
-  }
+
 
   &__svg {
     position: absolute;
@@ -34,21 +34,57 @@
     canvas {
       position: absolute;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
   &__content {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 10%;
-    max-width: 25%;
+    max-width: 400px;
+   
+    &.dark {
+      color: #fff;
+    }
+
+    i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    input {
+      display: inline-block;
+      border-radius: 4px;
+      border: none;
+      background: #f8f8f8;
+      width: 75%;
+      margin-right: 10px;
+    }
+
+    button {
+      position: relative;
+
+      i {
+        color: #6ddcbd;
+      }
+
+      &:after {
+        position: relative;
+        color: #8a8a8a;
+        content: 'OR';
+        margin: 0 10px;
+      }
+    }
   }
+}
 
 
 @media screen and (min-width: 1300px) {
+  &__container {
   &__svg {
     bottom: -70px;
   }
+}
 }
 
 @media screen and (min-width: 1420px) {
@@ -56,10 +92,10 @@
 
   &__container {
     height: 1000px;
-  }
 
   &__svg {
     bottom: 0;
   }
+}
 }
 }

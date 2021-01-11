@@ -2,15 +2,16 @@
 
 .particles {
 
-  height: 700px;
+  height: 500px;
   width: 100%;
   left: -100px;
   position: relative;
+  z-index: 1;
 
   &__text {
     position: absolute;
     right: -5%;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
 

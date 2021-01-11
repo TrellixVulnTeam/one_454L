@@ -4,6 +4,7 @@ let body = document.getElementsByClassName('core');
 let mapText = document.getElementsByClassName('map__text');
 let mapShadow = document.getElementsByClassName('map__shadow');
 let particlesText = document.getElementsByClassName('particles__text');
+let binaryText = document.getElementsByClassName('binary__container__content');
 let mobileNav = document.getElementsByClassName('nav__mobile__hamburger-icon-container');
 let mobileNavBg = document.getElementsByClassName('nav__mobile__background');
 let mobileNavItems = document.getElementsByClassName('nav__mobile__items__item');
@@ -100,6 +101,8 @@ window.onload = function() {
 
     themeToggleInput.addEventListener('click', themeClassChanges);
 
+    document.querySelector("#emailCopy").addEventListener("click", copy);
+
     init();
     step();
 };
@@ -131,6 +134,7 @@ function themeClassChanges() {
         $(mapShadow).addClass('dark');
         $(mapText).addClass('dark');
         $(particlesText).addClass('dark');
+        $(binaryText).addClass('dark');
         $(mobileNav).addClass('dark');
         $(mobileNavBg).addClass('dark');
         $(mobileNavItems).addClass('dark');
@@ -145,6 +149,7 @@ function themeClassChanges() {
         $(mapShadow).removeClass('dark');
         $(mapText).removeClass('dark');
         $(particlesText).removeClass('dark');
+        $(binaryText).removeClass('dark');
         $(mobileNav).removeClass('dark');
         $(mobileNavBg).removeClass('dark');
         $(mobileNavItems).removeClass('dark');
@@ -152,3 +157,10 @@ function themeClassChanges() {
         resetCanvas();
     }
 }
+
+function copy() {
+    var copyText = document.querySelector("#emailInput");
+    copyText.select();
+    document.execCommand("copy");
+  }
+  

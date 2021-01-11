@@ -155,9 +155,23 @@
 .core__toggle__slider.dark:after {
   color: #5e4ae3;
 }
+.core__footer {
+  position: absolute;
+  bottom: 10px;
+  right: 25%;
+}
+.core__footer p {
+  color: #8a8a8a;
+}
+.core__footer i {
+  color: #000;
+}
+.core__footer i.fa-heart {
+  color: red;
+}
 
 .nav {
-  width: 96%;
+  width: 100%;
   position: relative;
   padding: 30px 40px;
   font-size: 14px;
@@ -450,10 +464,10 @@
   position: relative;
 }
 .map__text {
-  position: relative;
+  position: absolute;
   top: 40%;
   transform: translateY(-50%);
-  padding: 0 45px;
+  padding: 0 0 0 45px;
 }
 .map__text__container {
   position: relative;
@@ -520,6 +534,7 @@
   .map__text {
     max-width: 100%;
     margin: 0 auto;
+    padding: 0 45px;
     text-align: center;
   }
   .map h1 {
@@ -533,15 +548,16 @@
 }
 
 .particles {
-  height: 700px;
+  height: 500px;
   width: 100%;
   left: -100px;
   position: relative;
+  z-index: 1;
 }
 .particles__text {
   position: absolute;
   right: -5%;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -570,31 +586,58 @@
   width: 100%;
   overflow: hidden;
 }
-.binary__svg {
+.binary__container__svg {
   position: absolute;
   bottom: -5px;
   height: auto;
   width: 100%;
 }
-.binary__svg path {
+.binary__container__svg path {
   fill: #fff;
 }
-.binary__svg path.dark {
+.binary__container__svg path.dark {
   fill: #000;
 }
-.binary canvas {
+.binary__container canvas {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
-.binary__content {
+.binary__container__content {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 10%;
-  max-width: 25%;
+  max-width: 400px;
+}
+.binary__container__content.dark {
+  color: #fff;
+}
+.binary__container__content i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.binary__container__content input {
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  background: #f8f8f8;
+  width: 75%;
+  margin-right: 10px;
+}
+.binary__container__content button {
+  position: relative;
+}
+.binary__container__content button i {
+  color: #6ddcbd;
+}
+.binary__container__content button:after {
+  position: relative;
+  color: #8a8a8a;
+  content: "OR";
+  margin: 0 10px;
 }
 @media screen and (min-width: 1300px) {
-  .binary__svg {
+  .binary__container__svg {
     bottom: -70px;
   }
 }
@@ -605,7 +648,7 @@
   .binary__container {
     height: 1000px;
   }
-  .binary__svg {
+  .binary__container__svg {
     bottom: 0;
   }
 }
