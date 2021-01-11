@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-    var container = document.getElementById("binary-container");
+    var container = document.getElementById("binary");
     var c = document.getElementById("canvas");
     var ctx = c.getContext("2d");
 
-    var sectionHeight = container.offsetHeight * 2;
-    var sectionWidth = container.offsetWidth * 2;
+    var sectionHeight = container.offsetHeight;
+    var sectionWidth = container.offsetWidth;
 
     c.height = sectionHeight;
     c.width = sectionWidth;

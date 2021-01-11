@@ -158,13 +158,13 @@
 .core__footer {
   position: absolute;
   bottom: 10px;
-  right: 25%;
+  right: 5%;
 }
 .core__footer p {
   color: #8a8a8a;
 }
 .core__footer i {
-  color: #000;
+  color: #fff;
 }
 .core__footer i.fa-heart {
   color: red;
@@ -575,48 +575,36 @@
 .binary {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 500px;
+  margin-top: 120px;
 }
 .binary h3 {
   font-family: "Rubik-Bold", serif;
 }
-.binary__container {
-  position: relative;
-  height: 800px;
-  width: 100%;
-  overflow: hidden;
-}
-.binary__container__svg {
-  position: absolute;
-  bottom: -5px;
-  height: auto;
-  width: 100%;
-}
-.binary__container__svg path {
-  fill: #fff;
-}
-.binary__container__svg path.dark {
-  fill: #000;
-}
-.binary__container canvas {
+.binary canvas {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.binary__container__content {
+.binary__content {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  max-width: 400px;
+  top: 45%;
+  left: 50%;
+  max-width: 90%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 4px;
+  padding: 25px;
 }
-.binary__container__content.dark {
+.binary__content.dark {
   color: #fff;
 }
-.binary__container__content i {
+.binary__content i {
   font-size: 20px;
   cursor: pointer;
 }
-.binary__container__content input {
+.binary__content input {
   display: inline-block;
   border-radius: 4px;
   border: none;
@@ -624,31 +612,15 @@
   width: 75%;
   margin-right: 10px;
 }
-.binary__container__content button {
+.binary__content button {
   position: relative;
 }
-.binary__container__content button i {
+.binary__content button i {
   color: #6ddcbd;
 }
-.binary__container__content button:after {
+.binary__content button:after {
   position: relative;
   color: #8a8a8a;
   content: "OR";
   margin: 0 10px;
-}
-@media screen and (min-width: 1300px) {
-  .binary__container__svg {
-    bottom: -70px;
-  }
-}
-@media screen and (min-width: 1420px) {
-  .binary {
-    height: 1000px;
-  }
-  .binary__container {
-    height: 1000px;
-  }
-  .binary__container__svg {
-    bottom: 0;
-  }
 }
