@@ -7,10 +7,10 @@
   position: relative;
 
   &__text {
-    position: relative;
+    position: absolute;
     top: 40%;
     transform: translateY(-50%);
-    padding: 0 45px;
+    padding: 0 0 0 45px;
 
     &__container {
       position: relative;
@@ -89,6 +89,7 @@
     &__text {
       max-width: 100%;
       margin: 0 auto;
+      padding: 0 45px;
       text-align: center;
     }
 

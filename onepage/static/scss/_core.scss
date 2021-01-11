@@ -187,5 +187,23 @@ $green: #6DDCBD;
       }
     }
   }
+
+  &__footer {
+    position: absolute;
+    bottom: 10px;
+    right: 25%;
+
+    p {
+      color: #8a8a8a;
+    }
+
+    i {
+      color: #000;
+
+      &.fa-heart {
+        color: red;
+      }
+    }
+  }
 }
 
