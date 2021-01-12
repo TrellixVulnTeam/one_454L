@@ -644,6 +644,7 @@
 }
 .skills__box img {
   width: 40px;
+  vertical-align: bottom;
 }
 .skills__box i,
 .skills__box img {
@@ -652,7 +653,6 @@
   margin-right: 10px;
   display: inline-block;
   font-size: 46px;
-  vertical-align: top;
 }
 .skills__box i.fa-html5,
 .skills__box img.fa-html5 {
@@ -690,7 +690,6 @@
   position: relative;
   left: 0;
   top: 0;
-  margin: 4px;
   height: 8px;
   border-radius: 10px;
 }
@@ -733,7 +732,22 @@
   font-family: "Rubik-Bold", serif;
   padding-bottom: 15px;
   border-bottom: 1px solid #d1d1d1;
-  margin-bottom: 30px;
   width: fit-content;
   position: relative;
+  margin: 0 auto 30px;
+}
+@media only screen and (max-width: 640px) {
+  .skills__box i {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto 20px;
+    display: block;
+    text-align: center;
+  }
+  .skills__box__loader {
+    width: 100%;
+  }
+  .skills__text {
+    text-align: center;
+  }
 }
