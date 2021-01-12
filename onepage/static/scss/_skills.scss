@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Adobe Clean Regular";
+  src: url("../fonts/AdobeClean-Regular.eot");
+  src: url("../fonts/AdobeClean-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/AdobeClean-Regular.woff") format("woff"),
+    url("../fonts/AdobeClean-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$cyan: #57caf4;
+$darkCyan: darken(cyan, 10);
+$lightGray: #f4f4f4;
+$gray: darken($lightGray, 30);
+
+$html: #e34c26;
+$sass: #cc6699;
+$js: #f0db4f;
+$python: #306998;
+$github: #1d202d;
+
+$ai: #fbb034;
+$ps: #18152E;
+$ae: #36174F;
+
+$transitionDuration: 0.3s;
+$transition: all $transitionDuration ease-in-out;
+
+.skills {
+  position: relative;
+
+  &__box {
+    position: relative;
+    padding: 50px;
+
+    img {
+      width: 40px;
+    }
+
+    i,
+    img {
+      position: relative;
+      left: 20%;
+      margin-right: 10px;
+      display: inline-block;
+      font-size: 46px;
+      vertical-align: top;
+
+      &.fa-html5 {
+        color: $html;
+      }
+
+      &.fa-sass {
+        color: $sass;
+      }
+
+      &.fa-js-square {
+        color: $js;
+      }
+
+      &.fa-python {
+        color: $python;
+      }
+
+      &.fa-github {
+        color: $github;
+      }
+    }
+
+    &__loader {
+      position: relative;
+      display: inline-block;
+      padding: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: auto;
+      border-radius: 23px;
+      background: #ffffff;
+      box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
+
+      &__inner {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 4px;
+        height: 8px;
+        border-radius: 10px;
+
+        &.html {
+          background: $html;
+          width: 98%;
+        }
+
+        &.sass {
+          background: $sass;
+          width: 80%;
+        }
+
+        &.js {
+          background: $js;
+          width: 75%;
+        }
+
+        &.python {
+          background: $python;
+          width: 60%;
+        }
+
+        &.github {
+          background: $github;
+          width: 90%;
+        }
+
+        &.ai {
+          background: $ai;
+          width: 90%;
+        }
+
+        &.ps {
+            background: $ps;
+            width: 90%;
+        }
+
+        &.ae {
+            background: $ae;
+            width: 70%;
+        }
+      }
+    }
+  }
+
+  &__text {
+    padding-left: 45px;
+
+    h3 {
+      font-family: "Rubik-Bold", serif;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #d1d1d1;
+      margin-bottom: 30px;
+      width: fit-content;
+      position: relative;
+    }
+  }
+}

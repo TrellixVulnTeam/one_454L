@@ -163,6 +163,9 @@
 .core__footer p {
   color: #8a8a8a;
 }
+.core__footer p:first-of-type {
+  margin-bottom: 0;
+}
 .core__footer i {
   color: #fff;
 }
@@ -575,7 +578,7 @@
 .binary {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   margin-top: 120px;
 }
 .binary h3 {
@@ -623,4 +626,114 @@
   color: #8a8a8a;
   content: "OR";
   margin: 0 10px;
+}
+
+@font-face {
+  font-family: "Adobe Clean Regular";
+  src: url("../fonts/AdobeClean-Regular.eot");
+  src: url("../fonts/AdobeClean-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AdobeClean-Regular.woff") format("woff"), url("../fonts/AdobeClean-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.skills {
+  position: relative;
+}
+.skills__box {
+  position: relative;
+  padding: 50px;
+}
+.skills__box img {
+  width: 40px;
+}
+.skills__box i,
+.skills__box img {
+  position: relative;
+  left: 20%;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 46px;
+  vertical-align: top;
+}
+.skills__box i.fa-html5,
+.skills__box img.fa-html5 {
+  color: #e34c26;
+}
+.skills__box i.fa-sass,
+.skills__box img.fa-sass {
+  color: #cc6699;
+}
+.skills__box i.fa-js-square,
+.skills__box img.fa-js-square {
+  color: #f0db4f;
+}
+.skills__box i.fa-python,
+.skills__box img.fa-python {
+  color: #306998;
+}
+.skills__box i.fa-github,
+.skills__box img.fa-github {
+  color: #1d202d;
+}
+.skills__box__loader {
+  position: relative;
+  display: inline-block;
+  padding: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: auto;
+  border-radius: 23px;
+  background: #ffffff;
+  box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
+}
+.skills__box__loader__inner {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  height: 8px;
+  border-radius: 10px;
+}
+.skills__box__loader__inner.html {
+  background: #e34c26;
+  width: 98%;
+}
+.skills__box__loader__inner.sass {
+  background: #cc6699;
+  width: 80%;
+}
+.skills__box__loader__inner.js {
+  background: #f0db4f;
+  width: 75%;
+}
+.skills__box__loader__inner.python {
+  background: #306998;
+  width: 60%;
+}
+.skills__box__loader__inner.github {
+  background: #1d202d;
+  width: 90%;
+}
+.skills__box__loader__inner.ai {
+  background: #fbb034;
+  width: 90%;
+}
+.skills__box__loader__inner.ps {
+  background: #18152E;
+  width: 90%;
+}
+.skills__box__loader__inner.ae {
+  background: #36174F;
+  width: 70%;
+}
+.skills__text {
+  padding-left: 45px;
+}
+.skills__text h3 {
+  font-family: "Rubik-Bold", serif;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 30px;
+  width: fit-content;
+  position: relative;
 }

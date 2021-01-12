@@ -195,6 +195,10 @@ $green: #6DDCBD;
 
     p {
       color: #8a8a8a;
+
+      &:first-of-type {
+        margin-bottom: 0;
+      }
     }
 
     i {
