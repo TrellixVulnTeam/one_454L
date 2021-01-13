@@ -163,6 +163,9 @@
 .core__footer p {
   color: #8a8a8a;
 }
+.core__footer p:first-of-type {
+  margin-bottom: 0;
+}
 .core__footer i {
   color: #fff;
 }
@@ -460,12 +463,11 @@
   }
 }
 .map {
-  padding: 60px 0 0;
   position: relative;
 }
 .map__text {
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   padding: 0 0 0 45px;
 }
@@ -509,7 +511,7 @@
   position: relative;
   height: 300px;
   width: 100%;
-  margin: 0 auto;
+  margin: 30px auto;
   pointer-events: none;
   overflow: hidden;
   padding: 60px 36px;
@@ -575,7 +577,7 @@
 .binary {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   margin-top: 120px;
 }
 .binary h3 {
@@ -623,4 +625,185 @@
   color: #8a8a8a;
   content: "OR";
   margin: 0 10px;
+}
+
+@font-face {
+  font-family: "Adobe Clean Regular";
+  src: url("../fonts/AdobeClean-Regular.eot");
+  src: url("../fonts/AdobeClean-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AdobeClean-Regular.woff") format("woff"), url("../fonts/AdobeClean-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.skills {
+  position: relative;
+  margin: 0 2% 40px;
+}
+.skills__box {
+  position: relative;
+  padding: 40px;
+  text-align: center;
+}
+.skills__box img {
+  width: 40px;
+  vertical-align: bottom;
+}
+.skills__box i,
+.skills__box img {
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 46px;
+}
+.skills__box i.fa-html5,
+.skills__box img.fa-html5 {
+  color: #e34c26;
+}
+.skills__box i.fa-sass,
+.skills__box img.fa-sass {
+  color: #cc6699;
+}
+.skills__box i.fa-js-square,
+.skills__box img.fa-js-square {
+  color: #f0db4f;
+}
+.skills__box i.fa-python,
+.skills__box img.fa-python {
+  color: #306998;
+}
+.skills__box i.fa-github,
+.skills__box img.fa-github {
+  color: #1d202d;
+}
+.skills__box__loader {
+  position: relative;
+  display: inline-block;
+  padding: 12px;
+  width: 60%;
+  height: auto;
+  border-radius: 23px;
+  background: #ffffff;
+  box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
+}
+.skills__box__loader__inner {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 8px;
+  border-radius: 10px;
+  width: 0;
+}
+.skills__box__loader__inner.html {
+  background: #e34c26;
+}
+.skills__box__loader__inner.html.loaded {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.sass {
+  background: #cc6699;
+}
+.skills__box__loader__inner.sass.loaded {
+  width: 80%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.js {
+  background: #f0db4f;
+}
+.skills__box__loader__inner.js.loaded {
+  width: 75%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.python {
+  background: #306998;
+}
+.skills__box__loader__inner.python.loaded {
+  width: 60%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.github {
+  background: #1d202d;
+}
+.skills__box__loader__inner.github.loaded {
+  width: 90%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.ai {
+  background: #fbb034;
+}
+.skills__box__loader__inner.ai.loaded {
+  width: 90%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.ps {
+  background: #0487D9;
+}
+.skills__box__loader__inner.ps.loaded {
+  width: 90%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.ae {
+  background: #6E4796;
+}
+.skills__box__loader__inner.ae.loaded {
+  width: 70%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner i:after {
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills__box__loader__inner i#html:after {
+  content: "100%";
+}
+.skills__box__loader__inner i#sass:after {
+  content: "80%";
+}
+.skills__box__loader__inner i#js:after {
+  content: "75%";
+}
+.skills__box__loader__inner i#python:after {
+  content: "60%";
+}
+.skills__box__loader__inner i#github:after {
+  content: "90%";
+}
+.skills__box__loader__inner i#ai:after {
+  content: "90%";
+}
+.skills__box__loader__inner i#ps:after {
+  content: "90%";
+}
+.skills__box__loader__inner i#ae:after {
+  content: "70%";
+}
+.skills__text h3 {
+  font-family: "Rubik-Bold", serif;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d1d1d1;
+  width: fit-content;
+  position: relative;
+  margin: 0 auto 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .skills__box i, .skills__box img {
+    margin: 0 auto 20px;
+    display: block;
+  }
+  .skills__box__loader {
+    width: 100%;
+  }
+  .skills__text {
+    text-align: center;
+  }
 }

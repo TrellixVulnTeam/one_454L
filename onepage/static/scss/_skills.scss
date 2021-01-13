@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "Adobe Clean Regular";
+  src: url("../fonts/AdobeClean-Regular.eot");
+  src: url("../fonts/AdobeClean-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/AdobeClean-Regular.woff") format("woff"),
+    url("../fonts/AdobeClean-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$cyan: #57caf4;
+$darkCyan: darken(cyan, 10);
+$lightGray: #f4f4f4;
+$gray: darken($lightGray, 30);
+
+$html: #e34c26;
+$sass: #cc6699;
+$js: #f0db4f;
+$python: #306998;
+$github: #1d202d;
+
+$ai: #fbb034;
+$ps: #0487D9;
+$ae: #6E4796;
+
+$transitionDuration: 0.5s;
+$transition: all $transitionDuration ease-in-out;
+
+.skills {
+  position: relative;
+  margin: 0 2% 40px;
+
+  &__box {
+    position: relative;
+    padding: 40px;
+    text-align: center;
+
+    img {
+      width: 40px;
+      vertical-align: bottom;
+    }
+
+    i,
+    img {
+      position: relative;
+      margin-right: 10px;
+      display: inline-block;
+      font-size: 46px;
+
+      &.fa-html5 {
+        color: $html;
+      }
+
+      &.fa-sass {
+        color: $sass;
+      }
+
+      &.fa-js-square {
+        color: $js;
+      }
+
+      &.fa-python {
+        color: $python;
+      }
+
+      &.fa-github {
+        color: $github;
+      }
+    }
+
+    &__loader {
+      position: relative;
+      display: inline-block;
+      padding: 12px;
+      width: 60%;
+      height: auto;
+      border-radius: 23px;
+      background: #ffffff;
+      box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
+
+      &__inner {
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 8px;
+        border-radius: 10px;
+        width: 0;
+
+        &.html {
+          background: $html;
+
+          &.loaded {
+          width: 100%;
+          transition: $transition;
+        }
+    }
+
+        &.sass {
+          background: $sass;
+
+          &.loaded {
+            width: 80%;
+            transition: $transition;
+          }
+        }
+
+        &.js {
+          background: $js;
+          
+          &.loaded {
+            width: 75%;
+            transition: $transition;
+          }
+        }
+
+        &.python {
+          background: $python;
+          
+          &.loaded {
+            width: 60%;
+            transition: $transition;
+          }
+        }
+
+        &.github {
+          background: $github;
+         
+          &.loaded {
+            width: 90%;
+            transition: $transition;
+          }
+        }
+
+        &.ai {
+          background: $ai;
+          
+          &.loaded {
+            width: 90%;
+            transition: $transition;
+          }
+        }
+
+        &.ps {
+            background: $ps;
+            
+            &.loaded {
+                width: 90%;
+                transition: $transition;
+              }
+        }
+
+        &.ae {
+            background: $ae;
+            
+            &.loaded {
+                width: 70%;
+                transition: $transition;
+              }
+        }
+
+        i {
+            position: absolute;
+            right: -5px;
+            top: -40px;
+            margin-right: 0;
+            font-size: 22px;
+            color: #d1d1d1;
+
+                &:after {
+                    font-size: 16px;
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+            }
+
+            &#html {
+                &:after {
+                    content: '100%';
+                }
+            }
+
+            &#sass {
+                &:after {
+                    content: '80%';
+                }
+            }
+
+            &#js {
+                &:after {
+                    content: '75%';
+                }
+            }
+
+            &#python {
+                &:after {
+                    content: '60%';
+                }
+            }
+
+            &#github {
+                &:after {
+                    content: '90%';
+                }
+            }
+
+            &#ai {
+                &:after {
+                    content: '90%';
+                }
+            }
+
+            &#ps {
+                &:after {
+                    content: '90%';
+                }
+            }
+
+            &#ae {
+                &:after {
+                    content: '70%';
+                }
+            }
+        }
+      }
+    }
+  }
+
+  &__text {
+
+    h3 {
+      font-family: "Rubik-Bold", serif;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #d1d1d1;
+      width: fit-content;
+      position: relative;
+      margin: 0 auto 30px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+      &__box {
+          i, img {
+              margin: 0 auto 20px;
+              display: block;
+          }
+
+          &__loader {
+              width: 100%;
+          }
+      }
+
+      &__text {
+        text-align: center;  
+
+    }
+  }
+}

@@ -71,7 +71,7 @@ window.onload = function() {
     });
 
     $(document).scroll(function() {
-        var y = $(this).scrollTop();
+        let y = $(this).scrollTop();
         if (y > 300) {
             $(upChevron).css('opacity', '100%');
         } else {
@@ -106,23 +106,6 @@ window.onload = function() {
     init();
     step();
 };
-
-// $(document).ready(function() {
-    // setTimeout(fadeOutPlayer, 1500);
-    // setTimeout(displayNone, 3000);
-// });
-
-// function fadeOutPlayer() {
-    // let player = document.getElementById("lottieLogo");
-    // player.addEventListener('complete', function(){
-        // $(this).css('opacity', '0');
-    // });
-// }
-
-// function displayNone() {
-    // let player = document.getElementById("lottieLogo");
-    // $(player).css('display', 'none');
-// }
 
 function themeClassChanges() {
     if ($(themeToggleInput).is(":checked")) {
@@ -159,8 +142,28 @@ function themeClassChanges() {
 }
 
 function copy() {
-    var copyText = document.querySelector("#emailInput");
+    let copyText = document.querySelector("#emailInput");
     copyText.select();
     document.execCommand("copy");
   }
+
+let skillBars = document.querySelectorAll(".skills__box__loader__inner");
+
+const config = {
+    root: null,
+    rootMargin: '-100px 0 0 -100px',
+  };
+
+let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0.9) {
+            entry.target.classList.add('loaded');
+            observer.unobserve(entry.target);
+      }
+    }, config);
+  });
+  
+  skillBars.forEach(bar => {
+    observer.observe(bar);
+  });
   
