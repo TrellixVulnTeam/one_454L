@@ -637,10 +637,12 @@
 }
 .skills {
   position: relative;
+  margin: 60px 2%;
 }
 .skills__box {
   position: relative;
-  padding: 50px;
+  padding: 40px;
+  text-align: center;
 }
 .skills__box img {
   width: 40px;
@@ -649,7 +651,6 @@
 .skills__box i,
 .skills__box img {
   position: relative;
-  left: 20%;
   margin-right: 10px;
   display: inline-block;
   font-size: 46px;
@@ -678,8 +679,6 @@
   position: relative;
   display: inline-block;
   padding: 12px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 60%;
   height: auto;
   border-radius: 23px;
@@ -695,7 +694,7 @@
 }
 .skills__box__loader__inner.html {
   background: #e34c26;
-  width: 98%;
+  width: 100%;
 }
 .skills__box__loader__inner.sass {
   background: #cc6699;
@@ -725,8 +724,44 @@
   background: #36174F;
   width: 70%;
 }
-.skills__text {
-  padding-left: 45px;
+.skills__box__loader__inner i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner i:after {
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills__box__loader__inner i#html:after {
+  content: "100%";
+}
+.skills__box__loader__inner i#sass:after {
+  content: "80%";
+}
+.skills__box__loader__inner i#js:after {
+  content: "75%";
+}
+.skills__box__loader__inner i#python:after {
+  content: "60%";
+}
+.skills__box__loader__inner i#github:after {
+  content: "90%";
+}
+.skills__box__loader__inner i#ai:after {
+  content: "90%";
+}
+.skills__box__loader__inner i#ps:after {
+  content: "90%";
+}
+.skills__box__loader__inner i#ae:after {
+  content: "70%";
 }
 .skills__text h3 {
   font-family: "Rubik-Bold", serif;
@@ -736,13 +771,10 @@
   position: relative;
   margin: 0 auto 30px;
 }
-@media only screen and (max-width: 640px) {
-  .skills__box i {
-    left: 50%;
-    transform: translateX(-50%);
+@media only screen and (max-width: 1024px) {
+  .skills__box i, .skills__box img {
     margin: 0 auto 20px;
     display: block;
-    text-align: center;
   }
   .skills__box__loader {
     width: 100%;
