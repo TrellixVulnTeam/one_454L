@@ -23,7 +23,7 @@ $ai: #fbb034;
 $ps: #0487D9;
 $ae: #6E4796;
 
-$transitionDuration: 0.3s;
+$transitionDuration: 0.5s;
 $transition: all $transitionDuration ease-in-out;
 
 .skills {
@@ -84,45 +84,78 @@ $transition: all $transitionDuration ease-in-out;
         top: 0;
         height: 8px;
         border-radius: 10px;
+        width: 0;
 
         &.html {
           background: $html;
+
+          &.loaded {
           width: 100%;
+          transition: $transition;
         }
+    }
 
         &.sass {
           background: $sass;
-          width: 80%;
+
+          &.loaded {
+            width: 80%;
+            transition: $transition;
+          }
         }
 
         &.js {
           background: $js;
-          width: 75%;
+          
+          &.loaded {
+            width: 75%;
+            transition: $transition;
+          }
         }
 
         &.python {
           background: $python;
-          width: 60%;
+          
+          &.loaded {
+            width: 60%;
+            transition: $transition;
+          }
         }
 
         &.github {
           background: $github;
-          width: 90%;
+         
+          &.loaded {
+            width: 90%;
+            transition: $transition;
+          }
         }
 
         &.ai {
           background: $ai;
-          width: 90%;
+          
+          &.loaded {
+            width: 90%;
+            transition: $transition;
+          }
         }
 
         &.ps {
             background: $ps;
-            width: 90%;
+            
+            &.loaded {
+                width: 90%;
+                transition: $transition;
+              }
         }
 
         &.ae {
             background: $ae;
-            width: 70%;
+            
+            &.loaded {
+                width: 70%;
+                transition: $transition;
+              }
         }
 
         i {

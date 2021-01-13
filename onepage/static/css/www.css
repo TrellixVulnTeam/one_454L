@@ -690,38 +690,63 @@
   top: 0;
   height: 8px;
   border-radius: 10px;
+  width: 0;
 }
 .skills__box__loader__inner.html {
   background: #e34c26;
+}
+.skills__box__loader__inner.html.loaded {
   width: 100%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner.sass {
   background: #cc6699;
+}
+.skills__box__loader__inner.sass.loaded {
   width: 80%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner.js {
   background: #f0db4f;
+}
+.skills__box__loader__inner.js.loaded {
   width: 75%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner.python {
   background: #306998;
+}
+.skills__box__loader__inner.python.loaded {
   width: 60%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner.github {
   background: #1d202d;
+}
+.skills__box__loader__inner.github.loaded {
   width: 90%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner.ai {
   background: #fbb034;
+}
+.skills__box__loader__inner.ai.loaded {
   width: 90%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner.ps {
   background: #0487D9;
+}
+.skills__box__loader__inner.ps.loaded {
   width: 90%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner.ae {
   background: #6E4796;
+}
+.skills__box__loader__inner.ae.loaded {
   width: 70%;
+  transition: all 0.5s ease-in-out;
 }
 .skills__box__loader__inner i {
   position: absolute;
