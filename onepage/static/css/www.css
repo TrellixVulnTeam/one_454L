@@ -186,10 +186,10 @@
   position: absolute;
   display: inline;
   left: 40px;
-}
-.nav__logo img {
-  height: 40px;
-  width: 40px;
+  font-family: variex, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 34px;
 }
 .nav__social {
   text-align: right;
