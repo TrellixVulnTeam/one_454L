@@ -10,15 +10,15 @@
   font-family: "Rubik-Light", serif;
 
   &__logo {
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     position: absolute;
     display: inline;
     left: 40px;
 
-    svg {
-      height: 50px;
-      width: 50px;
+    img {
+      height: 40px;
+      width: 40px;
     }
   }
 
