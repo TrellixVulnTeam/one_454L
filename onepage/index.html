@@ -13,6 +13,7 @@
 <script type="module" src="/static/js/maps.js"></script>
 <script type="module" src="/static/js/particles.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
+<script type="module" src="/static/js/loader.js"></script>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
 
@@ -21,6 +22,11 @@
 <script src="https://kit.fontawesome.com/0f90afe29b.js" crossorigin="anonymous"></script>
 </head>
 <body class="core" id="body">
+
+<div class="loader">
+    <div class="loader__progress-bar"></div>
+    <h1 class="loader__count"></h1>
+</div>
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -141,7 +147,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/048-illustrator.svg">
+        <img src="static/images/ai.svg">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ai">
                 <i class="fas fa-sort-down" id="ai"></i>
@@ -149,7 +155,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/050-photoshop.svg">
+        <img src="static/images/ps.svg">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ps">
                 <i class="fas fa-sort-down" id="ps"></i>
@@ -157,7 +163,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/044-after-effects.svg">
+        <img src="static/images/ae.svg">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ae">
                 <i class="fas fa-sort-down" id="ae"></i>
@@ -189,7 +195,6 @@
 
 <div class="core__footer">
     <p><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Alexander Barnes 2021</p>
-    <p>Adobe icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
 </div>
 
 </body>
