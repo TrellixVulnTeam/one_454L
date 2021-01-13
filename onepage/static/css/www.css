@@ -35,16 +35,6 @@
   bottom: 6%;
   transition: all 0.2s ease;
 }
-.core__lottie {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
-  z-index: 100;
-  transition: all 0.5s ease-out;
-}
 .core__toggle {
   position: absolute;
   top: 25px;
