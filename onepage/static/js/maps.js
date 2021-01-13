@@ -248,7 +248,7 @@ window.initMap = function() {
         var options = {
             timeout: 20000,
             enableHighAccuracy: true,
-            maximumAge: 75000,
+            maximumAge: 0,
         };
 
         navigator.geolocation.getCurrentPosition(success, error, options);
