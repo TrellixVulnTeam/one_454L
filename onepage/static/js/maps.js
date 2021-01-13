@@ -15,6 +15,7 @@ let city;
 window.initMap = function() {
 
     function success(position) {
+        console.log("success");
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
 
@@ -244,6 +245,12 @@ window.initMap = function() {
         console.log('Geolocation is not supported by your browser');
     } else {
         console.log('Locating…');
-        navigator.geolocation.getCurrentPosition(success, error);
+        var options = {
+            timeout: 20000,
+            enableHighAccuracy: true,
+            maximumAge: 75000,
+        };
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
     }
 }
