@@ -148,7 +148,7 @@
 .core__footer {
   position: absolute;
   bottom: 20px;
-  right: 5%;
+  right: 2%;
 }
 .core__footer p {
   color: #8a8a8a;
@@ -540,11 +540,16 @@
 }
 
 .particles {
-  height: 500px;
   width: 100%;
   left: -100px;
+  height: 500px;
   position: relative;
   z-index: 1;
+}
+.particles__container {
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
 }
 .particles__text {
   position: absolute;
@@ -689,12 +694,44 @@
   width: 100%;
   transition: all 0.5s ease-in-out;
 }
+.skills__box__loader__inner.html i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner.html i:after {
+  content: "100%";
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .skills__box__loader__inner.sass {
   background: #cc6699;
 }
 .skills__box__loader__inner.sass.loaded {
   width: 80%;
   transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.sass i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner.sass i:after {
+  content: "80%";
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .skills__box__loader__inner.js {
   background: #f0db4f;
@@ -703,12 +740,44 @@
   width: 75%;
   transition: all 0.5s ease-in-out;
 }
+.skills__box__loader__inner.js i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner.js i:after {
+  content: "75%";
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .skills__box__loader__inner.python {
   background: #306998;
 }
 .skills__box__loader__inner.python.loaded {
   width: 60%;
   transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.python i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner.python i:after {
+  content: "60%";
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .skills__box__loader__inner.github {
   background: #1d202d;
@@ -717,28 +786,7 @@
   width: 90%;
   transition: all 0.5s ease-in-out;
 }
-.skills__box__loader__inner.ai {
-  background: #fbb034;
-}
-.skills__box__loader__inner.ai.loaded {
-  width: 90%;
-  transition: all 0.5s ease-in-out;
-}
-.skills__box__loader__inner.ps {
-  background: #0487D9;
-}
-.skills__box__loader__inner.ps.loaded {
-  width: 90%;
-  transition: all 0.5s ease-in-out;
-}
-.skills__box__loader__inner.ae {
-  background: #6E4796;
-}
-.skills__box__loader__inner.ae.loaded {
-  width: 70%;
-  transition: all 0.5s ease-in-out;
-}
-.skills__box__loader__inner i {
+.skills__box__loader__inner.github i {
   position: absolute;
   right: -5px;
   top: -40px;
@@ -746,36 +794,82 @@
   font-size: 22px;
   color: #d1d1d1;
 }
-.skills__box__loader__inner i:after {
+.skills__box__loader__inner.github i:after {
+  content: "90%";
   font-size: 16px;
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
-.skills__box__loader__inner i#html:after {
-  content: "100%";
+.skills__box__loader__inner.ai {
+  background: #fbb034;
 }
-.skills__box__loader__inner i#sass:after {
-  content: "80%";
+.skills__box__loader__inner.ai.loaded {
+  width: 90%;
+  transition: all 0.5s ease-in-out;
 }
-.skills__box__loader__inner i#js:after {
-  content: "75%";
+.skills__box__loader__inner.ai i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
 }
-.skills__box__loader__inner i#python:after {
-  content: "60%";
-}
-.skills__box__loader__inner i#github:after {
+.skills__box__loader__inner.ai i:after {
   content: "90%";
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.skills__box__loader__inner i#ai:after {
+.skills__box__loader__inner.ps {
+  background: #0487d9;
+}
+.skills__box__loader__inner.ps.loaded {
+  width: 90%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.ps i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner.ps i:after {
   content: "90%";
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.skills__box__loader__inner i#ps:after {
-  content: "90%";
+.skills__box__loader__inner.ae {
+  background: #6e4796;
 }
-.skills__box__loader__inner i#ae:after {
+.skills__box__loader__inner.ae.loaded {
+  width: 70%;
+  transition: all 0.5s ease-in-out;
+}
+.skills__box__loader__inner.ae i {
+  position: absolute;
+  right: -5px;
+  top: -40px;
+  margin-right: 0;
+  font-size: 22px;
+  color: #d1d1d1;
+}
+.skills__box__loader__inner.ae i:after {
   content: "70%";
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .skills__text h3 {
   font-family: "Rubik-Bold", serif;
@@ -786,7 +880,8 @@
   margin: 0 auto 30px;
 }
 @media only screen and (max-width: 1024px) {
-  .skills__box i, .skills__box img {
+  .skills__box i,
+.skills__box img {
     margin: 0 auto 20px;
     display: block;
   }
@@ -832,4 +927,53 @@
   font-size: 3em;
   margin-top: -1.33em;
   color: #fff;
+}
+
+.edex {
+  position: relative;
+  margin: 50px 0;
+}
+.edex__image {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  width: 300px;
+  border: 5px solid #5e4ae3;
+}
+.edex__image img {
+  position: relative;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+.edex__inner {
+  display: block;
+  text-align: left;
+  max-width: 85%;
+}
+.edex__inner__roles {
+  height: 50px;
+  font-size: 30px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.edex__inner__roles h3 {
+  font-family: "Rubik-Bold", serif;
+  transition: margin-top 1s ease-in-out;
+  text-transform: uppercase;
+}
+.edex__inner h5 {
+  font-family: "Rubik-Bold", serif;
+}
+.edex__inner p {
+  margin-top: 15px;
+}
+@media only screen and (max-width: 1023px) {
+  .edex__inner {
+    text-align: center;
+    margin: 50px auto 0;
+  }
 }
