@@ -107,17 +107,6 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass),
     }
   }
 
-  &__text {
-    h3 {
-      font-family: "Rubik-Bold", serif;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #d1d1d1;
-      width: fit-content;
-      position: relative;
-      margin: 0 auto 30px;
-    }
-  }
-
   @media only screen and (max-width: 1024px) {
     &__box {
       i,

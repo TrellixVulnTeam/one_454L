@@ -1,0 +1,108 @@
+@use 'core' as *;
+
+.projects {
+    position: relative;
+    margin: 100px 0;
+    text-align: center;
+
+    &__inner {
+        position: relative;
+        margin-top: 75px;
+
+        &__box {
+            position: relative;
+            width: 75%;
+            overflow: hidden;
+            margin: 0 auto 50px;
+            height: auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
+
+             img {
+                 height: 55%;
+                 width: 100%;
+                 object-fit: cover;
+                 border-bottom: 4px solid $green;
+             }
+
+             &__text {
+                 margin: 20px 10px;
+
+                 a {
+                    color: $blue;
+                    cursor: pointer;
+                    padding: 0 5px;
+                    transition: all .3s ease-in;
+
+                    &:hover {
+                        color: $blue;
+                        padding: 0 10px;
+                        transition: all .2s ease-in;
+                    }
+                 }
+
+                 i {
+                     color: $blue;
+                 }
+             }
+        }
+    }
+
+    &__modal {
+        position: fixed;
+        height: 90vh;
+        width: 80vw;
+        max-width: 1000px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border-radius: 10px;
+        z-index: 100;
+        text-align: center;
+        display: none;
+        overflow-y: scroll;
+
+        &__title {
+            height: auto;
+            background: #fff;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            left: 0;
+            padding: 15px 0;
+
+            i {
+                position: absolute;
+                right: 0;
+                margin: 10px 20px;
+                font-size: 22px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+
+            h3 {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+        }
+
+        &__background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+            display: none;
+            cursor: pointer;
+            background: #000;
+            opacity: 50%;
+        }
+    }
+}
