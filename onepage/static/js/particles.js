@@ -65,7 +65,7 @@ export function init() {
     list = [];
 
     w = canvas.width = COLS * SPACING;
-    h = canvas.height = ROWS * SPACING * 2;
+    h = canvas.height = ROWS * SPACING;
 
     container.style.width = '100%';
 

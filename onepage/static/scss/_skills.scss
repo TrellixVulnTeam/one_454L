@@ -31,7 +31,7 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass),
 
 .skills {
   position: relative;
-  margin: 0 2% 40px;
+  margin: 0 2% 50px;
 
   &__box {
     position: relative;
@@ -104,17 +104,6 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass),
           }
         }
       }
-    }
-  }
-
-  &__text {
-    h3 {
-      font-family: "Rubik-Bold", serif;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #d1d1d1;
-      width: fit-content;
-      position: relative;
-      margin: 0 auto 30px;
     }
   }
 

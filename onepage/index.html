@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Alexander Barnes</title>
-<link rel="icon" type="image/png" href="/static/images/logo2.svg">
+<link rel="icon" type="image/png" href="/static/images/logo-icon.ico">
 <link rel="stylesheet" href="/static/css/www.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
@@ -15,7 +15,8 @@
 <script type="module" src="/static/js/particles.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<!-- <script type="module" src="/static/js/loader.js"></script> -->
+<script type="module" src="/static/js/loader.js"></script>
+<script type="module" src="/static/js/projects.js"></script>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
 
@@ -25,10 +26,10 @@
 </head>
 <body class="core" id="body">
 
-<!-- <div class="loader">
+<div class="loader">
     <div class="loader__progress-bar"></div>
     <h1 class="loader__count"></h1>
-</div> -->
+</div>
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -48,34 +49,36 @@
 
 <div class="nav" id="nav">
     <div class="grid-x">
-        <div class="cell large-3 medium-3">
+        <div class="cell large-2 medium-3">
             <div class="nav__logo">&#60X&#62</div>
         </div>
 
-        <div class="cell large-6 show-for-large">
+        <div class="cell large-8 show-for-large">
             <div class="nav__desktop">
                 <div class="nav__desktop__items">
-                    <div class="nav__desktop__items__item active">HELLO</div>
-                    <div class="nav__desktop__items__item">SKILLS</div>
-                    <div class="nav__desktop__items__item">PARTICLES</div>
-                    <div class="nav__desktop__items__item">EDU / EXP</div>
-                    <div class="nav__desktop__items__item">LET'S TALK</div>
+                    <div class="nav__desktop__items__item active" data-section="hello">HELLO</div>
+                    <div class="nav__desktop__items__item" data-section="skills">SKILLS</div>
+                    <div class="nav__desktop__items__item" data-section="particles">PARTICLES</div>
+                    <div class="nav__desktop__items__item" data-section="about">EDU / EXP</div>
+                    <div class="nav__desktop__items__item" data-section="projects">PROJECTS</div>
+                    <div class="nav__desktop__items__item" data-section="binary">LET'S TALK</div>
                 </div>
             </div>
         </div>
 
-        <div class="cell large-3 medium-9">
+        <div class="cell large-2 medium-9">
             <div class="nav__social">
                 <div class="nav__social__item"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
             </div>
 
             <div class="nav__mobile">
                 <div id="menu" class="nav__mobile__items">
-                    <div class="nav__mobile__items__item active">HELLO</div>
-                    <div class="nav__mobile__items__item">SKILLS</div>
-                    <div class="nav__mobile__items__item">PARTICLES</div>
-                    <div class="nav__mobile__items__item">EDU / EXP</div>
-                    <div class="nav__mobile__items__item">LET'S TALK</div>
+                    <div class="nav__mobile__items__item active" data-section="hello">HELLO</div>
+                    <div class="nav__mobile__items__item" data-section="skills">SKILLS</div>
+                    <div class="nav__mobile__items__item" data-section="particles">PARTICLES</div>
+                    <div class="nav__mobile__items__item" data-section="about">EDU / EXP</div>
+                    <div class="nav__mobile__items__item" data-section="projects">PROJECTS</div>
+                    <div class="nav__mobile__items__item" data-section="binary">LET'S TALK</div>
                     <div class="nav__mobile__items__item__social"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
                 </div>
                 <div id="hamburger" class="nav__mobile__hamburger-icon-container">
@@ -86,7 +89,7 @@
     </div>
 </div>
 
-<section class="map">
+<section class="map" id="hello-section">
     <div class="grid-x">
         <div class="cell large-6 medium-12 small-12 map__text__container">
             <div class="map__text">
@@ -103,10 +106,8 @@
     </div>
 </section>
 
-<section class="skills">
-    <div class="skills__text">
-        <h3>SKILLS</h3>
-    </div>
+<section class="skills" id="skills-section">
+        <h3 class="centered">SKILLS</h3>
     <div class="grid-x">
     <div class="cell large-6 medium-12 skills__box ">
         <i class="fab fa-html5"></i>
@@ -175,16 +176,15 @@
     </div>
 </section>
 
-<section class="particles">
-    <div class="particles__container" id="particles-container">
-    </div>
+<section class="particles" id="particles-section">
+    <div class="particles__container" id="particles-container"></div>
     <div class="particles__text">
         <h3>SAUCY INTERACTIVE JAVASCRIPT</h3>
         <p>Don't waste too much of the working day playing with this..</p>
     </div>
 </section>
 
-<section class="edex">
+<section class="edex" id="about-section">
     <div class="grid-x">
     <div class="cell large-5 medium-12">
         <div class="edex__image">
@@ -203,22 +203,160 @@
                 This prompted me to change courses, jumping into the second year of Digital Art & Technology (now referred to as Digital Media Design) at Plymouth University.<br>
                 The curriculum consisted of a mixture of projects, all creative, but some with a larger amount of programming involved. Before I knew it, I was diving into web development, 
                 using my design skills to inform technical decisions and vice versa.<br>
-                I graduated in 2019 with a First Class Honours, and after a year in my first industry role as a Front-End Developer, I am now looking for new opportunities.
+                I graduated in 2019 with a First Class Honours, and after a year in my first industry role as a Front-End Developer at BillBuddy, I am now looking for new opportunities.
             </p>
         </div>
     </div>
-
     </div>
 </section>
 
-<section id="binary" class="binary">
+<section class="projects" id="projects-section">
+    <h3 class="centered">PROJECTS</h3>
+    <div class="projects__inner">
+        <div class="grid-x">
+            <div class="cell large-4 medium-12">
+                <div class="projects__inner__box">
+                    <img src="static/images/profile.jpg">
+                    <div class="projects__inner__box__text">
+                        <h5>HUMAN AUGMENTATION LIBRARY</h5>
+                        <p>Project involving the conception and design of futuristic human augmentations.</p>
+                        <i class="fas fa-chevron-left"></i><a id="human">READ MORE</a><i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cell large-4 medium-12">
+                <div class="projects__inner__box">
+                    <img src="static/images/profile.jpg">
+                    <div class="projects__inner__box__text">
+                        <h5>PROJECT TITLE</h5>
+                        <p>Project created bla bla llboesjgreoijvroivjewgvioj jibreghpowrvpriwj</p>
+                        <i class="fas fa-chevron-left"></i><a id="project">READ MORE</a><i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cell large-4 medium-12">
+                <div class="projects__inner__box">
+                    <img src="static/images/profile.jpg">
+                    <div class="projects__inner__box__text">
+                        <h5>BILLBUDDY</h5>
+                        <p>My graduate role as a Front-End Developer at BillBuddy.</p>
+                        <i class="fas fa-chevron-left"></i><a id="billbuddy">READ MORE</a><i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="projects__modal__background"></div>
+
+<div class="projects__modal" id="human-modal">
+    <div class="projects__modal__title">
+        <h3>HUMAN AUGMENTATION LIBRARY</h3>
+        <i class="fas fa-times"></i>
+    </div>
+    <p>Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+    </p>
+    <div class="projects__modal__tiles">
+        <div class="grid-x">
+        <div class="cell medium-4">
+            <img src="static/images/test/car1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+            <img src="static/images/test/sky1.jpeg">
+        </div>
+        <div class="cell medium-4">
+            <img src="static/images/test/sky2.jpeg">                
+            <img src="static/images/test/car3.jpeg">
+            <img src="static/images/test/sky3.jpeg">
+            <img src="static/images/test/sky1.jpeg">
+        </div>
+        <div class="cell medium-4">
+            <img src="static/images/test/space1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects__modal" id="project-modal">
+    <div class="projects__modal__title">
+        <h3>PROJECT TITLE</h3>
+        <i class="fas fa-times"></i>
+    </div>
+    <p>Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+    </p>
+    <div class="projects__modal__tiles">
+        <div class="grid-x">
+        <div class="cell medium-4">
+            <img src="static/images/test/car1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+            <img src="static/images/test/sky1.jpeg">
+        </div>
+        <div class="cell medium-4">
+            <img src="static/images/test/sky2.jpeg">                
+            <img src="static/images/test/car3.jpeg">
+            <img src="static/images/test/sky3.jpeg">
+            <img src="static/images/test/sky1.jpeg">
+        </div>
+        <div class="cell medium-4">
+            <img src="static/images/test/space1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects__modal" id="billbuddy-modal">
+    <div class="projects__modal__title">
+        <h3>BILLBUDDY</h3>
+        <i class="fas fa-times"></i>
+    </div>
+    <p>Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+        Project description is bla bla description about what i did yayayayayayaay
+    </p>
+    <div class="projects__modal__tiles">
+        <div class="grid-x">
+        <div class="cell medium-4">
+            <img src="static/images/test/car1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+            <img src="static/images/test/sky1.jpeg">
+        </div>
+        <div class="cell medium-4">
+            <img src="static/images/test/sky2.jpeg">                
+            <img src="static/images/test/car3.jpeg">
+            <img src="static/images/test/sky3.jpeg">
+            <img src="static/images/test/sky1.jpeg">
+        </div>
+        <div class="cell medium-4">
+            <img src="static/images/test/space1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+        </div>
+        </div>
+    </div>
+</div>
+
+<section id="binary-section" class="binary">
     <canvas id="canvas"></canvas>
     <div class="binary__content">
         <h3>GET IN TOUCH</h3>
         <p>If you think I would be a great addition to your team, contact me via one of the following </p>
         <input id="emailInput" type="text" value="ninety5code@gmail.com"/>
         <button id="emailCopy"><i class="fas fa-copy"></i></button>
-        <a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+        <a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
 </section>
 
