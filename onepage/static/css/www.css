@@ -523,6 +523,9 @@
   max-width: 1300px;
 }
 @media only screen and (max-width: 1023px) {
+  .map {
+    margin-bottom: 50px;
+  }
   .map__container {
     height: 400px;
     margin: 0 0 100px;
@@ -544,6 +547,9 @@
     padding: 0 45px;
     text-align: center;
   }
+  .map__text__container {
+    margin: 40px 0;
+  }
   .map h1 {
     line-height: 5.5rem;
     font-size: 85px;
@@ -557,6 +563,7 @@
 .particles {
   height: 500px;
   width: 100%;
+  margin-bottom: 125px;
   left: -100px;
   position: relative;
   z-index: 1;
@@ -583,7 +590,6 @@
   position: relative;
   width: 100%;
   height: 600px;
-  margin-top: 120px;
 }
 .binary h3 {
   font-family: "Rubik-Bold", serif;
@@ -641,7 +647,7 @@
 }
 .skills {
   position: relative;
-  margin: 0 2% 40px;
+  margin: 0 2% 50px;
 }
 .skills__box {
   position: relative;
@@ -933,7 +939,7 @@
 
 .edex {
   position: relative;
-  margin: 50px 0;
+  margin-bottom: 100px;
 }
 .edex__image {
   position: relative;
@@ -982,7 +988,7 @@
 
 .projects {
   position: relative;
-  margin: 100px 0;
+  margin-bottom: 100px;
   text-align: center;
 }
 .projects__inner {

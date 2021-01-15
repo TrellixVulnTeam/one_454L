@@ -67,6 +67,8 @@
   }
 
   @media only screen and (max-width: 1023px) {
+    margin-bottom: 50px;
+    
     &__container {
       height: 400px;
       margin: 0 0 100px;
@@ -90,6 +92,10 @@
       margin: 0 auto;
       padding: 0 45px;
       text-align: center;
+
+      &__container {
+        margin: 40px 0;
+      }
     }
 
       h1 {

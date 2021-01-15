@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Alexander Barnes</title>
-<link rel="icon" type="image/png" href="/static/images/logo2.svg">
+<link rel="icon" type="image/png" href="/static/images/logo-icon.ico">
 <link rel="stylesheet" href="/static/css/www.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
@@ -15,7 +15,7 @@
 <script type="module" src="/static/js/particles.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<!-- <script type="module" src="/static/js/loader.js"></script> -->
+<script type="module" src="/static/js/loader.js"></script>
 <script type="module" src="/static/js/projects.js"></script>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
@@ -26,10 +26,10 @@
 </head>
 <body class="core" id="body">
 
-<!-- <div class="loader">
+<div class="loader">
     <div class="loader__progress-bar"></div>
     <h1 class="loader__count"></h1>
-</div> -->
+</div>
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -56,12 +56,12 @@
         <div class="cell large-8 show-for-large">
             <div class="nav__desktop">
                 <div class="nav__desktop__items">
-                    <div class="nav__desktop__items__item active" id="hello">HELLO</div>
-                    <div class="nav__desktop__items__item" id="skills">SKILLS</div>
-                    <div class="nav__desktop__items__item" id="particles">PARTICLES</div>
-                    <div class="nav__desktop__items__item" id="about">EDU / EXP</div>
-                    <div class="nav__desktop__items__item" id="projects">PROJECTS</div>
-                    <div class="nav__desktop__items__item" id="binary">LET'S TALK</div>
+                    <div class="nav__desktop__items__item active" data-section="hello">HELLO</div>
+                    <div class="nav__desktop__items__item" data-section="skills">SKILLS</div>
+                    <div class="nav__desktop__items__item" data-section="particles">PARTICLES</div>
+                    <div class="nav__desktop__items__item" data-section="about">EDU / EXP</div>
+                    <div class="nav__desktop__items__item" data-section="projects">PROJECTS</div>
+                    <div class="nav__desktop__items__item" data-section="binary">LET'S TALK</div>
                 </div>
             </div>
         </div>
@@ -73,12 +73,12 @@
 
             <div class="nav__mobile">
                 <div id="menu" class="nav__mobile__items">
-                    <div class="nav__mobile__items__item active">HELLO</div>
-                    <div class="nav__mobile__items__item">SKILLS</div>
-                    <div class="nav__mobile__items__item">PARTICLES</div>
-                    <div class="nav__mobile__items__item">EDU / EXP</div>
-                    <div class="nav__mobile__items__item">PROJECTS</div>
-                    <div class="nav__mobile__items__item">LET'S TALK</div>
+                    <div class="nav__mobile__items__item active" data-section="hello">HELLO</div>
+                    <div class="nav__mobile__items__item" data-section="skills">SKILLS</div>
+                    <div class="nav__mobile__items__item" data-section="particles">PARTICLES</div>
+                    <div class="nav__mobile__items__item" data-section="about">EDU / EXP</div>
+                    <div class="nav__mobile__items__item" data-section="projects">PROJECTS</div>
+                    <div class="nav__mobile__items__item" data-section="binary">LET'S TALK</div>
                     <div class="nav__mobile__items__item__social"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
                 </div>
                 <div id="hamburger" class="nav__mobile__hamburger-icon-container">

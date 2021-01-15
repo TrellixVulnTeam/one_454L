@@ -1,37 +1,42 @@
 import {init, resetCanvas, step} from "./particles.js";
 
 let body = document.getElementsByClassName('core');
+
 let mapText = document.getElementsByClassName('map__text');
 let mapShadow = document.getElementsByClassName('map__shadow');
+
 let particlesText = document.getElementsByClassName('particles__text');
+
 let binaryText = document.getElementsByClassName('binary__container__content');
-let mobileNav = document.getElementsByClassName('nav__mobile__hamburger-icon-container');
-let mobileNavBg = document.getElementsByClassName('nav__mobile__background');
-let mobileNavItems = document.getElementsByClassName('nav__mobile__items__item');
+let binaryForeground = document.querySelector('path');
+
+let mobileMenu = document.getElementsByClassName('nav__mobile__hamburger-icon-container');
+let mobileMenuBg = document.getElementsByClassName('nav__mobile__background');
+let mobileMenuItem = document.getElementsByClassName('nav__mobile__items__item');
 let menu = document.getElementById('menu');
+
 let hamburger = document.getElementById('hamburger');
-let menu_item = document.getElementsByClassName('nav__desktop__items__item');
-let mobile_menu_item = document.getElementsByClassName('nav__mobile__items__item');
-let mobile_background = document.getElementsByClassName('nav__mobile__background');
+let menuItem = document.getElementsByClassName('nav__desktop__items__item');
+
 let upChevron = document.getElementById('upChevron');
+
 let themeBox = document.getElementById('themeBox');
 let themeToggle = document.getElementById('themeToggle');
 let themeToggleInput = document.getElementById('themeToggleInput');
 let themeToggleSlider = document.getElementById('themeToggleSlider');
 let themeChevron = document.getElementById('themeChevron');
 let themeChevronContainer = document.getElementById('themeChevronContainer');
-let binaryForeground = document.querySelector('path');
 
 window.onload = function() {
 
     hamburger.addEventListener('click', navStatus);
 
-    for (let i = 0; i < menu_item.length; i++) {
-        menu_item[i].addEventListener('click', navUnderline);
+    for (let i = 0; i < menuItem.length; i++) {
+        menuItem[i].addEventListener('click', navUnderline);
     }
 
-    for (let i = 0; i < mobile_menu_item.length; i++) {
-        mobile_menu_item[i].addEventListener('click', mobileNavUnderline);
+    for (let i = 0; i < mobileMenuItem.length; i++) {
+        mobileMenuItem[i].addEventListener('click', mobileNavUnderline);
     }
 
     function navStatus() {
@@ -43,24 +48,24 @@ window.onload = function() {
     }
 
     function navClose() {
-        $(mobile_background).removeClass('active');
+        $(mobileMenuBg).removeClass('active');
         $(hamburger).removeClass('active');
         $(menu).removeClass('active');
     }
 
     function navOpen() {
-        $(mobile_background).addClass('active');
+        $(mobileMenuBg).addClass('active');
         $(hamburger).addClass('active');
         $(menu).addClass('active');
     }
 
     function navUnderline() {
-        $(menu_item).removeClass('active');
+        $(menuItem).removeClass('active');
         $(this).addClass('active');
     }
 
     function mobileNavUnderline() {
-        $(mobile_menu_item).removeClass('active');
+        $(mobileMenuItem).removeClass('active');
         $(this).addClass('active');
     }
 
@@ -118,9 +123,9 @@ function themeClassChanges() {
         $(mapText).addClass('dark');
         $(particlesText).addClass('dark');
         $(binaryText).addClass('dark');
-        $(mobileNav).addClass('dark');
-        $(mobileNavBg).addClass('dark');
-        $(mobileNavItems).addClass('dark');
+        $(mobileMenu).addClass('dark');
+        $(mobileMenuBg).addClass('dark');
+        $(mobileMenuItem).addClass('dark');
         $(binaryForeground).addClass('dark');
         resetCanvas();
     } else {
@@ -133,9 +138,9 @@ function themeClassChanges() {
         $(mapText).removeClass('dark');
         $(particlesText).removeClass('dark');
         $(binaryText).removeClass('dark');
-        $(mobileNav).removeClass('dark');
-        $(mobileNavBg).removeClass('dark');
-        $(mobileNavItems).removeClass('dark');
+        $(mobileMenu).removeClass('dark');
+        $(mobileMenuBg).removeClass('dark');
+        $(mobileMenuItem).removeClass('dark');
         $(binaryForeground).removeClass('dark');
         resetCanvas();
     }
@@ -166,14 +171,27 @@ let observer = new IntersectionObserver(entries => {
   skillBars.forEach(bar => {
     observer.observe(bar);
   });
-  
-let navItems = $('.nav__desktop__items__item');
 
-$(navItems).on('click', function() {
-    let navId = $(this).attr('id');
-    let matchingSection = $('body').find('section#' + navId + '-section');
+$(menuItem).on('click', function() {
+    let data = $(this).data('section');
+    let matchingSection = $('body').find('section#' + data + '-section');
 
     $('html, body').animate({
         scrollTop: $(matchingSection).offset().top-50
     }, 500);
 });
+
+$(mobileMenuItem).on('click', function() {
+    let data = $(this).data('section');
+    let section = $('body').find('section#' + data + '-section');
+
+    $(mobileMenuBg).removeClass('active');
+    $(hamburger).removeClass('active');
+    $(menu).removeClass('active');
+
+    setTimeout(function() {
+        $('html, body').animate({
+            scrollTop: $(section).offset().top-50
+        }, 500);
+    }, 1000);
+})

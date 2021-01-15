@@ -4,7 +4,7 @@ bar = document.querySelector('.loader__progress-bar'),
     i = 0,
     throttle = 0.7; // 0-1
 
-(function draw() {
+$(document).ready(function draw() {
   if(i <= 100) {
     var r = Math.random();
     
@@ -21,4 +21,4 @@ bar = document.querySelector('.loader__progress-bar'),
         background.classList.add('dissapear');
     }, 500);
   }
-})();
+});
