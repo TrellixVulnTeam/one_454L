@@ -1,0 +1,25 @@
+@use 'core' as *;
+
+.lottie {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+
+    lottie-player {
+        position: absolute;
+        top: 0;
+        right: -40%;
+    }
+
+    &__text {
+        position: relative;
+        left: 10%;
+        top: 50%;
+        max-width: 90%;
+
+        p {
+            font-family: "Karla-Regular", serif;
+            font-size: 20px;
+        }
+    }
+}

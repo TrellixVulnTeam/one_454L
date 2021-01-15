@@ -1086,3 +1086,24 @@
   background: #000;
   opacity: 50%;
 }
+
+.lottie {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+.lottie lottie-player {
+  position: absolute;
+  top: 0;
+  right: -40%;
+}
+.lottie__text {
+  position: relative;
+  left: 10%;
+  top: 50%;
+  max-width: 90%;
+}
+.lottie__text p {
+  font-family: "Karla-Regular", serif;
+  font-size: 20px;
+}
