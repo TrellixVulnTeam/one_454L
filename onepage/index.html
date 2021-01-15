@@ -15,7 +15,7 @@
 <script type="module" src="/static/js/particles.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<script type="module" src="/static/js/loader.js"></script>
+<!-- <script type="module" src="/static/js/loader.js"></script> -->
 <script type="module" src="/static/js/projects.js"></script>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
@@ -26,10 +26,10 @@
 </head>
 <body class="core" id="body">
 
-<div class="loader">
+<!-- <div class="loader">
     <div class="loader__progress-bar"></div>
     <h1 class="loader__count"></h1>
-</div>
+</div> -->
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -263,18 +263,26 @@
         Project description is bla bla description about what i did yayayayayayaay
     </p>
     <div class="projects__modal__tiles">
-        <img src="static/images/profile.jpg">
-        <img src="static/images/ai.svg">
-        <img src="static/images/ps.svg">
-        <img src="static/images/ae.svg">
-        <img src="static/images/profile.jpg">
-        <img src="static/images/ai.svg">
-        <img src="static/images/ps.svg">
-        <img src="static/images/ae.svg">
-        <img src="static/images/profile.jpg">
-        <img src="static/images/ai.svg">
-        <img src="static/images/ps.svg">
-        <img src="static/images/ae.svg">
+        <div class="grid-x">
+            <div class="cell medium-4">
+                <img src="static/images/test/car1.jpeg">
+                <img src="static/images/test/car2.jpeg">
+                <img src="static/images/test/sky1.jpeg">
+            </div>
+
+        <div class="cell medium-4">
+                <img src="static/images/test/sky2.jpeg">
+                <img src="static/images/test/car3.jpeg">
+                <img src="static/images/test/sky3.jpeg">
+                <img src="static/images/test/sky1.jpeg">
+        </div>
+
+        <div class="cell medium-4">
+                <img src="static/images/test/space1.jpeg">
+                <img src="static/images/test/car2.jpeg">
+        </div>
+       
+        </div>
     </div>
 </div>
 

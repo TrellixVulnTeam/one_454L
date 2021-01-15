@@ -430,10 +430,7 @@
 @media only screen and (max-width: 1023px) {
   .nav__logo {
     transform: none;
-  }
-  .nav__logo svg {
-    width: 100px;
-    height: 100px;
+    font-size: 55px;
   }
   .nav__mobile {
     display: block;
@@ -1040,6 +1037,10 @@
   display: none;
   overflow-y: scroll;
 }
+.projects__modal p {
+  max-width: 90%;
+  margin: 10px auto 30px;
+}
 .projects__modal__title {
   height: auto;
   background: #fff;
@@ -1052,7 +1053,7 @@
 .projects__modal__title i {
   position: absolute;
   right: 0;
-  margin: 10px 20px;
+  margin: 10px 30px;
   font-size: 22px;
   cursor: pointer;
 }
@@ -1062,6 +1063,10 @@
 .projects__modal__title h3 {
   display: inline-block;
   margin-bottom: 0;
+}
+.projects__modal__tiles img {
+  padding: 2px;
+  width: 100%;
 }
 .projects__modal__background {
   position: fixed;
