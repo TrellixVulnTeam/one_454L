@@ -167,3 +167,13 @@ let observer = new IntersectionObserver(entries => {
     observer.observe(bar);
   });
   
+let navItems = $('.nav__desktop__items__item');
+
+$(navItems).on('click', function() {
+    let navId = $(this).attr('id');
+    let matchingSection = $('body').find('section#' + navId + '-section');
+
+    $('html, body').animate({
+        scrollTop: $(matchingSection).offset().top-50
+    }, 500);
+});

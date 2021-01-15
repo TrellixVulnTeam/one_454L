@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    var container = document.getElementById("binary");
+    var container = document.querySelector("section#binary-section");
+
     var c = document.getElementById("canvas");
     var ctx = c.getContext("2d");
 

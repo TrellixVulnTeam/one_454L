@@ -5,7 +5,7 @@ let modalClose = $('.projects__modal').find('i');
 
 $(projectLink).on('click', function() {
     let projectId = $(this).prop('id');
-    let projectModal = $('.projects__modal').attr('id', projectId);
+    let projectModal = $('.projects__modal').attr('id', projectId + '-modal');
 
     $(projectModalBackground).fadeIn(500);
     $(projectModal).fadeIn(500);

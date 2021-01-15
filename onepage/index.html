@@ -56,12 +56,12 @@
         <div class="cell large-8 show-for-large">
             <div class="nav__desktop">
                 <div class="nav__desktop__items">
-                    <div class="nav__desktop__items__item active">HELLO</div>
-                    <div class="nav__desktop__items__item">SKILLS</div>
-                    <div class="nav__desktop__items__item">PARTICLES</div>
-                    <div class="nav__desktop__items__item">EDU / EXP</div>
-                    <div class="nav__desktop__items__item">PROJECTS</div>
-                    <div class="nav__desktop__items__item">LET'S TALK</div>
+                    <div class="nav__desktop__items__item active" id="hello">HELLO</div>
+                    <div class="nav__desktop__items__item" id="skills">SKILLS</div>
+                    <div class="nav__desktop__items__item" id="particles">PARTICLES</div>
+                    <div class="nav__desktop__items__item" id="about">EDU / EXP</div>
+                    <div class="nav__desktop__items__item" id="projects">PROJECTS</div>
+                    <div class="nav__desktop__items__item" id="binary">LET'S TALK</div>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
     </div>
 </div>
 
-<section class="map">
+<section class="map" id="hello-section">
     <div class="grid-x">
         <div class="cell large-6 medium-12 small-12 map__text__container">
             <div class="map__text">
@@ -106,7 +106,7 @@
     </div>
 </section>
 
-<section class="skills">
+<section class="skills" id="skills-section">
         <h3 class="centered">SKILLS</h3>
     <div class="grid-x">
     <div class="cell large-6 medium-12 skills__box ">
@@ -176,7 +176,7 @@
     </div>
 </section>
 
-<section class="particles">
+<section class="particles" id="particles-section">
     <div class="particles__container" id="particles-container"></div>
     <div class="particles__text">
         <h3>SAUCY INTERACTIVE JAVASCRIPT</h3>
@@ -184,7 +184,7 @@
     </div>
 </section>
 
-<section class="edex">
+<section class="edex" id="about-section">
     <div class="grid-x">
     <div class="cell large-5 medium-12">
         <div class="edex__image">
@@ -210,7 +210,7 @@
     </div>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects-section">
     <h3 class="centered">PROJECTS</h3>
     <div class="projects__inner">
         <div class="grid-x">
@@ -250,7 +250,7 @@
 
 <div class="projects__modal__background"></div>
 
-<div class="projects__modal" id="human">
+<div class="projects__modal" id="human-modal">
     <div class="projects__modal__title">
         <h3>PROJECT TITLE</h3>
         <i class="fas fa-times"></i>
@@ -264,37 +264,33 @@
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
-            <div class="cell medium-4">
-                <img src="static/images/test/car1.jpeg">
-                <img src="static/images/test/car2.jpeg">
-                <img src="static/images/test/sky1.jpeg">
-            </div>
-
         <div class="cell medium-4">
-                <img src="static/images/test/sky2.jpeg">
-                <img src="static/images/test/car3.jpeg">
-                <img src="static/images/test/sky3.jpeg">
-                <img src="static/images/test/sky1.jpeg">
+            <img src="static/images/test/car1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+            <img src="static/images/test/sky1.jpeg">
         </div>
-
         <div class="cell medium-4">
-                <img src="static/images/test/space1.jpeg">
-                <img src="static/images/test/car2.jpeg">
+            <img src="static/images/test/sky2.jpeg">                
+            <img src="static/images/test/car3.jpeg">
+            <img src="static/images/test/sky3.jpeg">
+            <img src="static/images/test/sky1.jpeg">
         </div>
-       
+        <div class="cell medium-4">
+            <img src="static/images/test/space1.jpeg">
+            <img src="static/images/test/car2.jpeg">
+        </div>
         </div>
     </div>
 </div>
 
-
-<section id="binary" class="binary">
+<section id="binary-section" class="binary">
     <canvas id="canvas"></canvas>
     <div class="binary__content">
         <h3>GET IN TOUCH</h3>
         <p>If you think I would be a great addition to your team, contact me via one of the following </p>
         <input id="emailInput" type="text" value="ninety5code@gmail.com"/>
         <button id="emailCopy"><i class="fas fa-copy"></i></button>
-        <a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+        <a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
 </section>
 
