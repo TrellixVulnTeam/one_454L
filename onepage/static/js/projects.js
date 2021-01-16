@@ -21,7 +21,7 @@ $(modalClose).on('click', function() {
 })
 
 function close() {
-    let currentProjectModal = $('.projects__modal').css('display', 'block');
+    let currentProjectModal = $('.projects__modal:visible');
 
     $(currentProjectModal).fadeOut(300);
     $(projectModalBackground).fadeOut(300);
