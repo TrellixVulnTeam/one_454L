@@ -17,7 +17,7 @@
 <script type="module" src="/static/js/particles.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<script type="module" src="/static/js/loader.js"></script>
+<!-- <script type="module" src="/static/js/loader.js"></script> -->
 <script type="module" src="/static/js/projects.js"></script>
 <script type="module" src="/static/js/lottie.js"></script>
 
@@ -29,10 +29,10 @@
 </head>
 <body class="core" id="body">
 
-<div class="loader">
+<!-- <div class="loader">
     <div class="loader__progress-bar"></div>
     <h1 class="loader__count"></h1>
-</div>
+</div> -->
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -59,13 +59,13 @@
         <div class="cell large-8 show-for-large">
             <div class="nav__desktop">
                 <div class="nav__desktop__items">
-                    <div class="nav__desktop__items__item active" data-section="hello">HELLO</div>
-                    <div class="nav__desktop__items__item" data-section="skills">SKILLS</div>
-                    <div class="nav__desktop__items__item" data-section="particles">PARTICLES</div>
-                    <div class="nav__desktop__items__item" data-section="about">EDU / EXP</div>
-                    <div class="nav__desktop__items__item" data-section="projects">PROJECTS</div>
-                    <div class="nav__desktop__items__item" data-section="lottie">LOTTIE</div>
-                    <div class="nav__desktop__items__item" data-section="binary">LET'S TALK</div>
+                    <div class="nav__desktop__items__item active" data-section="hello" id="hello">HELLO</div>
+                    <div class="nav__desktop__items__item" data-section="skills" id="skills">SKILLS</div>
+                    <div class="nav__desktop__items__item" data-section="particles" id="particles">PARTICLES</div>
+                    <div class="nav__desktop__items__item" data-section="about" id="about">EDU / EXP</div>
+                    <div class="nav__desktop__items__item" data-section="projects" id="projects">PROJECTS</div>
+                    <div class="nav__desktop__items__item" data-section="lottie" id="lottie">LOTTIE</div>
+                    <div class="nav__desktop__items__item" data-section="binary" id="binary">LET'S TALK</div>
                 </div>
             </div>
         </div>
@@ -77,13 +77,13 @@
 
             <div class="nav__mobile">
                 <div id="menu" class="nav__mobile__items">
-                    <div class="nav__mobile__items__item active" data-section="hello">HELLO</div>
-                    <div class="nav__mobile__items__item" data-section="skills">SKILLS</div>
-                    <div class="nav__mobile__items__item" data-section="particles">PARTICLES</div>
-                    <div class="nav__mobile__items__item" data-section="about">EDU / EXP</div>
-                    <div class="nav__mobile__items__item" data-section="projects">PROJECTS</div>
-                    <div class="nav__mobile__items__item" data-section="lottie">LOTTIE</div>
-                    <div class="nav__mobile__items__item" data-section="binary">LET'S TALK</div>
+                    <div class="nav__mobile__items__item active" data-section="hello" id="smallscreen-hello">HELLO</div>
+                    <div class="nav__mobile__items__item" data-section="skills" id="smallscreen-skills">SKILLS</div>
+                    <div class="nav__mobile__items__item" data-section="particles" id="smallscreen-particles">PARTICLES</div>
+                    <div class="nav__mobile__items__item" data-section="about" id="smallscreen-about">EDU / EXP</div>
+                    <div class="nav__mobile__items__item" data-section="projects" id="smallscreen-projects">PROJECTS</div>
+                    <div class="nav__mobile__items__item" data-section="lottie" id="smallscreen-lottie">LOTTIE</div>
+                    <div class="nav__mobile__items__item" data-section="binary" id="smallscreen-binary">LET'S TALK</div>
                     <div class="nav__mobile__items__item__social"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
                 </div>
                 <div id="hamburger" class="nav__mobile__hamburger-icon-container">

@@ -195,3 +195,27 @@ $(mobileMenuItem).on('click', function() {
         }, 500);
     }, 1000);
 })
+
+function soulmate(event) {
+    let element = $(event.target);
+    let element_id = element.attr('id');
+    let sid;
+
+    if (element_id.indexOf("smallscreen-") >= 0) {
+        sid = "#" + element_id.replace("smallscreen-", "");
+        $(menuItem).removeClass('active');
+        $(sid).addClass('active');
+    } else {
+        sid = "#" + "smallscreen-" + element_id;
+        $(mobileMenuItem).removeClass('active');
+        $(sid).addClass('active');
+    }
+}
+
+$(mobileMenuItem).on('click', function(event) {
+    soulmate(event);
+});
+
+$(menuItem).on("click", function(event) {
+    soulmate(event);
+});
