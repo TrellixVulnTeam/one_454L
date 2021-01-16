@@ -17,6 +17,10 @@
 .core {
   position: relative;
 }
+.core.dark {
+  background: #000;
+  color: #fff;
+}
 .core.no-scroll {
   overflow: hidden;
 }
@@ -34,9 +38,6 @@
 .core h5 {
   font-family: "Rubik-Bold", serif;
   margin: 0 auto 10px;
-}
-.core.dark {
-  background: #000;
 }
 .core__scroll-top {
   position: fixed;
@@ -198,6 +199,10 @@
   font-weight: 400;
   font-style: normal;
   font-size: 34px;
+  color: #000;
+}
+.nav__logo.dark {
+  color: #fff;
 }
 .nav__social {
   text-align: right;
@@ -405,6 +410,9 @@
   color: #888888;
   font-size: 16px;
 }
+.nav__desktop__items__item.dark {
+  color: #fff;
+}
 .nav__desktop__items__item:after {
   content: "";
   position: absolute;
@@ -609,9 +617,7 @@
   background: #fff;
   border-radius: 4px;
   padding: 25px;
-}
-.binary__content.dark {
-  color: #fff;
+  color: #0a0a0a !important;
 }
 .binary__content i {
   font-size: 20px;
@@ -694,6 +700,9 @@
   border-radius: 23px;
   background: #ffffff;
   box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
+}
+.skills__box__loader.dark {
+  box-shadow: none;
 }
 .skills__box__loader__inner {
   position: relative;
@@ -1005,6 +1014,10 @@
   border-radius: 10px;
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
+.projects__inner__box.dark {
+  box-shadow: none;
+  color: #0a0a0a;
+}
 .projects__inner__box img {
   height: 55%;
   width: 100%;
@@ -1042,6 +1055,7 @@
   text-align: center;
   display: none;
   overflow-y: scroll;
+  color: #0a0a0a !important;
 }
 .projects__modal p {
   max-width: 90%;

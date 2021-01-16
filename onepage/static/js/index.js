@@ -2,12 +2,10 @@ import {init, resetCanvas, step} from "./particles.js";
 
 let body = document.getElementsByClassName('core');
 
-let mapText = document.getElementsByClassName('map__text');
+let navLogo = document.getElementsByClassName('nav__logo');
+
 let mapShadow = document.getElementsByClassName('map__shadow');
 
-let particlesText = document.getElementsByClassName('particles__text');
-
-let binaryText = document.getElementsByClassName('binary__container__content');
 let binaryForeground = document.querySelector('path');
 
 let mobileMenu = document.getElementsByClassName('nav__mobile__hamburger-icon-container');
@@ -26,6 +24,11 @@ let themeToggleInput = document.getElementById('themeToggleInput');
 let themeToggleSlider = document.getElementById('themeToggleSlider');
 let themeChevron = document.getElementById('themeChevron');
 let themeChevronContainer = document.getElementById('themeChevronContainer');
+
+let skillBarsOuter = document.querySelectorAll(".skills__box__loader");
+let skillBars = document.querySelectorAll(".skills__box__loader__inner");
+
+let projectsBox = document.querySelectorAll(".projects__inner__box");
 
 window.onload = function() {
 
@@ -118,30 +121,46 @@ function themeClassChanges() {
         $(themeToggleSlider).addClass('dark');
         $(themeChevron).addClass('dark');
         $(themeChevronContainer).addClass('dark');
+
         $(body).addClass('dark');
+
         $(mapShadow).addClass('dark');
-        $(mapText).addClass('dark');
-        $(particlesText).addClass('dark');
-        $(binaryText).addClass('dark');
+ 
         $(mobileMenu).addClass('dark');
         $(mobileMenuBg).addClass('dark');
         $(mobileMenuItem).addClass('dark');
+
         $(binaryForeground).addClass('dark');
+
+        $(navLogo).addClass('dark');
+        $(menuItem).addClass('dark');
+
+        $(skillBarsOuter).addClass('dark');
+
+        $(projectsBox).addClass('dark');
         resetCanvas();
     } else {
         $(themeBox).removeClass('dark');
         $(themeToggleSlider).removeClass('dark');
         $(themeChevron).removeClass('dark');
         $(themeChevronContainer).removeClass('dark');
+
         $(body).removeClass('dark');
+
         $(mapShadow).removeClass('dark');
-        $(mapText).removeClass('dark');
-        $(particlesText).removeClass('dark');
-        $(binaryText).removeClass('dark');
+
         $(mobileMenu).removeClass('dark');
         $(mobileMenuBg).removeClass('dark');
         $(mobileMenuItem).removeClass('dark');
+
         $(binaryForeground).removeClass('dark');
+
+        $(navLogo).removeClass('dark');
+        $(menuItem).removeClass('dark');
+
+        $(skillBarsOuter).removeClass('dark');
+
+        $(projectsBox).removeClass('dark');
         resetCanvas();
     }
 }
@@ -151,8 +170,6 @@ function copy() {
     copyText.select();
     document.execCommand("copy");
   }
-
-let skillBars = document.querySelectorAll(".skills__box__loader__inner");
 
 const config = {
     root: null,

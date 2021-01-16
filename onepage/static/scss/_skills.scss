@@ -67,6 +67,10 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass),
       background: #ffffff;
       box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
 
+      &.dark {
+        box-shadow: none;
+      }
+
       &__inner {
         position: relative;
         left: 0;

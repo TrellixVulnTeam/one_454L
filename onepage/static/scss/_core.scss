@@ -26,6 +26,11 @@ $green: #6DDCBD;
 .core {
   position: relative;
 
+  &.dark {
+    background: #000;
+    color: #fff;
+  }
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -47,10 +52,6 @@ h5 {
   font-family: "Rubik-Bold", serif;
   margin: 0 auto 10px;
 }
-
-  &.dark {
-    background: #000;
-  }
 
   &__scroll-top {
     position: fixed;

@@ -20,6 +20,11 @@
             box-shadow:  20px 20px 60px #d9d9d9,
              -20px -20px 60px #ffffff;
 
+             &.dark {
+                 box-shadow: none;
+                 color: #0a0a0a;
+             }
+
              img {
                  height: 55%;
                  width: 100%;
@@ -64,6 +69,7 @@
         text-align: center;
         display: none;
         overflow-y: scroll;
+        color: #0a0a0a!important;
 
         p {
             max-width: 90%;
