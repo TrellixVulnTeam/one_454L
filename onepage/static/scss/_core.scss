@@ -18,6 +18,8 @@
   src: url("../fonts/Karla-Regular.ttf") format('TrueType');
 }
 
+$font-black: #0a0a0a;
+
 $black: #2d2d2a;
 $blue: #5e4ae3;
 $linkedin: #0e76a8;
@@ -29,6 +31,90 @@ $green: #6DDCBD;
   &.dark {
     background: #000;
     color: #fff;
+
+    .core {
+      &__toggle {
+
+        &__box {
+          background: #fff;
+          border-color: $blue;
+
+          &__outer {
+            color: $blue;
+          }
+        }
+
+        &__slider {
+          background-color: $blue;
+
+        &:before {
+          background: #fff;
+        }
+
+        &:after {
+          color: $blue;
+        }
+        }
+      }
+    }
+
+    .map__shadow {
+      box-shadow: inset 0 -10px 50px 85px #000;
+    }
+
+    .nav__logo {
+      color: #fff;
+    }
+
+    .skills__box {
+      i.fa-github {
+        color: #fff;
+      }
+      
+      &__loader {
+      box-shadow: none;
+      color: $font-black;
+    }
+  }
+
+  .projects__inner__box {       
+    box-shadow: none;
+    color: #0a0a0a;
+}
+
+.nav__mobile__background {
+  background: #fff;
+}
+
+.nav__mobile__hamburger-icon {
+  background: #fff;
+
+  &:before, &:after {
+    background: #fff;
+  }
+
+  &.active {
+      &:before, &:after {
+        background: $blue;
+      }
+  }
+}
+
+.nav__mobile__items__item {
+color: #fff;
+
+    &.active {
+      color: $blue;
+
+      &:after {
+        background: #fff;
+      }
+    }
+  }
+
+  .nav__desktop__items__item {
+    color: #fff;
+  }
   }
 
   &.no-scroll {
@@ -80,11 +166,6 @@ h5 {
     opacity: 0;
     transition: .4s ease;
 
-    &.active {
-      opacity: 1;
-      transition: .4s ease;
-    }
-
     &__box {
       position: fixed;
       right: -65px;
@@ -98,6 +179,23 @@ h5 {
       z-index: 10;
       transition: .4s ease;
 
+      &.active {
+          right: -25px;
+          transition: .4s ease;
+
+          .core__toggle {
+            opacity: 1;
+            transition: .4s ease;
+          }
+  
+          &.core__toggle__box__outer {
+            i {
+              transform: rotate(180deg);
+              transition: .4s ease;
+            }
+          }
+        }
+
       &__outer {
         color: #fff;
         font-size: 14px;
@@ -109,30 +207,17 @@ h5 {
         i {
           transition: .4s ease;
 
-          &.active {
-            transform: rotate(180deg);
-            transition: .4s ease;
-          }
-        }
-
-        &.dark {
-          color: $blue;
+          // &.active {
+            // transform: rotate(180deg);
+            // transition: .4s ease;
+          // }
         }
       }
 
-      &.active {
-        right: -25px;
-        transition: .4s ease;
-      }
-
-      &.dark {
-        background: #fff;
-        border-color: $blue;
-
-        &__outer {
-          color: $blue;
-        }
-      }
+      // &.active {
+        // right: -25px;
+        // transition: .4s ease;
+      // }
     }
 
     input[type=checkbox] {
@@ -184,18 +269,6 @@ h5 {
         transform: translateY(-50%);
         color: #fff;
         font-size: 12px;
-      }
-
-      &.dark {
-        background-color: $blue;
-
-        &:before {
-          background: #fff;
-        }
-
-        &:after {
-          color: $blue;
-        }
       }
     }
   }

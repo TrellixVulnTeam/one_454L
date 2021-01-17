@@ -2,37 +2,26 @@ import {init, resetCanvas, step} from "./particles.js";
 
 let body = document.getElementsByClassName('core');
 
-let navLogo = document.getElementsByClassName('nav__logo');
-
-let mapShadow = document.getElementsByClassName('map__shadow');
-
-let binaryForeground = document.querySelector('path');
-
-let mobileMenu = document.getElementsByClassName('nav__mobile__hamburger-icon-container');
+let mobileNav = document.getElementById('mobile-nav');
 let mobileMenuBg = document.getElementsByClassName('nav__mobile__background');
 let mobileMenuItem = document.getElementsByClassName('nav__mobile__items__item');
-let menu = document.getElementById('menu');
-
 let hamburger = document.getElementById('hamburger');
+
 let menuItem = document.getElementsByClassName('nav__desktop__items__item');
 
-let upChevron = document.getElementById('upChevron');
+let upChevron = document.getElementsByClassName('core__scroll-top');
 
 let themeBox = document.getElementById('themeBox');
-let themeToggle = document.getElementById('themeToggle');
 let themeToggleInput = document.getElementById('themeToggleInput');
-let themeToggleSlider = document.getElementById('themeToggleSlider');
 let themeChevron = document.getElementById('themeChevron');
-let themeChevronContainer = document.getElementById('themeChevronContainer');
 
-let skillBarsOuter = document.querySelectorAll(".skills__box__loader");
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
-
-let projectsBox = document.querySelectorAll(".projects__inner__box");
 
 window.onload = function() {
 
     hamburger.addEventListener('click', navStatus);
+    themeToggleInput.addEventListener('click', themeClassChanges);
+    document.querySelector("#emailCopy").addEventListener("click", copy);
 
     for (let i = 0; i < menuItem.length; i++) {
         menuItem[i].addEventListener('click', navUnderline);
@@ -42,40 +31,18 @@ window.onload = function() {
         mobileMenuItem[i].addEventListener('click', mobileNavUnderline);
     }
 
-    function navStatus() {
-        if ((hamburger).classList.contains('active')) {
-            navClose();
-        } else {
-            navOpen();
-        }
-    }
-
-    function navClose() {
-        $(mobileMenuBg).removeClass('active');
-        $(hamburger).removeClass('active');
-        $(menu).removeClass('active');
-    }
-
-    function navOpen() {
-        $(mobileMenuBg).addClass('active');
-        $(hamburger).addClass('active');
-        $(menu).addClass('active');
-    }
-
-    function navUnderline() {
-        $(menuItem).removeClass('active');
-        $(this).addClass('active');
-    }
-
-    function mobileNavUnderline() {
-        $(mobileMenuItem).removeClass('active');
-        $(this).addClass('active');
-    }
-
     $(upChevron).on('click', function() {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#nav").offset().top
         }, 500);
+    });
+
+    $(themeChevron).on('click', function() {
+        if ((themeBox).classList.contains('active')) {
+            $(themeBox).removeClass('active');
+        } else {
+            $(themeBox).addClass('active');
+        }
     });
 
     $(document).scroll(function() {
@@ -87,80 +54,46 @@ window.onload = function() {
         }
     });
 
-    $(themeChevron).on('click', function() {
-        if ((themeBox).classList.contains('active')) {
-            themeBoxClose();
-        } else {
-            themeBoxOpen();
-        }
-    });
-
-    function themeBoxOpen() {
-        $(themeChevron).addClass('active');
-        $(themeBox).addClass('active');
-        $(themeToggle).addClass('active');
-    }
-
-    function themeBoxClose() {
-        $(themeChevron).removeClass('active');
-        $(themeBox).removeClass('active');
-        $(themeToggle).removeClass('active');
-    }
-
-    themeToggleInput.addEventListener('click', themeClassChanges);
-
-    document.querySelector("#emailCopy").addEventListener("click", copy);
-
     init();
     step();
 };
 
+function navStatus() {
+    if ((mobileNav).classList.contains('active')) {
+        navClose();
+    } else {
+        navOpen();
+    }
+}
+
+function navClose() {
+    $(mobileNav).removeClass('active');
+    $(mobileMenuBg).removeClass('active');
+    $(hamburger).removeClass('active');
+}
+
+function navOpen() {
+    $(mobileNav).addClass('active');
+    $(mobileMenuBg).addClass('active');
+    $(hamburger).addClass('active');
+}
+
+function navUnderline() {
+    $(menuItem).removeClass('active');
+    $(this).addClass('active');
+}
+
+function mobileNavUnderline() {
+    $(mobileMenuItem).removeClass('active');
+    $(this).addClass('active');
+}
+
 function themeClassChanges() {
     if ($(themeToggleInput).is(":checked")) {
-        $(themeBox).addClass('dark');
-        $(themeToggleSlider).addClass('dark');
-        $(themeChevron).addClass('dark');
-        $(themeChevronContainer).addClass('dark');
-
         $(body).addClass('dark');
-
-        $(mapShadow).addClass('dark');
- 
-        $(mobileMenu).addClass('dark');
-        $(mobileMenuBg).addClass('dark');
-        $(mobileMenuItem).addClass('dark');
-
-        $(binaryForeground).addClass('dark');
-
-        $(navLogo).addClass('dark');
-        $(menuItem).addClass('dark');
-
-        $(skillBarsOuter).addClass('dark');
-
-        $(projectsBox).addClass('dark');
         resetCanvas();
     } else {
-        $(themeBox).removeClass('dark');
-        $(themeToggleSlider).removeClass('dark');
-        $(themeChevron).removeClass('dark');
-        $(themeChevronContainer).removeClass('dark');
-
         $(body).removeClass('dark');
-
-        $(mapShadow).removeClass('dark');
-
-        $(mobileMenu).removeClass('dark');
-        $(mobileMenuBg).removeClass('dark');
-        $(mobileMenuItem).removeClass('dark');
-
-        $(binaryForeground).removeClass('dark');
-
-        $(navLogo).removeClass('dark');
-        $(menuItem).removeClass('dark');
-
-        $(skillBarsOuter).removeClass('dark');
-
-        $(projectsBox).removeClass('dark');
         resetCanvas();
     }
 }
@@ -193,24 +126,24 @@ $(menuItem).on('click', function() {
     let data = $(this).data('section');
     let matchingSection = $('body').find('section#' + data + '-section');
 
+    setTimeout(function() {
     $('html, body').animate({
         scrollTop: $(matchingSection).offset().top-50
     }, 500);
+}, 500);
 });
 
 $(mobileMenuItem).on('click', function() {
     let data = $(this).data('section');
     let section = $('body').find('section#' + data + '-section');
 
-    $(mobileMenuBg).removeClass('active');
-    $(hamburger).removeClass('active');
-    $(menu).removeClass('active');
+    navStatus();
 
     setTimeout(function() {
         $('html, body').animate({
             scrollTop: $(section).offset().top-50
         }, 500);
-    }, 1000);
+    }, 1500);
 })
 
 function soulmate(event) {

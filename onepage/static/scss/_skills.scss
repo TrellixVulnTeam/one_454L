@@ -1,3 +1,5 @@
+@use 'core' as *;
+
 @font-face {
   font-family: "Adobe Clean Regular";
   src: url("../fonts/AdobeClean-Regular.eot");
@@ -67,10 +69,6 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass),
       background: #ffffff;
       box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
 
-      &.dark {
-        box-shadow: none;
-      }
-
       &__inner {
         position: relative;
         left: 0;
@@ -110,6 +108,19 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass),
       }
     }
   }
+
+  // &.dark {
+  //   .skills__box {
+  //     i.fa-github {
+  //       color: #fff;
+  //     }
+      
+  //     &__loader {
+  //     box-shadow: none;
+  //     color: $font-black;
+  //   }
+  // }
+// }
 
   @media only screen and (max-width: 1024px) {
     &__box {
