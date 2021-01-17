@@ -22,14 +22,12 @@ $ae: #6e4796;
 $transitionDuration: 0.5s;
 $transition: all $transitionDuration ease-in-out;
 
-$skills: ("html", $html, "100"), ("sass", $sass, "80"),
-  ("js", $js, "75"), ("python", $python, "60"),
-  ("github", $github, "90"), ("ai", $ai, "90"), ("ps", $ps, "90"),
-  ("ae", $ae, "70");
+$skills: ("html", $html, "100"), ("sass", $sass, "80"), ("js", $js, "75"),
+  ("python", $python, "60"), ("github", $github, "90"), ("ai", $ai, "90"),
+  ("ps", $ps, "90"), ("ae", $ae, "70");
 
-$icons: ("fa-html5", $html), ("fa-sass", $sass),
-  ("fa-js-square", $js), ("fa-python", $python),
-  ("fa-github", $github);
+$icons: ("fa-html5", $html), ("fa-sass", $sass), ("fa-js-square", $js),
+  ("fa-python", $python), ("fa-github", $github);
 
 .skills {
   position: relative;
@@ -108,19 +106,6 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass),
       }
     }
   }
-
-  // &.dark {
-  //   .skills__box {
-  //     i.fa-github {
-  //       color: #fff;
-  //     }
-      
-  //     &__loader {
-  //     box-shadow: none;
-  //     color: $font-black;
-  //   }
-  // }
-// }
 
   @media only screen and (max-width: 1024px) {
     &__box {
