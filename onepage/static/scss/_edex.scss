@@ -1,58 +1,58 @@
 @use 'core' as *;
 
 .edex {
+  position: relative;
+  margin-bottom: 100px;
+
+  &__image {
     position: relative;
-    margin-bottom: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    width: 300px;
+    border: 5px solid $blue;
 
-    &__image {
-        position: relative;
-        border-radius: 50%;
-        overflow: hidden;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 300px;
-        width: 300px;
-        border: 5px solid $blue; 
+    img {
+      position: relative;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-        img {
-            position: relative;
-            width: auto;
-            height: 100%;
-            object-fit: cover;
-        }
+  &__inner {
+    display: block;
+    text-align: left;
+    max-width: 85%;
+
+    &__roles {
+      height: 50px;
+      font-size: 30px;
+      vertical-align: middle;
+      overflow: hidden;
+
+      h3 {
+        font-family: "Rubik-Bold", serif;
+        transition: margin-top 1s ease-in-out;
+        text-transform: uppercase;
+      }
     }
 
+    h5 {
+      font-family: "Rubik-Bold", serif;
+    }
+
+    p {
+      margin-top: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 1023px) {
     &__inner {
-        display: block;
-        text-align: left;
-        max-width: 85%;
-
-        &__roles {
-            height: 50px;
-            font-size: 30px;
-            vertical-align: middle;
-            overflow: hidden;
-
-            h3 {
-                font-family: "Rubik-Bold", serif;
-                transition: margin-top 1s ease-in-out;
-                text-transform: uppercase;
-            }
-        }
-
-        h5 {
-            font-family: "Rubik-Bold", serif; 
-        }
-
-        p {
-           margin-top: 15px;
-        }
+      text-align: center;
+      margin: 50px auto 0;
     }
-
-    @media only screen and (max-width: 1023px) {
-        &__inner {
-            text-align: center;
-            margin: 50px auto 0;
-        }
-    }
+  }
 }
