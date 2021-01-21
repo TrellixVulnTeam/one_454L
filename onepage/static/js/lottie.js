@@ -1,5 +1,6 @@
 LottieInteractivity.create({
   player: "#myLottie",
+  renderer: "canvas",
   mode: "scroll",
   actions: [
     {

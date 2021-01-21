@@ -15,7 +15,6 @@ let upChevron = document.getElementsByClassName("core__scroll-top");
 
 let themeBox = document.getElementById("themeBox");
 let themeToggleInput = document.getElementById("themeToggleInput");
-let themeChevron = document.getElementById("themeChevron");
 
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
 
@@ -41,7 +40,8 @@ window.onload = function () {
     );
   });
 
-  $(themeChevron).on("click", function () {
+  $(themeBox).on("click", function () {
+    console.log("theme box clicked");
     if (themeBox.classList.contains("active")) {
       $(themeBox).removeClass("active");
     } else {
