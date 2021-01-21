@@ -141,26 +141,26 @@
 }
 .core__toggle__box {
   position: fixed;
-  right: -65px;
+  left: -65px;
   width: 90px;
   height: 185px;
   background: #5e4ae3;
   border: 2px solid #fff;
   border-radius: 8px;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+  transform: translateY(-50%) rotate(180deg);
+  z-index: 12;
   transition: 0.4s ease;
 }
 .core__toggle__box.active {
-  right: -25px;
+  left: -25px;
   transition: 0.4s ease;
 }
 .core__toggle__box.active .core__toggle {
   opacity: 1;
   transition: 0.4s ease;
 }
-.core__toggle__box.active.core__toggle__box__outer i {
+.core__toggle__box.active .core__toggle__box__outer i {
   transform: rotate(180deg);
   transition: 0.4s ease;
 }
@@ -236,6 +236,36 @@
 }
 .core__footer i.fa-heart {
   color: red;
+}
+@media only screen and (max-width: 1023px) {
+  .core__scroll-top {
+    bottom: 0;
+    left: 20px;
+  }
+  .core__scroll-top:hover {
+    bottom: 2%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .core__toggle {
+    width: 53px;
+    height: 29px;
+  }
+  .core__toggle__box {
+    width: 100px;
+    height: 200px;
+  }
+  .core__toggle__box__outer {
+    font-size: 20px;
+  }
+  .core__toggle__slider:after {
+    right: -120px;
+    font-size: 14px;
+  }
+  .core__toggle__slider:before {
+    height: 23px;
+    width: 23px;
+  }
 }
 
 .nav {
@@ -468,6 +498,8 @@
   .nav__logo {
     transform: none;
     font-size: 55px;
+    top: 20%;
+    left: 5%;
   }
   .nav__mobile {
     display: block;
@@ -481,6 +513,8 @@
   .nav__mobile__hamburger-icon-container {
     height: 85px;
     width: 70px;
+    top: 20%;
+    right: 5%;
   }
   .nav__mobile__hamburger-icon:before, .nav__mobile__hamburger-icon:after {
     height: 7px;
@@ -490,6 +524,17 @@
   }
   .nav__social {
     display: none;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .nav__mobile.active .nav__mobile__items {
+    top: 85px;
+  }
+  .nav__mobile__items__item {
+    font-size: 32px;
+  }
+  .nav__mobile__items__item:after {
+    height: 48px;
   }
 }
 
@@ -506,6 +551,7 @@
 }
 .map {
   position: relative;
+  overflow: hidden;
 }
 .map__text {
   position: absolute;
@@ -559,7 +605,6 @@
   }
   .map__container {
     height: 400px;
-    margin: 0 0 100px;
   }
   .map__googlemap {
     left: 50%;
@@ -577,9 +622,11 @@
     margin: 0 auto;
     padding: 0 45px;
     text-align: center;
+    position: relative;
   }
   .map__text__container {
-    margin: 40px 0;
+    margin: 0 0 40px;
+    height: auto;
   }
   .map h1 {
     line-height: 5.5rem;
@@ -588,6 +635,16 @@
   }
   .map p {
     font-size: 26px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .map__text__container {
+    margin: 40px 0;
+  }
+  .map__text h1 {
+    font-size: 40px;
+    line-height: 3.5rem;
+    margin: 40px 0 20px;
   }
 }
 
@@ -615,6 +672,11 @@
 .particles__text p {
   font-family: "Karla-Regular", serif;
   font-size: 20px;
+}
+@media screen and (max-width: 799px) {
+  .particles {
+    display: none;
+  }
 }
 
 .binary {
@@ -665,6 +727,25 @@
   color: #8a8a8a;
   content: "OR";
   margin: 0 10px;
+}
+@media only screen and (max-width: 1023px) {
+  .binary__content {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .binary {
+    margin-top: -100px;
+  }
+  .binary__content {
+    text-align: center;
+  }
+  .binary__content input {
+    margin: 0 auto 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
 }
 
 @font-face {
@@ -750,6 +831,7 @@
 .skills__box__loader__inner.html i:after {
   content: "100%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -773,6 +855,7 @@
 .skills__box__loader__inner.sass i:after {
   content: "80%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -796,6 +879,7 @@
 .skills__box__loader__inner.js i:after {
   content: "75%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -819,6 +903,7 @@
 .skills__box__loader__inner.python i:after {
   content: "60%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -842,6 +927,7 @@
 .skills__box__loader__inner.github i:after {
   content: "90%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -865,6 +951,7 @@
 .skills__box__loader__inner.ai i:after {
   content: "90%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -888,6 +975,7 @@
 .skills__box__loader__inner.ps i:after {
   content: "90%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -911,6 +999,7 @@
 .skills__box__loader__inner.ae i:after {
   content: "70%";
   font-size: 16px;
+  font-family: "Rubik-Light", serif;
   position: absolute;
   top: -10px;
   left: 50%;
@@ -1001,6 +1090,8 @@
   font-family: "Rubik-Bold", serif;
   transition: margin-top 1s ease-in-out;
   text-transform: uppercase;
+  height: 50px;
+  margin: 0;
 }
 .edex__inner h5 {
   font-family: "Rubik-Bold", serif;
@@ -1116,6 +1207,37 @@
   background: #000;
   opacity: 50%;
 }
+@media only screen and (max-width: 799px) {
+  .projects__modal p {
+    margin: 10px auto 30px;
+  }
+  .projects__modal__title {
+    padding: 15px 0 0;
+  }
+  .projects__modal__title h3 {
+    display: block;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .projects__modal__title i {
+    position: relative;
+    margin: 5px auto 10px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .projects__modal p {
+    font-size: 20px;
+  }
+  .projects__modal__title {
+    padding: 20px 0;
+  }
+  .projects__modal__title h3 {
+    font-size: 32px;
+  }
+  .projects__modal__title i {
+    font-size: 24px;
+  }
+}
 
 .lottie {
   position: relative;
@@ -1126,14 +1248,35 @@
   position: absolute;
   top: 0;
   right: -40%;
+  width: auto;
+  height: 95%;
 }
 .lottie__text {
   position: relative;
   left: 10%;
-  top: 50%;
+  top: 20%;
   max-width: 90%;
 }
 .lottie__text p {
   font-family: "Karla-Regular", serif;
   font-size: 20px;
+}
+@media (min-width: 639px) and (max-width: 1023px) {
+  .lottie__text {
+    max-width: 50%;
+    left: 5%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .lottie__text {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .lottie lottie-player {
+    height: 100%;
+    right: 0;
+  }
 }

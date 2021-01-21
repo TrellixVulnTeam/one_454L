@@ -28,4 +28,8 @@
       font-size: 20px;
     }
   }
+
+  @media screen and (max-width: 799px) {
+    display: none;
+  }
 }
