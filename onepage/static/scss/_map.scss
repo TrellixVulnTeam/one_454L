@@ -4,6 +4,7 @@
   $this: ".map";
 
   position: relative;
+  overflow: hidden;
 
   &__text {
     position: absolute;
@@ -63,7 +64,6 @@
 
     &__container {
       height: 400px;
-      margin: 0 0 100px;
     }
 
     &__googlemap {
@@ -84,9 +84,11 @@
       margin: 0 auto;
       padding: 0 45px;
       text-align: center;
+      position: relative;
 
       &__container {
-        margin: 40px 0;
+        margin: 0 0 40px;
+        height: auto;
       }
     }
 
@@ -98,6 +100,21 @@
 
     p {
       font-size: 26px;
+    }
+  }
+
+  @media only screen and (max-width: 639px) {
+    &__text {
+
+      &__container {
+        margin: 40px 0;
+      }
+
+      h1{
+        font-size: 40px;
+        line-height: 3.5rem;
+        margin: 40px 0 20px;
+      }
     }
   }
 }

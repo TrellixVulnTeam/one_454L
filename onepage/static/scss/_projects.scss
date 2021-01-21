@@ -117,4 +117,49 @@
       opacity: 50%;
     }
   }
+
+  @media only screen and (max-width: 799px) {
+    &__modal {
+
+      p {
+        margin: 10px auto 30px;
+      }
+
+      &__title {
+        padding: 15px 0 0;
+
+        h3 {
+        display: block;
+        max-width: 95%;
+        margin: 0 auto;
+        }
+
+        i {
+          position: relative;
+          margin: 5px auto 10px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 639px) {
+    &__modal {
+
+      p {
+        font-size: 20px;
+      }
+
+      &__title {
+        padding: 20px 0;
+
+        h3 {
+          font-size: 32px;
+        }
+
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }

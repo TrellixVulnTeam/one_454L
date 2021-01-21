@@ -95,6 +95,7 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass), ("fa-js-square", $js),
               &:after {
                 content: "#{$width}%";
                 font-size: 16px;
+                font-family: "Rubik-Light", serif;
                 position: absolute;
                 top: -10px;
                 left: 50%;

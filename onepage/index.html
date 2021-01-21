@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alexander Barnes</title>
 <link rel="icon" type="image/png" href="/static/images/logo-icon.ico">
 <link rel="stylesheet" href="/static/css/www.css">
@@ -11,6 +12,9 @@
 <link rel="stylesheet" href="https://use.typekit.net/lip5eew.css">
 
 <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+<script src="https://kit.fontawesome.com/0f90afe29b.js" crossorigin="anonymous"></script>
 
 <script type="module" src="/static/js/index.js"></script>
 <script type="module" src="/static/js/maps.js"></script>
@@ -21,11 +25,8 @@
 <script type="module" src="/static/js/projects.js"></script>
 <script type="module" src="/static/js/lottie.js"></script>
 
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
-<script src="https://kit.fontawesome.com/0f90afe29b.js" crossorigin="anonymous"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
 </head>
 <body class="core" id="body">
 
@@ -155,7 +156,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ai.svg">
+        <img src="static/images/ai-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ai">
                 <i class="fas fa-sort-down"></i>
@@ -163,7 +164,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ps.svg">
+        <img src="static/images/ps-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ps">
                 <i class="fas fa-sort-down"></i>
@@ -171,7 +172,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ae.svg">
+        <img src="static/images/ae-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ae">
                 <i class="fas fa-sort-down"></i>
@@ -257,8 +258,8 @@
 
 <div class="projects__modal" id="human-modal">
     <div class="projects__modal__title">
-        <h3>HUMAN AUGMENTATION LIBRARY</h3>
         <i class="fas fa-times"></i>
+        <h3>HUMAN AUGMENTATION LIBRARY</h3>
     </div>
     <p>Project description is bla bla description about what i did yayayayayayaay
         Project description is bla bla description about what i did yayayayayayaay
@@ -269,18 +270,18 @@
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
-        <div class="cell medium-4">
+        <div class="cell  medium-12">
             <img src="static/images/test/car1.jpeg">
             <img src="static/images/test/car2.jpeg">
             <img src="static/images/test/sky1.jpeg">
         </div>
-        <div class="cell medium-4">
+        <div class="cell  medium-12">
             <img src="static/images/test/sky2.jpeg">                
             <img src="static/images/test/car3.jpeg">
             <img src="static/images/test/sky3.jpeg">
             <img src="static/images/test/sky1.jpeg">
         </div>
-        <div class="cell medium-4">
+        <div class="cell  medium-12">
             <img src="static/images/test/space1.jpeg">
             <img src="static/images/test/car2.jpeg">
         </div>
@@ -290,8 +291,8 @@
 
 <div class="projects__modal" id="project-modal">
     <div class="projects__modal__title">
-        <h3>PROJECT TITLE</h3>
         <i class="fas fa-times"></i>
+        <h3>PROJECT TITLE</h3>
     </div>
     <p>Project description is bla bla description about what i did yayayayayayaay
         Project description is bla bla description about what i did yayayayayayaay
@@ -302,18 +303,18 @@
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
-        <div class="cell medium-4">
+        <div class="cell  medium-12">
             <img src="static/images/test/car1.jpeg">
             <img src="static/images/test/car2.jpeg">
             <img src="static/images/test/sky1.jpeg">
         </div>
-        <div class="cell medium-4">
+        <div class="cell  medium-12">
             <img src="static/images/test/sky2.jpeg">                
             <img src="static/images/test/car3.jpeg">
             <img src="static/images/test/sky3.jpeg">
             <img src="static/images/test/sky1.jpeg">
         </div>
-        <div class="cell medium-4">
+        <div class="cell medium-12">
             <img src="static/images/test/space1.jpeg">
             <img src="static/images/test/car2.jpeg">
         </div>
@@ -323,8 +324,8 @@
 
 <div class="projects__modal" id="billbuddy-modal">
     <div class="projects__modal__title">
-        <h3>BILLBUDDY</h3>
         <i class="fas fa-times"></i>
+        <h3>BILLBUDDY</h3>
     </div>
     <p>Project description is bla bla description about what i did yayayayayayaay
         Project description is bla bla description about what i did yayayayayayaay
@@ -335,17 +336,17 @@
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
-        <div class="cell medium-4">
+        <div class="cell medium-12">
             <img src="static/images/projects/bb2.png">
             <img src="static/images/projects/bb5.png">
             <img src="static/images/projects/bb6.png">
         </div>
-        <div class="cell medium-4">
+        <div class="cell medium-12">
             <img src="static/images/projects/bb3.png">                
             <img src="static/images/projects/bb7.png">
             <img src="static/images/projects/bb8.png">
         </div>
-        <div class="cell medium-4">
+        <div class="cell medium-12">
             <img src="static/images/projects/bb4.png">
             <img src="static/images/projects/bb9.png">
         </div>
@@ -355,14 +356,14 @@
 
 <section class="lottie" id="lottie-section">
     <div class="grid-x">
-        <div class="cell medium-6 small-12">
+        <div class="cell large-6 medium-12">
             <div class="lottie__text">
             <h3>OOH LOOK, AN AFTER EFFECTS ANIMATION IN THE WILD</h3>
             <p>Designed in Illustrator, animated in After Effects and then exported and configured using lottie.</p>
             </div>
         </div>
-        <div class="cell medium-6 small-12">
-            <lottie-player id="myLottie" src="https://assets4.lottiefiles.com/packages/lf20_lvdiclzb.json" background="transparent" speed="1" style="width: auto; height: 95%;"></lottie-player>
+        <div class="cell large-6 medium-12" id="lottie-container">
+            <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" style="width: auto; height: 95%" speed="1"></lottie-player>
         </div>
     </div>
 </section>

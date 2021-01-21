@@ -305,6 +305,8 @@
     &__logo {
       transform: none;
       font-size: 55px;
+      top: 20%;
+      left: 5%;
     }
 
     &__mobile {
@@ -320,6 +322,8 @@
         &-container {
           height: 85px;
           width: 70px;
+          top: 20%;
+          right: 5%;
         }
 
         &:before,
@@ -341,6 +345,26 @@
 
     &__social {
       display: none;
+    }
+  }
+
+  @media only screen and (max-width: 639px) {
+    &__mobile {
+      &.active {
+        .nav__mobile__items {
+          top: 85px;
+        }
+      }
+
+      &__items {
+        &__item {
+          font-size: 32px;
+
+          &:after {
+            height: 48px;
+          }
+        }
+      }
     }
   }
 }
