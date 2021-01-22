@@ -1183,6 +1183,7 @@
   margin: 10px 30px;
   font-size: 22px;
   cursor: pointer;
+  color: #c0c0c0;
 }
 .projects__modal__title i:hover {
   color: #5e4ae3;
