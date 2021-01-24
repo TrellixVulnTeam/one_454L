@@ -1,6 +1,6 @@
 LottieInteractivity.create({
   player: "#myLottie",
-  renderer: "canvas",
+  rendered: "canvas",
   mode: "scroll",
   actions: [
     {
@@ -19,4 +19,12 @@ LottieInteractivity.create({
       frames: [105, 205],
     },
   ],
+});
+
+let animation = bodymovin.loadAnimation({
+  container: document.getElementById('lottie-mobile'),
+  rendered: 'canvas',
+  loop: true,
+  autoplay: true,
+  path: '/static/js/tech-bodymovin2.json'
 });

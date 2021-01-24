@@ -154,10 +154,10 @@ $green: #6ddcbd;
   }
 
   h3 {
-    font-family: "Rubik-Bold", serif;
+    font-family: "Rubik-Bold";
 
     &.centered {
-      font-family: "Rubik-Bold", serif;
+      font-family: "Rubik-Bold";
       padding-bottom: 15px;
       border-bottom: 1px solid #d1d1d1;
       width: fit-content;
@@ -167,7 +167,7 @@ $green: #6ddcbd;
   }
 
   h5 {
-    font-family: "Rubik-Bold", serif;
+    font-family: "Rubik-Bold";
     margin: 0 auto 10px;
   }
 
@@ -334,11 +334,12 @@ $green: #6ddcbd;
       height: 29px;
 
       &__box {
-        width: 100px;
+        width: 90px;
         height: 200px;
 
         &__outer {
-          font-size: 20px;
+          font-size: 16px;
+          left: 6px;
         }
       }
 

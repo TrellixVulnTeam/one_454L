@@ -100,10 +100,10 @@
   overflow: hidden;
 }
 .core h3 {
-  font-family: "Rubik-Bold", serif;
+  font-family: "Rubik-Bold";
 }
 .core h3.centered {
-  font-family: "Rubik-Bold", serif;
+  font-family: "Rubik-Bold";
   padding-bottom: 15px;
   border-bottom: 1px solid #d1d1d1;
   width: fit-content;
@@ -111,7 +111,7 @@
   margin: 0 auto 30px;
 }
 .core h5 {
-  font-family: "Rubik-Bold", serif;
+  font-family: "Rubik-Bold";
   margin: 0 auto 10px;
 }
 .core__scroll-top {
@@ -252,11 +252,12 @@
     height: 29px;
   }
   .core__toggle__box {
-    width: 100px;
+    width: 90px;
     height: 200px;
   }
   .core__toggle__box__outer {
-    font-size: 20px;
+    font-size: 16px;
+    left: 6px;
   }
   .core__toggle__slider:after {
     right: -120px;
@@ -499,7 +500,7 @@
     transform: none;
     font-size: 55px;
     top: 20%;
-    left: 5%;
+    left: 2%;
   }
   .nav__mobile {
     display: block;
@@ -565,7 +566,7 @@
   width: 500px;
 }
 .map h1 {
-  font-family: "Rubik-Bold", serif;
+  font-family: "Rubik-Bold", sans-serif;
   text-transform: uppercase;
   line-height: 3.5rem;
 }
@@ -1245,12 +1246,17 @@
   height: 700px;
   overflow: hidden;
 }
+.lottie #lottie-mobile {
+  position: absolute;
+  opacity: 0;
+}
 .lottie lottie-player {
   position: absolute;
   top: 0;
   right: -40%;
   width: auto;
   height: 95%;
+  display: block;
 }
 .lottie__text {
   position: relative;
@@ -1258,17 +1264,16 @@
   top: 20%;
   max-width: 90%;
 }
-.lottie__text p {
-  font-family: "Karla-Regular", serif;
-  font-size: 20px;
-}
-@media (min-width: 639px) and (max-width: 1023px) {
-  .lottie__text {
-    max-width: 50%;
-    left: 5%;
-  }
-}
 @media only screen and (max-width: 639px) {
+  .lottie {
+    height: 800px;
+  }
+  .lottie lottie-player {
+    opacity: 0;
+  }
+  .lottie #lottie-mobile {
+    opacity: 1;
+  }
   .lottie__text {
     position: relative;
     left: 0;
@@ -1276,8 +1281,8 @@
     margin: 0 auto;
     text-align: center;
   }
-  .lottie lottie-player {
-    height: 100%;
-    right: 0;
+  .lottie__text p {
+    font-family: "Karla-Regular", serif;
+    font-size: 20px;
   }
 }
