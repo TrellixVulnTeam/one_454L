@@ -5,12 +5,18 @@
   height: 700px;
   overflow: hidden;
 
+  #lottie-mobile {
+    position: absolute;
+    opacity: 0;
+  }
+
   lottie-player {
     position: absolute;
     top: 0;
     right: -40%;
     width: auto;
     height: 95%;
+    display: block;
   }
 
   &__text {
@@ -18,32 +24,31 @@
     left: 10%;
     top: 20%;
     max-width: 90%;
+  }
+
+ @media only screen and (max-width: 639px) {
+
+  height: 800px;
+
+  lottie-player {
+    opacity: 0;
+  }
+
+  #lottie-mobile {
+    opacity: 1;
+  }
+
+  &__text {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    text-align: center;
 
     p {
       font-family: "Karla-Regular", serif;
       font-size: 20px;
     }
   }
-
-  @media (min-width: 639px) and (max-width: 1023px) {
-    &__text {
-      max-width: 50%;
-      left: 5%;
-    }
-  }
-
-  @media only screen and (max-width: 639px) {
-    &__text {
-      position: relative;
-      left: 0;
-      top: 0;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    lottie-player {
-      height: 100%;
-      right: 0;
-    }
-  }
+}
 }
