@@ -7,43 +7,7 @@
   position: relative;
   padding: 30px 40px;
   font-size: 14px;
-  font-family: "Rubik-Light", serif;
-
-  // &.dark {
-  // .nav__mobile__background {
-  //   background: #fff;
-  // }
-
-  // .nav__mobile__hamburger-icon {
-  //   background: #fff;
-
-  //   &:before, &:after {
-  //     background: #fff;
-  //   }
-
-  //   &.active {
-  //       &:before, &:after {
-  //         background: $blue;
-  //       }
-  //   }
-  // }
-
-  // .nav__mobile__items__item {
-  // color: #fff;
-
-  //     &.active {
-  //       color: $blue;
-
-  //       &:after {
-  //         background: #fff;
-  //       }
-  //     }
-  //   }
-
-  //   .nav__desktop__items__item {
-  //     color: #fff;
-  //   }
-  // }
+  font-family: "Rubik-Light", $fallbackFonts;
 
   &__logo {
     top: 50%;
@@ -345,6 +309,16 @@
 
     &__social {
       display: none;
+    }
+  }
+
+  @media only screen and (max-width: 799px) {
+    &__mobile {
+      &__items {
+        &__item#smallscreen-particles {
+            display: none;
+        }
+      }
     }
   }
 

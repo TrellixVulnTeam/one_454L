@@ -18,6 +18,8 @@
   src: url("../fonts/Karla-Regular.ttf") format("TrueType");
 }
 
+$fallbackFonts: Geneva, Verdana, sans-serif;
+
 $font-black: #0a0a0a;
 
 $black: #2d2d2a;
@@ -28,134 +30,22 @@ $green: #6ddcbd;
 .core {
   position: relative;
 
-  &.dark {
-    background: #000;
-    color: #fff;
-
-    .core {
-      &__toggle {
-        &__box {
-          background: #fff;
-          border-color: $blue;
-
-          &__outer {
-            color: $blue;
-          }
-        }
-
-        &__slider {
-          background-color: $blue;
-
-          &:before {
-            background: #fff;
-          }
-
-          &:after {
-            color: $blue;
-          }
-        }
-      }
-    }
-
-    .map__shadow {
-      box-shadow: inset 0 -10px 50px 85px #000;
-    }
-
-    .skills__box {
-      i.fa-github {
-        color: #fff;
-      }
-
-      &__loader {
-        box-shadow: none;
-        color: $font-black;
-      }
-    }
-
-    .projects__inner__box {
-      box-shadow: none;
-      color: #0a0a0a;
-    }
-
-    .nav__logo {
-      color: #fff;
-    }
-
-    .nav__mobile__background {
-      background: #fff;
-    }
-
-    .nav__mobile__hamburger-icon {
-      background: #fff;
-
-      &:before,
-      &:after {
-        background: #fff;
-      }
-    }
-
-    .nav__mobile__hamburger-icon-container {
-      &.active {
-        span {
-          &:before,
-          &:after {
-            background: $blue;
-          }
-        }
-      }
-    }
-
-    .nav__mobile__items__item {
-      color: #fff;
-
-      &.active {
-        color: $blue;
-
-        &:after {
-          background: #fff;
-        }
-      }
-    }
-
-    .nav__mobile {
-      &.active {
-        .nav__mobile__items__item {
-          color: $blue;
-
-          &.active {
-            &.active {
-              color: #fff;
-              --webkit-transition: all 0.7s ease-in-out;
-              -moz-transition: all 0.7s ease-in-out;
-              -o-transition: all 0.7s ease-in-out;
-              transition: all 0.7s ease-in-out;
-
-              &:after {
-                background: $blue;
-                width: 80%;
-                --webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .nav__desktop__items__item {
-      color: #fff;
-    }
-  }
-
   &.no-scroll {
     overflow: hidden;
   }
 
-  h3 {
-    font-family: "Rubik-Bold";
+  p {
+    font-family: "Karla-Regular", $fallbackFonts;
+    font-size: 16px;
 
+    &.large {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    font-family: "Rubik-Bold", $fallbackFonts;
+    
     &.centered {
       font-family: "Rubik-Bold";
       padding-bottom: 15px;
@@ -167,7 +57,7 @@ $green: #6ddcbd;
   }
 
   h5 {
-    font-family: "Rubik-Bold";
+    font-family: "Rubik-Bold", $fallbackFonts;
     margin: 0 auto 10px;
   }
 
@@ -314,6 +204,127 @@ $green: #6ddcbd;
       &.fa-heart {
         color: red;
       }
+    }
+  }
+
+  &.dark {
+    background: #000;
+    color: #fff;
+
+    .core {
+      &__toggle {
+        &__box {
+          background: #fff;
+          border-color: $blue;
+
+          &__outer {
+            color: $blue;
+          }
+        }
+
+        &__slider {
+          background-color: $blue;
+
+          &:before {
+            background: #fff;
+          }
+
+          &:after {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    .map__shadow {
+      box-shadow: inset 0 -10px 50px 85px #000;
+    }
+
+    .skills__box {
+      i.fa-github {
+        color: #fff;
+      }
+
+      &__loader {
+        box-shadow: none;
+        color: $font-black;
+      }
+    }
+
+    .projects__inner__box {
+      box-shadow: none;
+      color: #0a0a0a;
+    }
+
+    .nav__logo {
+      color: #fff;
+    }
+
+    .nav__mobile__background {
+      background: #fff;
+    }
+
+    .nav__mobile__hamburger-icon {
+      background: #fff;
+
+      &:before,
+      &:after {
+        background: #fff;
+      }
+    }
+
+    .nav__mobile__hamburger-icon-container {
+      &.active {
+        span {
+          &:before,
+          &:after {
+            background: $blue;
+          }
+        }
+      }
+    }
+
+    .nav__mobile__items__item {
+      color: #fff;
+
+      &.active {
+        color: $blue;
+
+        &:after {
+          background: #fff;
+        }
+      }
+    }
+
+    .nav__mobile {
+      &.active {
+        .nav__mobile__items__item {
+          color: $blue;
+
+          &.active {
+            &.active {
+              color: #fff;
+              --webkit-transition: all 0.7s ease-in-out;
+              -moz-transition: all 0.7s ease-in-out;
+              -o-transition: all 0.7s ease-in-out;
+              transition: all 0.7s ease-in-out;
+
+              &:after {
+                background: $blue;
+                width: 80%;
+                --webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav__desktop__items__item {
+      color: #fff;
     }
   }
 

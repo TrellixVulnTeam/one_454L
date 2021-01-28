@@ -17,18 +17,14 @@
       height: 400px;
       width: 500px;
     }
-  }
 
   h1 {
-    font-family: "Rubik-Bold", sans-serif;
+    font-family: "Rubik-Bold", $fallbackFonts;
     text-transform: uppercase;
     line-height: 3.5rem;
+    font-weight: 600;
   }
-
-  p {
-    font-family: "Karla-Regular", serif;
-    font-size: 20px;
-  }
+}
 
   &__googlemap {
     width: 99%; // Fixes slight overflow problem

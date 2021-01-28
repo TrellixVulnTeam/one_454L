@@ -26,9 +26,21 @@
     max-width: 90%;
   }
 
+  @media only screen and (min-width: 639px) and (max-width: 1023px) {
+    &__text {
+      max-width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 1023px) {
+    &__text {
+      left: 5%;
+    }
+  }
+
  @media only screen and (max-width: 639px) {
 
-  height: 800px;
+  height: 625px;
 
   lottie-player {
     opacity: 0;
@@ -46,7 +58,6 @@
     text-align: center;
 
     p {
-      font-family: "Karla-Regular", serif;
       font-size: 20px;
     }
   }
