@@ -1,15 +1,5 @@
 @use 'core' as *;
 
-@font-face {
-  font-family: "Adobe Clean Regular";
-  src: url("../fonts/AdobeClean-Regular.eot");
-  src: url("../fonts/AdobeClean-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/AdobeClean-Regular.woff") format("woff"),
-    url("../fonts/AdobeClean-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 $html: #e34c26;
 $sass: #cc6699;
 $js: #f0db4f;
