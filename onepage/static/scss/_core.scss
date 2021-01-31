@@ -326,6 +326,15 @@ $green: #6ddcbd;
     .nav__desktop__items__item {
       color: #fff;
     }
+
+    .lottie {
+    &-white {
+      display: none;
+    }
+    &-black {
+      display: block;
+    }
+  }
   }
 
 @media only screen and (max-width: 1023px) {

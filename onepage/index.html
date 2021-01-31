@@ -20,7 +20,7 @@
 
 <script type="module" src="/static/js/index.js"></script>
 <script type="module" src="/static/js/maps.js"></script>
-<script type="module" src="/static/js/particles.js"></script>
+<!-- <script type="module" src="/static/js/particles.js"></script> -->
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
 <script type="module" src="/static/js/loader.js"></script>
@@ -34,7 +34,7 @@
 
 <div class="loader">
     <div class="loader__progress-bar"></div>
-    <h1 class="loader__count"></h1> -->
+    <h1 class="loader__count"></h1>
 </div>
 
 <div class="core__scroll-top" id="upChevron">
@@ -64,7 +64,7 @@
                 <div class="nav__desktop__items">
                     <div class="nav__desktop__items__item active" data-section="hello" id="hello">HELLO</div>
                     <div class="nav__desktop__items__item" data-section="skills" id="skills">SKILLS</div>
-                    <div class="nav__desktop__items__item" data-section="particles" id="particles">PARTICLES</div>
+                    <!-- <div class="nav__desktop__items__item" data-section="particles" id="particles">PARTICLES</div> -->
                     <div class="nav__desktop__items__item" data-section="about" id="about">EDU / EXP</div>
                     <div class="nav__desktop__items__item" data-section="projects" id="projects">PROJECTS</div>
                     <div class="nav__desktop__items__item" data-section="lottie" id="lottie">LOTTIE</div>
@@ -82,7 +82,7 @@
                 <div class="nav__mobile__items">
                     <div class="nav__mobile__items__item active" data-section="hello" id="smallscreen-hello">HELLO</div>
                     <div class="nav__mobile__items__item" data-section="skills" id="smallscreen-skills">SKILLS</div>
-                    <div class="nav__mobile__items__item" data-section="particles" id="smallscreen-particles">PARTICLES</div>
+                    <!-- <div class="nav__mobile__items__item" data-section="particles" id="smallscreen-particles">PARTICLES</div> -->
                     <div class="nav__mobile__items__item" data-section="about" id="smallscreen-about">EDU / EXP</div>
                     <div class="nav__mobile__items__item" data-section="projects" id="smallscreen-projects">PROJECTS</div>
                     <div class="nav__mobile__items__item" data-section="lottie" id="smallscreen-lottie">LOTTIE</div>
@@ -184,13 +184,13 @@
     </div>
 </section>
 
-<section class="particles" id="particles-section">
+<!-- <section class="particles" id="particles-section">
     <div class="particles__container" id="particles-container"></div>
     <div class="particles__text">
         <h3>SAUCY INTERACTIVE JAVASCRIPT</h3>
         <p class="large">Don't waste too much of the working day playing with this..</p>
     </div>
-</section>
+</section> -->
 
 <section class="edex" id="about-section">
     <div class="grid-x">
@@ -365,7 +365,10 @@
         </div>
         <div class="cell large-6 medium-12" id="lottie-container">
             <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" style="width: auto; height: 95%" speed="1"></lottie-player>
-            <div id="lottie-mobile"></div>
+            <div id="lottie-mobile">
+                <img class="lottie-white" src="/static/images/tech-lottie-white.gif">
+                <img class="lottie-black" src="/static/images/tech-lottie-blk.gif">
+            </div>
         </div>
     </div>
 </section>

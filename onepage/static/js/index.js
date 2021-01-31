@@ -1,4 +1,4 @@
-import { init, resetCanvas, step } from "./particles.js";
+// import { init, resetCanvas, step } from "./particles.js";
 
 let body = document.getElementsByClassName("core");
 
@@ -58,8 +58,8 @@ window.onload = function () {
     }
   });
 
-  init();
-  step();
+  // init();
+  // step();
 };
 
 function navStatus() {
@@ -95,10 +95,10 @@ function mobileNavUnderline() {
 function themeClassChanges() {
   if ($(themeToggleInput).is(":checked")) {
     $(body).addClass("dark");
-    resetCanvas();
+    // resetCanvas();
   } else {
     $(body).removeClass("dark");
-    resetCanvas();
+    // resetCanvas();
   }
 }
 
