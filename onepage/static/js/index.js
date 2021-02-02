@@ -1,5 +1,3 @@
-// import { init, resetCanvas, step } from "./particles.js";
-
 let body = document.getElementsByClassName("core");
 
 let mobileNav = document.getElementById("mobile-nav");
@@ -57,9 +55,6 @@ window.onload = function () {
       $(upChevron).css("opacity", "0");
     }
   });
-
-  // init();
-  // step();
 };
 
 function navStatus() {
@@ -95,10 +90,8 @@ function mobileNavUnderline() {
 function themeClassChanges() {
   if ($(themeToggleInput).is(":checked")) {
     $(body).addClass("dark");
-    // resetCanvas();
   } else {
     $(body).removeClass("dark");
-    // resetCanvas();
   }
 }
 
