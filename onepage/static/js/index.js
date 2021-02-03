@@ -16,7 +16,7 @@ let themeToggleInput = document.getElementById("themeToggleInput");
 
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
 
-window.onload = function () {
+$(document).ready(function() {
   hamburger.addEventListener("click", navStatus);
   themeToggleInput.addEventListener("click", themeClassChanges);
   document.querySelector("#emailCopy").addEventListener("click", copy);
@@ -55,7 +55,7 @@ window.onload = function () {
       $(upChevron).css("opacity", "0");
     }
   });
-};
+});
 
 function navStatus() {
   if (mobileNav.classList.contains("active")) {
