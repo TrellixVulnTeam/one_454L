@@ -1,5 +1,3 @@
-import { init, resetCanvas, step } from "./particles.js";
-
 let body = document.getElementsByClassName("core");
 
 let mobileNav = document.getElementById("mobile-nav");
@@ -18,7 +16,7 @@ let themeToggleInput = document.getElementById("themeToggleInput");
 
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
 
-window.onload = function () {
+$(document).ready(function() {
   hamburger.addEventListener("click", navStatus);
   themeToggleInput.addEventListener("click", themeClassChanges);
   document.querySelector("#emailCopy").addEventListener("click", copy);
@@ -57,10 +55,7 @@ window.onload = function () {
       $(upChevron).css("opacity", "0");
     }
   });
-
-  init();
-  step();
-};
+});
 
 function navStatus() {
   if (mobileNav.classList.contains("active")) {
@@ -95,10 +90,8 @@ function mobileNavUnderline() {
 function themeClassChanges() {
   if ($(themeToggleInput).is(":checked")) {
     $(body).addClass("dark");
-    resetCanvas();
   } else {
     $(body).removeClass("dark");
-    resetCanvas();
   }
 }
 

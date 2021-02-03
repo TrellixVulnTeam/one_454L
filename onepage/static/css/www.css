@@ -244,6 +244,12 @@
 .core.dark .nav__desktop__items__item {
   color: #fff;
 }
+.core.dark .lottie-white {
+  display: none;
+}
+.core.dark .lottie-black {
+  display: block;
+}
 @media only screen and (max-width: 1023px) {
   .core__scroll-top {
     bottom: 0;
@@ -675,11 +681,6 @@
 }
 .particles__text.dark {
   color: #fff;
-}
-@media screen and (max-width: 799px) {
-  .particles {
-    display: none;
-  }
 }
 
 .binary {
@@ -1139,9 +1140,9 @@
 }
 .projects__modal {
   position: fixed;
-  height: 90vh;
-  width: 80vw;
-  max-width: 1000px;
+  height: 95vh;
+  width: 95vw;
+  max-width: 1150px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1237,6 +1238,9 @@
 .lottie #lottie-mobile {
   position: absolute;
   opacity: 0;
+}
+.lottie-black {
+  display: none;
 }
 .lottie lottie-player {
   position: absolute;

@@ -10,6 +10,10 @@
     opacity: 0;
   }
 
+  &-black {
+    display: none;
+  }
+
   lottie-player {
     position: absolute;
     top: 0;

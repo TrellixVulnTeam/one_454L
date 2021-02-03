@@ -20,10 +20,9 @@
 
 <script type="module" src="/static/js/index.js"></script>
 <script type="module" src="/static/js/maps.js"></script>
-<script type="module" src="/static/js/particles.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<!-- <script type="module" src="/static/js/loader.js"></script> -->
+<script type="module" src="/static/js/loader.js"></script>
 <script type="module" src="/static/js/projects.js"></script>
 <script type="module" src="/static/js/lottie.js"></script>
 
@@ -32,10 +31,10 @@
 </head>
 <body class="core" id="body">
 
-<!-- <div class="loader">
+<div class="loader">
     <div class="loader__progress-bar"></div>
-    <h1 class="loader__count"></h1> -->
-<!-- </div> -->
+    <h1 class="loader__count"></h1>
+</div>
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -64,7 +63,6 @@
                 <div class="nav__desktop__items">
                     <div class="nav__desktop__items__item active" data-section="hello" id="hello">HELLO</div>
                     <div class="nav__desktop__items__item" data-section="skills" id="skills">SKILLS</div>
-                    <div class="nav__desktop__items__item" data-section="particles" id="particles">PARTICLES</div>
                     <div class="nav__desktop__items__item" data-section="about" id="about">EDU / EXP</div>
                     <div class="nav__desktop__items__item" data-section="projects" id="projects">PROJECTS</div>
                     <div class="nav__desktop__items__item" data-section="lottie" id="lottie">LOTTIE</div>
@@ -82,7 +80,6 @@
                 <div class="nav__mobile__items">
                     <div class="nav__mobile__items__item active" data-section="hello" id="smallscreen-hello">HELLO</div>
                     <div class="nav__mobile__items__item" data-section="skills" id="smallscreen-skills">SKILLS</div>
-                    <div class="nav__mobile__items__item" data-section="particles" id="smallscreen-particles">PARTICLES</div>
                     <div class="nav__mobile__items__item" data-section="about" id="smallscreen-about">EDU / EXP</div>
                     <div class="nav__mobile__items__item" data-section="projects" id="smallscreen-projects">PROJECTS</div>
                     <div class="nav__mobile__items__item" data-section="lottie" id="smallscreen-lottie">LOTTIE</div>
@@ -184,14 +181,6 @@
     </div>
 </section>
 
-<section class="particles" id="particles-section">
-    <div class="particles__container" id="particles-container"></div>
-    <div class="particles__text">
-        <h3>SAUCY INTERACTIVE JAVASCRIPT</h3>
-        <p class="large">Don't waste too much of the working day playing with this..</p>
-    </div>
-</section>
-
 <section class="edex" id="about-section">
     <div class="grid-x">
     <div class="cell large-5 medium-12">
@@ -227,14 +216,14 @@
                     <img src="static/images/augmentation/patch3d.png">
                     <div class="projects__inner__box__text">
                         <h5>HUMAN AUGMENTATION LIBRARY</h5>
-                        <p>Final year project involving the conception and design of futuristic human augmentations.</p>
+                        <p>The conception and design of a human augmentation library.</p>
                         <i class="fas fa-chevron-left"></i><a id="human">READ MORE</a><i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
             <div class="cell large-4 medium-12">
                 <div class="projects__inner__box">
-                    <img src="static/images/bb/bb1.png">
+                    <img class="nudge-down" src="static/images/bb/bb1.png">
                     <div class="projects__inner__box__text">
                         <h5>BILLBUDDY</h5>
                         <p>My graduate role as a Front-End Developer at BillBuddy.</p>
@@ -247,7 +236,7 @@
                     <img src="static/images/incognito/typewriter-banner.png">
                     <div class="projects__inner__box__text">
                         <h5>INCOGNITO</h5>
-                        <p>Group project surrounding digital privacy and the movement of information.</p>
+                        <p>Project surrounding digital privacy and the movement of information.</p>
                         <i class="fas fa-chevron-left"></i><a id="project">READ MORE</a><i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
@@ -263,12 +252,9 @@
         <i class="fas fa-times"></i>
         <h3>HUMAN AUGMENTATION LIBRARY</h3>
     </div>
-    <p>Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
+    <p>This was my final year project during my BA in Digital Art in Design, in which is received a First Class Honours for both project and overall.<br>
+    The concept is an interactive library for futuristic augmentations, in which the user picks up the individual item from the podium and scans it, resulting in the accompanying informative animation being played on the screen in front of the user.<br>
+    I started with 2D designs of each augmentation, then 3D designs, and finally created an animation for each. The scanning system was created using a RaspberryPi connected to an RFID reader. I attached an RFID sticker to the bottom of each item, which upon scanning passed parameters to the URL of the browser, loading the correct animation. 
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
@@ -304,12 +290,19 @@
         <i class="fas fa-times"></i>
         <h3>BILLBUDDY</h3>
     </div>
-    <p>Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
+    <p>As mentioned in the above 'About Me' style section, my first postgraduate industry role has been with BillBuddy, hired as a 
+        Front-End Web Developer to join the well funded and fast moving small team back in November 2019. At this time the company 
+        was looking for someone who could learn quickly and work well with other developers, collaborating on larger tasks and taking 
+        on smaller ones themselves.<br> 
+        Three months into the role, after getting up to speed with the codebase structure and common patterns, I was tasked with 
+        re-designing the site and re-building the front of house. This was a big responsibility, but I thoroughly enjoyed it from 
+        start to finish. I created new design assets such as phone mockups and animations and mixed these with CSS animation and 
+        structural changes for a brighter and more contemporary feel.<br>
+        The remaining months have consisted of building new features, learning to use API's in a variety of ways (from Google Maps 
+        to fetching data on offers and building elements with Typescript components) and getting more involved in the back end with 
+        the use of Python and other languages such as YAML. I have also been introduced to the Agile workflow, well versed in the power of Scrum!<br>
+        I pride myself on being multi-disciplinary, able to move around the Adobe Creative Suite and mix these skills into development. 
+        I'm looking to move into a role where design/UX is a key component of the development cycle, influencing technical decisions on a daily basis.
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
@@ -334,12 +327,14 @@
         <i class="fas fa-times"></i>
         <h3>INCOGNITO</h3>
     </div>
-    <p>Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
-        Project description is bla bla description about what i did yayayayayayaay
+    <p>During the final year of my degree, I was part of a group project exploring the theme of data protection (looks like we were ahead of the GDPR rollout!).<br> 
+        The concept was to take a seemingly analog item and hide a digital element inside it. We chose to take an old typewriter and install a flexible bar sensor on 
+        the underside of the piece of metal that each key arm moves toward on each stroke. The sensor had a range from 0 to 1550 once in place, this was mapped from 0 
+        to 88 to make assigning values to each key cleaner. With installation complete and functions written to handle converting the sensor values to keys, we 
+        hooked up a small shredder and used it as our 'trigger', with paper being entered into it causing the most recent message typed to be sent to our database and then 
+        printed out at another location (in this case in another room). We invited users to enter a room and answer personal questions presented to them on a screen infront 
+        of the podium on which the typewriter was placed - allowing us to hide wires and the RaspberryPi it was connected to inside the podium itself. The physical act of 
+        'destroying' their answers became the antithetical action, essentially handing them to us.
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
@@ -365,7 +360,10 @@
         </div>
         <div class="cell large-6 medium-12" id="lottie-container">
             <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" style="width: auto; height: 95%" speed="1"></lottie-player>
-            <div id="lottie-mobile"></div>
+            <div id="lottie-mobile">
+                <img class="lottie-white" src="/static/images/tech-lottie-white.gif">
+                <img class="lottie-black" src="/static/images/tech-lottie-blk.gif">
+            </div>
         </div>
     </div>
 </section>
