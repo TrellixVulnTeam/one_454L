@@ -2,7 +2,7 @@
 
 .lottie {
   position: relative;
-  height: 700px;
+  height: 775px;
   overflow: hidden;
 
   #lottie-mobile {
@@ -16,17 +16,17 @@
 
   lottie-player {
     position: absolute;
-    top: 0;
-    right: -40%;
+    top: -100px;
+    right: -35%;
     width: auto;
-    height: 95%;
+    height: 100%;
     display: block;
   }
 
   &__text {
     position: relative;
     left: 10%;
-    top: 20%;
+    top: 0;
     max-width: 90%;
   }
 

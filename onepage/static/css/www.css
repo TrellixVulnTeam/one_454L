@@ -44,14 +44,15 @@
 }
 .core__scroll-top {
   position: fixed;
-  bottom: 5%;
-  left: 5%;
+  bottom: 0;
+  left: 20px;
   color: #6ddcbd;
   font-size: 40px;
   cursor: pointer;
   z-index: 10;
   transition: all 0.2s ease;
   opacity: 0;
+  display: none;
 }
 .core__scroll-top:hover {
   bottom: 6%;
@@ -165,6 +166,10 @@
 .core__footer i.fa-heart {
   color: red;
 }
+.core__footer a {
+  margin-right: 10px;
+  cursor: pointer;
+}
 .core.dark {
   background: #000;
   color: #fff;
@@ -201,6 +206,9 @@
 }
 .core.dark .nav__logo {
   color: #fff;
+}
+.core.dark .nav__logo.active {
+  color: #5e4ae3;
 }
 .core.dark .nav__mobile__background {
   background: #fff;
@@ -252,8 +260,7 @@
 }
 @media only screen and (max-width: 1023px) {
   .core__scroll-top {
-    bottom: 0;
-    left: 20px;
+    display: block;
   }
   .core__scroll-top:hover {
     bottom: 2%;
@@ -289,6 +296,13 @@
   font-size: 14px;
   font-family: "Rubik-Light", Geneva, Verdana, sans-serif;
 }
+.nav__container {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+}
 .nav__logo {
   top: 50%;
   transform: translateY(-50%);
@@ -301,6 +315,9 @@
   font-size: 34px;
   color: #000;
 }
+.nav__logo.active {
+  color: #fff;
+}
 .nav__social {
   text-align: right;
   position: relative;
@@ -309,10 +326,16 @@
 }
 .nav__social__item {
   display: inline-block;
+  padding: 0 5px;
 }
 .nav__social__item i {
-  color: #0e76a8;
   font-size: 24px;
+}
+.nav__social__item i.fa-linkedin {
+  color: #0e76a8;
+}
+.nav__social__item i.fa-github {
+  color: #000;
 }
 .nav__social__item i:hover {
   cursor: pointer;
@@ -323,8 +346,7 @@
   display: none;
 }
 .nav__mobile.active .nav__mobile__items {
-  opacity: 1;
-  top: 120px;
+  top: 100px;
   z-index: 3;
   --webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -395,7 +417,7 @@
   width: 100%;
   top: -180px;
   height: 0;
-  opacity: 0;
+  display: none;
   z-index: -1;
   /* So the menu doesn't cover the hamburger icon when it's hidden */
   --webkit-transition: all 0.6s ease-in-out;
@@ -410,8 +432,9 @@
   color: #fff;
 }
 .nav__mobile__items__item__social {
-  position: absolute;
-  right: 0;
+  text-align: right;
+  display: block;
+  height: 80px;
 }
 .nav__mobile__items__item__social i {
   color: #fff;
@@ -509,6 +532,11 @@
   transition: all 0.2s ease-in;
 }
 @media only screen and (max-width: 1023px) {
+  .nav__container {
+    position: relative;
+    box-shadow: none;
+    background: none;
+  }
   .nav__logo {
     transform: none;
     font-size: 55px;
@@ -571,6 +599,7 @@
 .map {
   position: relative;
   overflow: hidden;
+  padding-top: 50px;
 }
 .map__text {
   position: absolute;
@@ -618,6 +647,7 @@
 @media only screen and (max-width: 1023px) {
   .map {
     margin-bottom: 50px;
+    padding-top: 0;
   }
   .map__container {
     height: 400px;
@@ -662,25 +692,6 @@
     line-height: 3.5rem;
     margin: 40px 0 20px;
   }
-}
-
-.particles {
-  height: 500px;
-  width: 100%;
-  margin-bottom: 125px;
-  left: -100px;
-  position: relative;
-  z-index: 1;
-}
-.particles__text {
-  position: absolute;
-  right: -5%;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-.particles__text.dark {
-  color: #fff;
 }
 
 .binary {
@@ -1072,7 +1083,7 @@
 .edex__inner {
   display: block;
   text-align: left;
-  max-width: 85%;
+  max-width: 90%;
 }
 .edex__inner__roles {
   height: 50px;
@@ -1114,6 +1125,9 @@
   background: #fff;
   border-radius: 10px;
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+.projects__inner__box:nth-of-type(2) {
+  width: 100%;
 }
 .projects__inner__box img {
   height: 240px;
@@ -1232,7 +1246,7 @@
 
 .lottie {
   position: relative;
-  height: 700px;
+  height: 775px;
   overflow: hidden;
 }
 .lottie #lottie-mobile {
@@ -1244,16 +1258,16 @@
 }
 .lottie lottie-player {
   position: absolute;
-  top: 0;
-  right: -40%;
+  top: -100px;
+  right: -35%;
   width: auto;
-  height: 95%;
+  height: 100%;
   display: block;
 }
 .lottie__text {
   position: relative;
   left: 10%;
-  top: 20%;
+  top: 0;
   max-width: 90%;
 }
 @media only screen and (min-width: 639px) and (max-width: 1023px) {

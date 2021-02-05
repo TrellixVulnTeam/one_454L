@@ -22,19 +22,19 @@
 <script type="module" src="/static/js/maps.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<script type="module" src="/static/js/loader.js"></script>
+<!-- <script type="module" src="/static/js/loader.js"></script> -->
 <script type="module" src="/static/js/projects.js"></script>
 <script type="module" src="/static/js/lottie.js"></script>
 
 
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYx0GTUZKaEvxGoem9Dh_5vPmbK3xFO5k&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
 </head>
 <body class="core" id="body">
 
-<div class="loader">
+<!-- <div class="loader">
     <div class="loader__progress-bar"></div>
     <h1 class="loader__count"></h1>
-</div>
+</div> -->
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -52,10 +52,11 @@
 
 <div class="nav__mobile__background"></div>
 
-<div class="nav" id="nav">
+<div class="nav__container">
+    <div class="nav" id="nav">
     <div class="grid-x">
         <div class="cell large-2 medium-3">
-            <div class="nav__logo">&#60X&#62</div>
+            <div id="logo" class="nav__logo">&#60X&#62</div>
         </div>
 
         <div class="cell large-8 show-for-large">
@@ -73,6 +74,7 @@
 
         <div class="cell large-2 medium-9">
             <div class="nav__social">
+                <div class="nav__social__item"><a href="https://github.com/sixtysixcode/one/" target="_blank"><i class="fab fa-github"></i></a></div>
                 <div class="nav__social__item"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
             </div>
 
@@ -84,6 +86,7 @@
                     <div class="nav__mobile__items__item" data-section="projects" id="smallscreen-projects">PROJECTS</div>
                     <div class="nav__mobile__items__item" data-section="lottie" id="smallscreen-lottie">LOTTIE</div>
                     <div class="nav__mobile__items__item" data-section="binary" id="smallscreen-binary">LET'S TALK</div>
+                    <div class="nav__mobile__items__item__social"><a href="https://github.com/sixtysixcode/one/" target="_blank"><i class="fab fa-github"></i></a></div>
                     <div class="nav__mobile__items__item__social"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
                 </div>
                 <div id="hamburger" class="nav__mobile__hamburger-icon-container">
@@ -92,6 +95,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <section class="map" id="hello-section">
@@ -155,7 +159,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ai-logo.png">
+        <img src="static/images/compression/ai-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ai">
                 <i class="fas fa-sort-down"></i>
@@ -163,7 +167,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ps-logo.png">
+        <img src="static/images/compression/ps-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ps">
                 <i class="fas fa-sort-down"></i>
@@ -171,7 +175,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ae-logo.png">
+        <img src="static/images/compression/ae-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ae">
                 <i class="fas fa-sort-down"></i>
@@ -185,7 +189,7 @@
     <div class="grid-x">
     <div class="cell large-5 medium-12">
         <div class="edex__image">
-            <img src="static/images/profile.jpg">
+            <img src="static/images/compression/profile.jpg">
         </div>
     </div>
     <div class="cell large-7 medium-12">
@@ -194,7 +198,6 @@
                 <h3>I am a creative.</h3>
                 <h3>I am constantly learning.</h3>
                 <h3>I rise to new challenges.</h3>
-                <h3>I thrive on new opportunities.</h3>
             </div>
             <p>I started University studying Fine Art at UWE Bristol but soon realised it was digital art I wanted to study. 
                 This prompted me to change courses, jumping into the second year of Digital Art & Technology (now referred to as Digital Media Design) at Plymouth University.<br>
@@ -214,17 +217,17 @@
         <div class="grid-x">
             <div class="cell large-4 medium-12">
                 <div class="projects__inner__box">
-                    <img src="static/images/augmentation/patch3d.png">
+                    <img src="static/images/compression/patch3d.png">
                     <div class="projects__inner__box__text">
-                        <h5>HUMAN AUGMENTATION LIBRARY</h5>
-                        <p>The conception and design of a human augmentation library.</p>
+                        <h5>ABSTRACTION</h5>
+                        <p>The conception of a human augmentation library.</p>
                         <i class="fas fa-chevron-left"></i><a id="human">READ MORE</a><i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
             <div class="cell large-4 medium-12">
                 <div class="projects__inner__box">
-                    <img class="nudge-down" src="static/images/bb/bb1.png">
+                    <img src="static/images/compression/bb1.png">
                     <div class="projects__inner__box__text">
                         <h5>BILLBUDDY</h5>
                         <p>My graduate role as a Front-End Developer at BillBuddy.</p>
@@ -234,10 +237,10 @@
             </div>
             <div class="cell large-4 medium-12">
                 <div class="projects__inner__box">
-                    <img src="static/images/incognito/typewriter-banner.png">
+                    <img src="static/images/compression/typewriter-banner.png">
                     <div class="projects__inner__box__text">
                         <h5>INCOGNITO</h5>
-                        <p>Project surrounding digital privacy and the movement of information.</p>
+                        <p>Project surrounding digital privacy and information.</p>
                         <i class="fas fa-chevron-left"></i><a id="project">READ MORE</a><i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
@@ -260,27 +263,27 @@
     <div class="projects__modal__tiles">
         <div class="grid-x">
         <div class="cell  medium-6 small-12">
-            <img src="/static/images/augmentation/2ddesigns.png">
-            <img src="/static/images/augmentation/ear3d.png">
-            <img src="/static/images/augmentation/ear3d2.png">
-            <img src="/static/images/augmentation/earprinting.png">
-            <img src="/static/images/augmentation/patchanim.png">
-            <img src="/static/images/augmentation/soundanim.png">
-            <img src="/static/images/augmentation/glasses3d.png">
-            <img src="/static/images/augmentation/patch3d.png">
-            <img src="/static/images/augmentation/glassesprinting.png">
+            <img src="/static/images/compression/2ddesigns.png">
+            <img src="/static/images/compression/ear3d.png">
+            <img src="/static/images/compression/ear3d2.png">
+            <img src="/static/images/compression/earprinting.png">
+            <img src="/static/images/compression/patchanim.png">
+            <img src="/static/images/compression/soundanim.png">
+            <img src="/static/images/compression/glasses3d.png">
+            <img src="/static/images/compression/patch3d.png">
+            <img src="/static/images/compression/glassesprinting.png">
         </div>
 
             <div class="cell  medium-6 small-12">
-            <img src="/static/images/augmentation/speakeranim.png">
-            <img src="/static/images/augmentation/rfidcode.png">
-            <img src="/static/images/augmentation/setup.png">       
-            <img src="/static/images/augmentation/patch3d.png">
-            <img src="/static/images/augmentation/speaker3d.png">
-            <img src="/static/images/augmentation/speakerprinting.png">
-            <img src="/static/images/augmentation/soundanim.png">
-            <img src="/static/images/augmentation/speakeranim2.png">
-            <img src="/static/images/augmentation/podiums.png">
+            <img src="/static/images/compression/speakeranim.png">
+            <img src="/static/images/compression/rfidcode.png">
+            <img src="/static/images/compression/setup.png">       
+            <img src="/static/images/compression/patch3d.png">
+            <img src="/static/images/compression/speaker3d.png">
+            <img src="/static/images/compression/speakerprinting.png">
+            <img src="/static/images/compression/soundanim.png">
+            <img src="/static/images/compression/speakeranim2.png">
+            <img src="/static/images/compression/podiums.png">
         </div>
         </div>
     </div>
@@ -308,16 +311,16 @@
     <div class="projects__modal__tiles">
         <div class="grid-x">
         <div class="cell medium-6 small-12">
-            <img src="/static/images/bb/bb2.png">
-            <img src="/static/images/bb/bb5.png">
-            <img src="/static/images/bb/bb6.png">
-            <img src="/static/images/bb/bb3.png">   
+            <img src="/static/images/compression/bb2.png">
+            <img src="/static/images/compression/bb5.png">
+            <img src="/static/images/compression/bb6.png">
+            <img src="/static/images/compression/bb3.png">   
         </div>
         <div class="cell medium-6 small-12">
-            <img src="/static/images/bb/bb7.png">
-            <img src="/static/images/bb/bb8.png">
-            <img src="/static/images/bb/bb4.png">
-            <img src="/static/images/bb/bb9.png">
+            <img src="/static/images/compression/bb7.png">
+            <img src="/static/images/compression/bb8.png">
+            <img src="/static/images/compression/bb4.png">
+            <img src="/static/images/compression/bb9.png">
         </div>
         </div>
     </div>
@@ -340,12 +343,12 @@
     <div class="projects__modal__tiles">
         <div class="grid-x">
         <div class="cell medium-6 small-12">
-            <img src="/static/images/incognito/code1.png">
-            <img src="/static/images/incognito/code2.png">
+            <img src="/static/images/compression/code1.png">
+            <img src="/static/images/compression/code2.png">
         </div>
         <div class="cell medium-6 small-12">
-            <img src="/static/images/incognito/illustrator.png">
-            <img src="/static/images/incognito/typewriter-real.png">
+            <img src="/static/images/compression/illustrator.png">
+            <img src="/static/images/compression/typewriter-real.png">
         </div>
         </div>
     </div>
@@ -360,7 +363,7 @@
             </div>
         </div>
         <div class="cell large-6 medium-12" id="lottie-container">
-            <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" style="width: auto; height: 95%" speed="1"></lottie-player>
+            <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" speed="1"></lottie-player>
             <div id="lottie-mobile">
                 <img class="lottie-white" src="/static/images/tech-lottie-white.gif">
                 <img class="lottie-black" src="/static/images/tech-lottie-blk.gif">
@@ -382,6 +385,7 @@
 
 <div class="core__footer">
     <p><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Alexander Barnes 2021</p>
+    <p>Check out the <a href="https://github.com/sixtysixcode/one/" target="_blank">Github Repository</a><i class="far fa-hand-point-left"></i></p>
 </div>
 
 </body>

@@ -9,6 +9,14 @@
   font-size: 14px;
   font-family: "Rubik-Light", $fallbackFonts;
 
+  &__container {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+  }
+
   &__logo {
     top: 50%;
     transform: translateY(-50%);
@@ -20,6 +28,10 @@
     font-style: normal;
     font-size: 34px;
     color: #000;
+
+    &.active {
+      color: #fff;
+    }
   }
 
   &__social {
@@ -30,10 +42,18 @@
 
     &__item {
       display: inline-block;
+      padding: 0 5px;
 
       i {
-        color: $linkedin;
         font-size: 24px;
+
+        &.fa-linkedin {
+          color: $linkedin;
+        }
+
+        &.fa-github {
+          color: #000;
+        }
 
         &:hover {
           cursor: pointer;
@@ -48,9 +68,8 @@
     display: none;
 
     &.active {
-      .nav__mobile__items {
-        opacity: 1;
-        top: 120px;
+.nav__mobile__items {
+        top: 100px;
         z-index: 3;
         --webkit-transition: all 0.4s ease-in-out;
         -moz-transition: all 0.4s ease-in-out;
@@ -135,7 +154,7 @@
       width: 100%;
       top: -180px;
       height: 0;
-      opacity: 0;
+      display: none;
       z-index: -1; /* So the menu doesn't cover the hamburger icon when it's hidden */
       --webkit-transition: all 0.6s ease-in-out;
       -moz-transition: all 0.6s ease-in-out;
@@ -149,8 +168,9 @@
         color: #fff;
 
         &__social {
-          position: absolute;
-          right: 0;
+          text-align: right;
+          display: block;
+          height: 80px;
 
           i {
             color: #fff;
@@ -266,6 +286,13 @@
   }
 
   @media only screen and (max-width: 1023px) {
+
+    &__container {
+      position: relative;
+      box-shadow: none;
+      background: none;
+    }
+
     &__logo {
       transform: none;
       font-size: 55px;

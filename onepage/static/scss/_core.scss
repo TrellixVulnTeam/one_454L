@@ -63,14 +63,15 @@ $green: #6ddcbd;
 
   &__scroll-top {
     position: fixed;
-    bottom: 5%;
-    left: 5%;
+    bottom: 0;
+    left: 20px;
     color: $green;
     font-size: 40px;
     cursor: pointer;
     z-index: 10;
     transition: all 0.2s ease;
     opacity: 0;
+    display: none;
 
     &:hover {
       bottom: 6%;
@@ -205,6 +206,11 @@ $green: #6ddcbd;
         color: red;
       }
     }
+
+    a {
+      margin-right: 10px;
+      cursor: pointer;
+    }
   }
 
   &.dark {
@@ -258,6 +264,10 @@ $green: #6ddcbd;
 
     .nav__logo {
       color: #fff;
+
+      &.active {
+        color: $blue;
+      }
     }
 
     .nav__mobile__background {
@@ -339,8 +349,7 @@ $green: #6ddcbd;
 
 @media only screen and (max-width: 1023px) {
   &__scroll-top {
-    bottom: 0;
-    left: 20px;
+    display: block;
 
     &:hover {
       bottom: 2%;
