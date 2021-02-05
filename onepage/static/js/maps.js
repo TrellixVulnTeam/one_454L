@@ -14,6 +14,7 @@ const myLoc = {
   lat: 51.18918,
   lng: -0.78982,
 };
+const apiKey = "AIzaSyDYx0GTUZKaEvxGoem9Dh_5vPmbK3xFO5k";
 
 window.initMap = function () {
   function success(position) {
@@ -29,7 +30,7 @@ window.initMap = function () {
         latitude +
         "," +
         longitude +
-        "&key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI",
+        "&key=" + apiKey,
       success: function (response) {
         let distanceElement = document.querySelector("#distanceElement");
         $(distanceElement).html(roundedMiles);
@@ -257,7 +258,7 @@ function materialiseMap(userLoc) {
 
 function IpLocation() {
   $.ajax({
-    url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI',
+    url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=' + apiKey,
     data: JSON.stringify({ "considerIp": "true" }),
     type: 'POST',
     contentType: 'application/json',

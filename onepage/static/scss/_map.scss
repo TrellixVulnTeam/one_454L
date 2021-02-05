@@ -5,6 +5,7 @@
 
   position: relative;
   overflow: hidden;
+  padding-top: 50px;
 
   &__text {
     position: absolute;
@@ -57,6 +58,7 @@
 
   @media only screen and (max-width: 1023px) {
     margin-bottom: 50px;
+    padding-top: 0;
 
     &__container {
       height: 400px;

@@ -22,19 +22,19 @@
 <script type="module" src="/static/js/maps.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<script type="module" src="/static/js/loader.js"></script>
+<!-- <script type="module" src="/static/js/loader.js"></script> -->
 <script type="module" src="/static/js/projects.js"></script>
 <script type="module" src="/static/js/lottie.js"></script>
 
 
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpzGVG-EpRG7o8cJ-39aCo8EFFj0KECLI&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYx0GTUZKaEvxGoem9Dh_5vPmbK3xFO5k&callback=initMap&libraries=geometry&v=weekly" type="text/javascript"></script>
 </head>
 <body class="core" id="body">
 
-<div class="loader">
+<!-- <div class="loader">
     <div class="loader__progress-bar"></div>
     <h1 class="loader__count"></h1>
-</div>
+</div> -->
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
@@ -52,10 +52,11 @@
 
 <div class="nav__mobile__background"></div>
 
-<div class="nav" id="nav">
+<div class="nav__container">
+    <div class="nav" id="nav">
     <div class="grid-x">
         <div class="cell large-2 medium-3">
-            <div class="nav__logo">&#60X&#62</div>
+            <div id="logo" class="nav__logo">&#60X&#62</div>
         </div>
 
         <div class="cell large-8 show-for-large">
@@ -73,6 +74,7 @@
 
         <div class="cell large-2 medium-9">
             <div class="nav__social">
+                <div class="nav__social__item"><a href="https://github.com/sixtysixcode/one/" target="_blank"><i class="fab fa-github"></i></a></div>
                 <div class="nav__social__item"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
             </div>
 
@@ -84,6 +86,7 @@
                     <div class="nav__mobile__items__item" data-section="projects" id="smallscreen-projects">PROJECTS</div>
                     <div class="nav__mobile__items__item" data-section="lottie" id="smallscreen-lottie">LOTTIE</div>
                     <div class="nav__mobile__items__item" data-section="binary" id="smallscreen-binary">LET'S TALK</div>
+                    <div class="nav__mobile__items__item__social"><a href="https://github.com/sixtysixcode/one/" target="_blank"><i class="fab fa-github"></i></a></div>
                     <div class="nav__mobile__items__item__social"><a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
                 </div>
                 <div id="hamburger" class="nav__mobile__hamburger-icon-container">
@@ -92,6 +95,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <section class="map" id="hello-section">
@@ -155,7 +159,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ai-logo.png">
+        <img src="static/images/compression/ai-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ai">
                 <i class="fas fa-sort-down"></i>
@@ -163,7 +167,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ps-logo.png">
+        <img src="static/images/compression/ps-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ps">
                 <i class="fas fa-sort-down"></i>
@@ -171,7 +175,7 @@
         </div>
     </div>
     <div class="skills__box cell large-6 medium-12">
-        <img src="static/images/ae-logo.png">
+        <img src="static/images/compression/ae-logo.png">
         <div class="skills__box__loader">
             <div class="skills__box__loader__inner ae">
                 <i class="fas fa-sort-down"></i>
@@ -185,21 +189,21 @@
     <div class="grid-x">
     <div class="cell large-5 medium-12">
         <div class="edex__image">
-            <img src="static/images/profile.jpg">
+            <img src="static/images/compression/profile.jpg">
         </div>
     </div>
     <div class="cell large-7 medium-12">
         <div class="edex__inner">
             <div class="edex__inner__roles">
-                <h3>I am a web developer.</h3>
                 <h3>I am a creative.</h3>
-                <h3>I am always learning.</h3>
-                <h3>I seek new opportunities.</h3>
+                <h3>I am constantly learning.</h3>
+                <h3>I rise to new challenges.</h3>
             </div>
             <p>I started University studying Fine Art at UWE Bristol but soon realised it was digital art I wanted to study. 
                 This prompted me to change courses, jumping into the second year of Digital Art & Technology (now referred to as Digital Media Design) at Plymouth University.<br>
-                The curriculum consisted of a mixture of projects, all creative, but some with a larger amount of programming involved. Before I knew it, I was diving into web development, 
-                using my design skills to inform technical decisions and vice versa.<br>
+                The curriculum consisted of a mixture of projects, all creative, but some with a larger amount of programming involved. Consequently, I became submerged in many aspects of web development, 
+                using my varied design skills to inform technical decisions and conversely, informing design with technical understanding and best practice. Both mutually compatible and providing a robust platform
+                from which to create dynamic and well structured web applications.<br>
                 I graduated in 2019 with a First Class Honours, and after a year in my first industry role as a Front-End Developer at BillBuddy, I am now looking for new opportunities.
             </p>
         </div>
@@ -213,17 +217,17 @@
         <div class="grid-x">
             <div class="cell large-4 medium-12">
                 <div class="projects__inner__box">
-                    <img src="static/images/augmentation/patch3d.png">
+                    <img src="static/images/compression/patch3d.png">
                     <div class="projects__inner__box__text">
-                        <h5>HUMAN AUGMENTATION LIBRARY</h5>
-                        <p>The conception and design of a human augmentation library.</p>
+                        <h5>ABSTRACTION</h5>
+                        <p>The conception of a human augmentation library.</p>
                         <i class="fas fa-chevron-left"></i><a id="human">READ MORE</a><i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
             <div class="cell large-4 medium-12">
                 <div class="projects__inner__box">
-                    <img class="nudge-down" src="static/images/bb/bb1.png">
+                    <img src="static/images/compression/bb1.png">
                     <div class="projects__inner__box__text">
                         <h5>BILLBUDDY</h5>
                         <p>My graduate role as a Front-End Developer at BillBuddy.</p>
@@ -233,10 +237,10 @@
             </div>
             <div class="cell large-4 medium-12">
                 <div class="projects__inner__box">
-                    <img src="static/images/incognito/typewriter-banner.png">
+                    <img src="static/images/compression/typewriter-banner.png">
                     <div class="projects__inner__box__text">
                         <h5>INCOGNITO</h5>
-                        <p>Project surrounding digital privacy and the movement of information.</p>
+                        <p>Project surrounding digital privacy and information.</p>
                         <i class="fas fa-chevron-left"></i><a id="project">READ MORE</a><i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
@@ -252,34 +256,34 @@
         <i class="fas fa-times"></i>
         <h3>HUMAN AUGMENTATION LIBRARY</h3>
     </div>
-    <p>This was my final year project during my BA in Digital Art in Design, in which is received a First Class Honours for both project and overall.<br>
-    The concept is an interactive library for futuristic augmentations, in which the user picks up the individual item from the podium and scans it, resulting in the accompanying informative animation being played on the screen in front of the user.<br>
-    I started with 2D designs of each augmentation, then 3D designs, and finally created an animation for each. The scanning system was created using a RaspberryPi connected to an RFID reader. I attached an RFID sticker to the bottom of each item, which upon scanning passed parameters to the URL of the browser, loading the correct animation. 
+    <p>This was my final year project during my BA in Digital Art and Design, in which I received a First Class Honours for both project and overall.<br>
+    The concept was interactive library for futuristic augmentations, in which the user picked up the individual item from the podium and scanned it, resulting in the accompanying informative animation being played on the screen in front of the user.<br>
+    I began with 2D designs of each augmentation, developing these into 3D designs, and finally created an animation for each. The scanning system was created using a RaspberryPi connected to an RFID reader. I attached an RFID sticker to the bottom of each item, which upon scanning passed parameters to the URL of the browser, loading the correct animation. 
     </p>
     <div class="projects__modal__tiles">
         <div class="grid-x">
         <div class="cell  medium-6 small-12">
-            <img src="/static/images/augmentation/2ddesigns.png">
-            <img src="/static/images/augmentation/ear3d.png">
-            <img src="/static/images/augmentation/ear3d2.png">
-            <img src="/static/images/augmentation/earprinting.png">
-            <img src="/static/images/augmentation/patchanim.png">
-            <img src="/static/images/augmentation/soundanim.png">
-            <img src="/static/images/augmentation/glasses3d.png">
-            <img src="/static/images/augmentation/patch3d.png">
-            <img src="/static/images/augmentation/glassesprinting.png">
+            <img src="/static/images/compression/2ddesigns.png">
+            <img src="/static/images/compression/ear3d.png">
+            <img src="/static/images/compression/ear3d2.png">
+            <img src="/static/images/compression/earprinting.png">
+            <img src="/static/images/compression/patchanim.png">
+            <img src="/static/images/compression/soundanim.png">
+            <img src="/static/images/compression/glasses3d.png">
+            <img src="/static/images/compression/patch3d.png">
+            <img src="/static/images/compression/glassesprinting.png">
         </div>
 
             <div class="cell  medium-6 small-12">
-            <img src="/static/images/augmentation/speakeranim.png">
-            <img src="/static/images/augmentation/rfidcode.png">
-            <img src="/static/images/augmentation/setup.png">       
-            <img src="/static/images/augmentation/patch3d.png">
-            <img src="/static/images/augmentation/speaker3d.png">
-            <img src="/static/images/augmentation/speakerprinting.png">
-            <img src="/static/images/augmentation/soundanim.png">
-            <img src="/static/images/augmentation/speakeranim2.png">
-            <img src="/static/images/augmentation/podiums.png">
+            <img src="/static/images/compression/speakeranim.png">
+            <img src="/static/images/compression/rfidcode.png">
+            <img src="/static/images/compression/setup.png">       
+            <img src="/static/images/compression/patch3d.png">
+            <img src="/static/images/compression/speaker3d.png">
+            <img src="/static/images/compression/speakerprinting.png">
+            <img src="/static/images/compression/soundanim.png">
+            <img src="/static/images/compression/speakeranim2.png">
+            <img src="/static/images/compression/podiums.png">
         </div>
         </div>
     </div>
@@ -290,12 +294,12 @@
         <i class="fas fa-times"></i>
         <h3>BILLBUDDY</h3>
     </div>
-    <p>As mentioned in the above 'About Me' style section, my first postgraduate industry role has been with BillBuddy, hired as a 
-        Front-End Web Developer to join the well funded and fast moving small team back in November 2019. At this time the company 
-        was looking for someone who could learn quickly and work well with other developers, collaborating on larger tasks and taking 
+    <p>My first postgraduate industry role has been with BillBuddy, employed in November 2019 as a  
+        Front-End Web Developer to join the well funded and fast moving small team. At this time the company 
+        was seeking someone who could learn quickly and work well with other developers, collaborating on larger tasks and taking 
         on smaller ones themselves.<br> 
         Three months into the role, after getting up to speed with the codebase structure and common patterns, I was tasked with 
-        re-designing the site and re-building the front of house. This was a big responsibility, but I thoroughly enjoyed it from 
+        re-designing the site and re-building the front of house. This was a huge responsibility, but I thoroughly enjoyed it from 
         start to finish. I created new design assets such as phone mockups and animations and mixed these with CSS animation and 
         structural changes for a brighter and more contemporary feel.<br>
         The remaining months have consisted of building new features, learning to use API's in a variety of ways (from Google Maps 
@@ -307,16 +311,16 @@
     <div class="projects__modal__tiles">
         <div class="grid-x">
         <div class="cell medium-6 small-12">
-            <img src="/static/images/bb/bb2.png">
-            <img src="/static/images/bb/bb5.png">
-            <img src="/static/images/bb/bb6.png">
-            <img src="/static/images/bb/bb3.png">   
+            <img src="/static/images/compression/bb2.png">
+            <img src="/static/images/compression/bb5.png">
+            <img src="/static/images/compression/bb6.png">
+            <img src="/static/images/compression/bb3.png">   
         </div>
         <div class="cell medium-6 small-12">
-            <img src="/static/images/bb/bb7.png">
-            <img src="/static/images/bb/bb8.png">
-            <img src="/static/images/bb/bb4.png">
-            <img src="/static/images/bb/bb9.png">
+            <img src="/static/images/compression/bb7.png">
+            <img src="/static/images/compression/bb8.png">
+            <img src="/static/images/compression/bb4.png">
+            <img src="/static/images/compression/bb9.png">
         </div>
         </div>
     </div>
@@ -328,10 +332,10 @@
         <h3>INCOGNITO</h3>
     </div>
     <p>During the final year of my degree, I was part of a group project exploring the theme of data protection (looks like we were ahead of the GDPR rollout!).<br> 
-        The concept was to take a seemingly analog item and hide a digital element inside it. We chose to take an old typewriter and install a flexible bar sensor on 
-        the underside of the piece of metal that each key arm moves toward on each stroke. The sensor had a range from 0 to 1550 once in place, this was mapped from 0 
+        The concept was to take a seemingly analog item and hide a digital element within it. We chose to take an old typewriter and install a flexible bar sensor on 
+        the underside of the piece of metal that each key arm moved toward on each stroke. The sensor had a range from 0 to 1550 once in place, this was mapped from 0 
         to 88 to make assigning values to each key cleaner. With installation complete and functions written to handle converting the sensor values to keys, we 
-        hooked up a small shredder and used it as our 'trigger', with paper being entered into it causing the most recent message typed to be sent to our database and then 
+        connected a small shredder and used it as our 'trigger'. The act of putting paper through the teeth causing the most recent message typed to be sent to our database and then 
         printed out at another location (in this case in another room). We invited users to enter a room and answer personal questions presented to them on a screen infront 
         of the podium on which the typewriter was placed - allowing us to hide wires and the RaspberryPi it was connected to inside the podium itself. The physical act of 
         'destroying' their answers became the antithetical action, essentially handing them to us.
@@ -339,12 +343,12 @@
     <div class="projects__modal__tiles">
         <div class="grid-x">
         <div class="cell medium-6 small-12">
-            <img src="/static/images/incognito/code1.png">
-            <img src="/static/images/incognito/code2.png">
+            <img src="/static/images/compression/code1.png">
+            <img src="/static/images/compression/code2.png">
         </div>
         <div class="cell medium-6 small-12">
-            <img src="/static/images/incognito/illustrator.png">
-            <img src="/static/images/incognito/typewriter-real.png">
+            <img src="/static/images/compression/illustrator.png">
+            <img src="/static/images/compression/typewriter-real.png">
         </div>
         </div>
     </div>
@@ -354,12 +358,12 @@
     <div class="grid-x">
         <div class="cell large-6 medium-12">
             <div class="lottie__text">
-            <h3>OOH LOOK, AN AFTER EFFECTS ANIMATION IN THE WILD</h3>
+            <h3>AN AFTER EFFECTS ANIMATION IN THE WILD</h3>
             <p class="large">Designed in Illustrator, animated in After Effects and then exported and configured using lottie.</p>
             </div>
         </div>
         <div class="cell large-6 medium-12" id="lottie-container">
-            <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" style="width: auto; height: 95%" speed="1"></lottie-player>
+            <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" speed="1"></lottie-player>
             <div id="lottie-mobile">
                 <img class="lottie-white" src="/static/images/tech-lottie-white.gif">
                 <img class="lottie-black" src="/static/images/tech-lottie-blk.gif">
@@ -372,7 +376,7 @@
     <canvas id="canvas"></canvas>
     <div class="binary__content">
         <h3>GET IN TOUCH</h3>
-        <p>If you think I would be a great addition to your team, contact me via one of the following </p>
+        <p>I believe I would be an asset to any team. I welcome enquiries via one of the following avenues.</p>
         <input id="emailInput" type="text" value="ninety5code@gmail.com"/>
         <button id="emailCopy"><i class="fas fa-copy"></i></button>
         <a href="https://www.linkedin.com/in/xander-barnes/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -381,6 +385,7 @@
 
 <div class="core__footer">
     <p><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Alexander Barnes 2021</p>
+    <p>Check out the <a href="https://github.com/sixtysixcode/one/" target="_blank">Github Repository</a><i class="far fa-hand-point-left"></i></p>
 </div>
 
 </body>

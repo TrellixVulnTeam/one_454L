@@ -2,9 +2,11 @@ let body = document.getElementsByClassName("core");
 
 let mobileNav = document.getElementById("mobile-nav");
 let mobileMenuBg = document.getElementsByClassName("nav__mobile__background");
+let mobileNavItems = document.getElementsByClassName("nav__mobile__items");
 let mobileMenuItem = document.getElementsByClassName(
   "nav__mobile__items__item"
 );
+
 let hamburger = document.getElementById("hamburger");
 
 let menuItem = document.getElementsByClassName("nav__desktop__items__item");
@@ -15,6 +17,8 @@ let themeBox = document.getElementById("themeBox");
 let themeToggleInput = document.getElementById("themeToggleInput");
 
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
+
+let logo = document.getElementById("logo");
 
 $(document).ready(function() {
   hamburger.addEventListener("click", navStatus);
@@ -68,13 +72,21 @@ function navStatus() {
 function navClose() {
   $(mobileNav).removeClass("active");
   $(mobileMenuBg).removeClass("active");
+  setTimeout(function() {
+    $(mobileNavItems).fadeOut();
+  }, 100);
   $(hamburger).removeClass("active");
+  $(logo).removeClass("active");
 }
 
 function navOpen() {
   $(mobileNav).addClass("active");
   $(mobileMenuBg).addClass("active");
+  setTimeout(function() {
+    $(mobileNavItems).fadeIn();
+  }, 100);
   $(hamburger).addClass("active");
+  $(logo).addClass("active");
 }
 
 function navUnderline() {
@@ -126,7 +138,7 @@ $(menuItem).on("click", function () {
   setTimeout(function () {
     $("html, body").animate(
       {
-        scrollTop: $(matchingSection).offset().top - 50,
+        scrollTop: $(matchingSection).offset().top - 100,
       },
       500
     );
