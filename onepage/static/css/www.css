@@ -1230,14 +1230,11 @@
   }
 }
 @media only screen and (max-width: 639px) {
-  .projects__modal p {
-    font-size: 20px;
-  }
   .projects__modal__title {
     padding: 20px 0;
   }
   .projects__modal__title h3 {
-    font-size: 32px;
+    font-size: 26px;
   }
   .projects__modal__title i {
     font-size: 24px;
