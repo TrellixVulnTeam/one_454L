@@ -8,6 +8,7 @@ let mk1;
 let mk2;
 let miles;
 let roundedMiles;
+let newMapText;
 let url;
 let city;
 const myLoc = {
@@ -33,7 +34,7 @@ window.initMap = function () {
         "&key=" + apiKey,
       success: function (response) {
         let distanceElement = document.querySelector("#distanceElement");
-        $(distanceElement).html(roundedMiles);
+        $(distanceElement).html("We're " + roundedMiles + " miles from each other");
 
         materialiseMap(userLoc);
       },
@@ -60,7 +61,7 @@ window.initMap = function () {
     };
 
     navigator.geolocation.getCurrentPosition(success, error, options);
-    console.log("geolocation success");
+    console.log("geolocation attempt");
   }
 };
 
@@ -272,7 +273,7 @@ function IpLocation() {
 
         computeDistance(data.location.lat, data.location.lng);
         let distanceElement = document.querySelector("#distanceElement");
-        $(distanceElement).html(roundedMiles);
+        $(distanceElement).html("We're " + roundedMiles + " miles from each other");
 
       } else {
         alert('not found');

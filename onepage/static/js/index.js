@@ -33,12 +33,7 @@ $(document).ready(function() {
   }
 
   $(upChevron).on("click", function () {
-    $([document.documentElement, document.body]).animate(
-      {
-        scrollTop: $("#body").offset().top,
-      },
-      500
-    );
+    window.scroll(0,0);
   });
 
   $(themeBox).on("click", function () {
