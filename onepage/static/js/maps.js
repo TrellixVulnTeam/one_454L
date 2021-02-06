@@ -60,6 +60,7 @@ window.initMap = function () {
     };
 
     navigator.geolocation.getCurrentPosition(success, error, options);
+    console.log("geolocation success");
   }
 };
 
