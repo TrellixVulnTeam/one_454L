@@ -267,8 +267,6 @@ html, body {
     }
 
     .nav__logo {
-      color: #fff;
-
       &.active {
         color: $blue;
       }
@@ -335,10 +333,6 @@ html, body {
       }
     }
 
-    .nav__desktop__items__item {
-      color: #fff;
-    }
-
     .lottie {
     &-white {
       display: none;
@@ -355,6 +349,12 @@ html, body {
 
     &:hover {
       bottom: 2%;
+    }
+  }
+
+  &.dark {
+    .nav__logo {
+      color:#fff;
     }
   }
 }

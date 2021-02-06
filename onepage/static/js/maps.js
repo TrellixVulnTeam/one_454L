@@ -17,54 +17,6 @@ const myLoc = {
 };
 const apiKey = "AIzaSyDNN0p5CJzhe0skik4v41UYCcTgmoiTFIk";
 
-window.initMap = function () {
-  function success(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-
-    computeDistance(latitude, longitude);
-
-    $.ajax({
-      type: "GET",
-      url:
-        "https://maps.googleapis.com/maps/api/geocode/json?latlng=" +
-        latitude +
-        "," +
-        longitude +
-        "&key=" + apiKey,
-      success: function (response) {
-        let distanceElement = document.querySelector("#distanceElement");
-        $(distanceElement).html("We're " + roundedMiles + " miles from each other");
-
-        materialiseMap(userLoc);
-      },
-    });
-  }
-
-  function error() {
-    if (error.code == error.PERMISSION_DENIED) {
-     IpLocation();
-    console.log("permission denied");
-    } else {
-      alert("There was an error with maps...");
-    }
-  }
-
-  if (!navigator.geolocation) {
-    IpLocation();
-    console.log(e.message);
-  } else {
-    let options = {
-      timeout: 20000,
-      enableHighAccuracy: true,
-      maximumAge: 0,
-    };
-
-    navigator.geolocation.getCurrentPosition(success, error, options);
-    console.log("geolocation attempt");
-  }
-};
-
 function computeDistance(latitude, longitude) {
   userLoc = {
     lat: latitude,
@@ -260,7 +212,7 @@ function materialiseMap(userLoc) {
   });
 }
 
-function IpLocation() {
+window.ipLocation = function() {
   $.ajax({
     url: "https://www.googleapis.com/geolocation/v1/geolocate?key=" + apiKey,
     data: JSON.stringify({ "considerIp": "true" }),
