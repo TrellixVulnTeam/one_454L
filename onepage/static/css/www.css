@@ -14,6 +14,10 @@
   font-family: "Karla-Regular";
   src: url("../fonts/Karla-Regular.ttf") format("TrueType");
 }
+html, body {
+  overflow-x: hidden;
+}
+
 .core {
   position: relative;
 }
