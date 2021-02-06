@@ -97,7 +97,7 @@ $green: #6ddcbd;
       background: $blue;
       border: 2px solid #fff;
       border-radius: 8px;
-      top: 50%;
+      top: 50vh;
       transform: translateY(-50%) rotate(180deg);
       z-index: 12;
       transition: 0.4s ease;
@@ -310,8 +310,7 @@ $green: #6ddcbd;
       &.active {
         .nav__mobile__items__item {
           color: $blue;
-
-          &.active {
+        
             &.active {
               color: #fff;
               --webkit-transition: all 0.7s ease-in-out;
@@ -328,7 +327,6 @@ $green: #6ddcbd;
                 transition: all 0.3s ease-in-out;
               }
             }
-          }
         }
       }
     }
