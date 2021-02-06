@@ -130,7 +130,7 @@ $(menuItem).on("click", function () {
   setTimeout(function () {
     $("html, body").animate(
       {
-        scrollTop: $(matchingSection).offset().top - 100,
+        scrollTop: $(matchingSection).offset().top - 150,
       },
       500
     );
