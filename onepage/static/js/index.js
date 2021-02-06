@@ -6,7 +6,6 @@ let mobileNavItems = document.getElementsByClassName("nav__mobile__items");
 let mobileMenuItem = document.getElementsByClassName(
   "nav__mobile__items__item"
 );
-
 let hamburger = document.getElementById("hamburger");
 
 let menuItem = document.getElementsByClassName("nav__desktop__items__item");
@@ -36,7 +35,7 @@ $(document).ready(function() {
   $(upChevron).on("click", function () {
     $([document.documentElement, document.body]).animate(
       {
-        scrollTop: $("#nav").offset().top,
+        scrollTop: $("#body").offset().top,
       },
       500
     );
@@ -53,7 +52,7 @@ $(document).ready(function() {
 
   $(document).scroll(function () {
     let y = $(this).scrollTop();
-    if (y > 300) {
+    if (y > 100) {
       $(upChevron).css("opacity", "100%");
     } else {
       $(upChevron).css("opacity", "0");
@@ -72,21 +71,19 @@ function navStatus() {
 function navClose() {
   $(mobileNav).removeClass("active");
   $(mobileMenuBg).removeClass("active");
-  setTimeout(function() {
-    $(mobileNavItems).fadeOut();
-  }, 100);
   $(hamburger).removeClass("active");
-  $(logo).removeClass("active");
+  setTimeout(function() {
+    $(logo).removeClass("active");
+  }, 200);
 }
 
 function navOpen() {
   $(mobileNav).addClass("active");
   $(mobileMenuBg).addClass("active");
-  setTimeout(function() {
-    $(mobileNavItems).fadeIn();
-  }, 100);
   $(hamburger).addClass("active");
+  setTimeout(function() {
   $(logo).addClass("active");
+  }, 200);
 }
 
 function navUnderline() {
@@ -158,7 +155,7 @@ $(mobileMenuItem).on("click", function () {
       },
       500
     );
-  }, 1500);
+  }, 1000);
 });
 
 function soulmate(event) {

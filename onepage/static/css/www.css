@@ -76,7 +76,7 @@
   background: #5e4ae3;
   border: 2px solid #fff;
   border-radius: 8px;
-  top: 50%;
+  top: 50vh;
   transform: translateY(-50%) rotate(180deg);
   z-index: 12;
   transition: 0.4s ease;
@@ -234,14 +234,14 @@
 .core.dark .nav__mobile.active .nav__mobile__items__item {
   color: #5e4ae3;
 }
-.core.dark .nav__mobile.active .nav__mobile__items__item.active.active {
+.core.dark .nav__mobile.active .nav__mobile__items__item.active {
   color: #fff;
   --webkit-transition: all 0.7s ease-in-out;
   -moz-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
 }
-.core.dark .nav__mobile.active .nav__mobile__items__item.active.active:after {
+.core.dark .nav__mobile.active .nav__mobile__items__item.active:after {
   background: #5e4ae3;
   width: 80%;
   --webkit-transition: all 0.3s ease-in-out;
@@ -346,7 +346,8 @@
   display: none;
 }
 .nav__mobile.active .nav__mobile__items {
-  top: 100px;
+  right: 0;
+  top: 85px;
   z-index: 3;
   --webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -371,12 +372,12 @@
   height: 100%;
   background: #5e4ae3;
   transition: all 0.4s ease-in-out;
-  top: -100%;
+  right: -100%;
   z-index: 3;
   display: none;
 }
 .nav__mobile__background.active {
-  top: 0;
+  right: 0;
   transition: all 0.2s ease-in-out;
 }
 .nav__mobile__hamburger-icon {
@@ -415,9 +416,9 @@
 .nav__mobile__items {
   position: relative;
   width: 100%;
-  top: -180px;
+  right: -100%;
+  top: 85px;
   height: 0;
-  display: none;
   z-index: -1;
   /* So the menu doesn't cover the hamburger icon when it's hidden */
   --webkit-transition: all 0.3s ease-in-out;
@@ -434,14 +435,13 @@
 .nav__mobile__items__item__social {
   text-align: right;
   display: block;
-  height: 80px;
+  height: 45px;
 }
 .nav__mobile__items__item__social i {
   color: #fff;
   border-radius: 5px;
   padding: 8px;
-  font-size: 50px;
-  margin: 30px 0;
+  font-size: 30px;
 }
 .nav__mobile__items__item:after {
   content: "";
@@ -451,24 +451,24 @@
   right: -5px;
   z-index: -10;
   height: 115px;
-  --webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  --webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .nav__mobile__items__item.active {
   color: #5e4ae3;
-  --webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  --webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .nav__mobile__items__item.active:after {
   width: 80%;
-  --webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  --webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .nav__mobile__items ul {
   list-style: none;
@@ -560,9 +560,6 @@
   }
   .nav__mobile__hamburger-icon:before, .nav__mobile__hamburger-icon:after {
     height: 7px;
-  }
-  .nav__mobile__items__item.active:after {
-    width: 100%;
   }
   .nav__social {
     display: none;
