@@ -14,7 +14,7 @@ const myLoc = {
   lat: 51.18918,
   lng: -0.78982,
 };
-const apiKey = "AIzaSyDYx0GTUZKaEvxGoem9Dh_5vPmbK3xFO5k";
+const apiKey = "AIzaSyDNN0p5CJzhe0skik4v41UYCcTgmoiTFIk";
 
 window.initMap = function () {
   function success(position) {
@@ -43,6 +43,7 @@ window.initMap = function () {
   function error() {
     if (error.code == error.PERMISSION_DENIED) {
      IpLocation();
+    console.log("permission denied");
     } else {
       alert("There was an error with maps...");
     }
@@ -50,6 +51,7 @@ window.initMap = function () {
 
   if (!navigator.geolocation) {
     IpLocation();
+    console.log(e.message);
   } else {
     let options = {
       timeout: 20000,
@@ -258,7 +260,7 @@ function materialiseMap(userLoc) {
 
 function IpLocation() {
   $.ajax({
-    url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=' + apiKey,
+    url: "https://www.googleapis.com/geolocation/v1/geolocate?key=" + apiKey,
     data: JSON.stringify({ "considerIp": "true" }),
     type: 'POST',
     contentType: 'application/json',

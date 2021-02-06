@@ -2,7 +2,7 @@ let background = document.querySelector(".loader"),
   bar = document.querySelector(".loader__progress-bar"),
   counter = document.querySelector(".loader__count"),
   i = 0,
-  throttle = 0.7; // 0-1
+  throttle = 0.85; // 0-1
 
 $(document).ready(function draw() {
   if (i <= 100) {
