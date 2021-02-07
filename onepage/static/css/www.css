@@ -528,18 +528,23 @@ html, body {
   bottom: 0;
   left: 0;
   z-index: -1;
-  transition: 0.2s ease-in-out;
+  transition: 0.24 ease-in-out;
 }
 .nav__desktop__items__item:hover {
   cursor: pointer;
   color: #2d2d2a;
 }
 .nav__desktop__items__item.active {
-  color: #fff;
+  animation: navColor;
+  animation-duration: 0.4s;
+  animation-delay: 0.65s;
+  animation-fill-mode: forwards;
 }
 .nav__desktop__items__item.active:after {
-  height: 100%;
-  transition: all 0.2s ease-in;
+  animation: navItemSelected;
+  animation-duration: 0.4s;
+  animation-delay: 0.65s;
+  animation-fill-mode: forwards;
 }
 @media only screen and (max-width: 1023px) {
   .nav__container {
@@ -601,6 +606,22 @@ html, body {
   }
   100% {
     transform: rotate(15deg);
+  }
+}
+@keyframes navItemSelected {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes navColor {
+  from {
+    color: #888888;
+  }
+  to {
+    color: #fff;
   }
 }
 .map {

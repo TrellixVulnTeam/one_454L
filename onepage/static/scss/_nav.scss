@@ -265,7 +265,7 @@
           bottom: 0;
           left: 0;
           z-index: -1;
-          transition: 0.2s ease-in-out;
+          transition: 0.24 ease-in-out;
         }
 
         &:hover {
@@ -274,11 +274,16 @@
         }
 
         &.active {
-          color: #fff;
+          animation: navColor;
+          animation-duration: 0.4s;
+          animation-delay: 0.65s;
+          animation-fill-mode: forwards;
 
           &:after {
-            height: 100%;
-            transition: all 0.2s ease-in;
+            animation: navItemSelected;
+            animation-duration: 0.4s;
+            animation-delay: 0.65s;
+            animation-fill-mode: forwards;
           }
         }
       }
@@ -369,5 +374,26 @@
   }
   100% {
     transform: rotate(15deg);
+  }
+}
+
+@keyframes navItemSelected {
+  // default non-selected style of nav item
+  from {
+    height: 0;
+  }
+  // highlighted style of nav item
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes navColor {
+  from {
+    color: #888888;
+  }
+
+  to {
+    color: #fff;
   }
 }

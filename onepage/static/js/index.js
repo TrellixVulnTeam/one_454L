@@ -9,6 +9,7 @@ let mobileMenuItem = document.getElementsByClassName(
 let hamburger = document.getElementById("hamburger");
 
 let menuItem = document.getElementsByClassName("nav__desktop__items__item");
+let menuItems = document.getElementsByClassName("nav__desktop__items");
 
 let upChevron = document.getElementsByClassName("core__scroll-top");
 
@@ -16,6 +17,7 @@ let themeBox = document.getElementById("themeBox");
 let themeToggleInput = document.getElementById("themeToggleInput");
 
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
+let sections = document.querySelectorAll("section");
 
 let logo = document.getElementById("logo");
 
@@ -112,21 +114,51 @@ function copy() {
 
 const config = {
   root: null,
-  rootMargin: "-100px 0 0 -100px",
+  rootMargin: "0px 0px 0px 0px;",
+  threshold: 0,
 };
 
-let observer = new IntersectionObserver((entries) => {
+let skillsObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.intersectionRatio > 0.9) {
+    if (entry.intersectionRatio > 0.3) {
       entry.target.classList.add("loaded");
-      observer.unobserve(entry.target);
+      skillsObserver.unobserve(entry.target);
     }
   }, config);
 });
 
 skillBars.forEach((bar) => {
-  observer.observe(bar);
+  skillsObserver.observe(bar);
 });
+
+if ('IntersectionObserver' in window) {
+  let config = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+
+let observer = new IntersectionObserver(onChange, config);
+
+sections.forEach(section => observer.observe(section));
+
+function onChange(changes, observer) {
+  changes.forEach(change => {
+      if (change.intersectionRatio > 0.5) {
+
+          let hash = change.target.id;
+          let newStr = hash.replace("-section", "");
+    
+          $(menuItem).removeClass('active');
+         
+          let navEl = document.querySelector('.nav__desktop__items__item#' + newStr);
+          navEl.classList.add('active');
+      }
+  });
+}
+} else {
+
+}
 
 $(menuItem).on("click", function () {
   let data = $(this).data("section");
