@@ -20,4 +20,3 @@ LottieInteractivity.create({
     },
   ],
 });
-
