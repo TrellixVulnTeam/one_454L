@@ -37,7 +37,6 @@ $(document).ready(function() {
   });
 
   $(themeBox).on("click", function () {
-    console.log("theme box clicked");
     if (themeBox.classList.contains("active")) {
       $(themeBox).removeClass("active");
     } else {

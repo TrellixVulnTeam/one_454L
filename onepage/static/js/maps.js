@@ -12,8 +12,7 @@ let newMapText;
 let url;
 let city;
 const myLoc = {
-  lat: 51.18918,
-  lng: -0.78982,
+  lat: 50.3887502, lng: -4.1281376,
 };
 const apiKey = "AIzaSyDNN0p5CJzhe0skik4v41UYCcTgmoiTFIk";
 

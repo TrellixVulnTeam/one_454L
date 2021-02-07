@@ -386,5 +386,16 @@ html, body {
         }
       }
     }
+
+    &__footer {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      right: 0;
+
+      p {
+        font-size: 12px;
+      }
+    }
   }
 }
