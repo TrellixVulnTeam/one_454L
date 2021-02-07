@@ -90,11 +90,15 @@ function mobileNavUnderline() {
   $(this).addClass("active");
 }
 
+function setMapStyle(mapStyle) { map.setOptions({styles: mapStyle}); } 
+
 function themeClassChanges() {
   if ($(themeToggleInput).is(":checked")) {
     $(body).addClass("dark");
+    setMapStyle(darkTheme);
   } else {
     $(body).removeClass("dark");
+   setMapStyle(lightTheme);
   }
 }
 
