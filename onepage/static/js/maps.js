@@ -12,11 +12,12 @@ let newMapText;
 let url;
 let city;
 const myLoc = {
-  lat: 50.3887502, lng: -4.1281376,
+  lat: 50.3887502,
+  lng: -4.1281376,
 };
 const apiKey = "AIzaSyDNN0p5CJzhe0skik4v41UYCcTgmoiTFIk";
 
-window.lightTheme =  [
+window.lightTheme = [
   {
     elementType: "geometry",
     stylers: [
@@ -177,7 +178,7 @@ window.lightTheme =  [
   },
 ];
 
-window.darkTheme =  [
+window.darkTheme = [
   {
     elementType: "geometry",
     stylers: [
@@ -356,17 +357,16 @@ function computeDistance(latitude, longitude) {
   miles = getMiles(distance);
   roundedMiles = Math.round(miles * 100) / 100;
 
-  return roundedMiles
+  return roundedMiles;
 }
 
 function materialiseMap(userLoc) {
-
-      let options = {
-        center: userLoc,
-          zoom: 6,
-          disableDefaultUI: true,
-          styles: lightTheme,
-      }
+  let options = {
+    center: userLoc,
+    zoom: 6,
+    disableDefaultUI: true,
+    styles: lightTheme,
+  };
 
   window.map = new google.maps.Map(document.getElementById("map"), options);
 
@@ -378,25 +378,26 @@ function materialiseMap(userLoc) {
   });
 }
 
-window.ipLocation = function() {
+window.ipLocation = function () {
   $.ajax({
     url: "https://www.googleapis.com/geolocation/v1/geolocate?key=" + apiKey,
-    data: JSON.stringify({ "considerIp": "true" }),
-    type: 'POST',
-    contentType: 'application/json',
-    success: function(data) {
-      if(data.location) {
+    data: JSON.stringify({ considerIp: "true" }),
+    type: "POST",
+    contentType: "application/json",
+    success: function (data) {
+      if (data.location) {
         userLoc = new google.maps.LatLng(data.location.lat, data.location.lng);
-    
+
         materialiseMap(userLoc);
 
         computeDistance(data.location.lat, data.location.lng);
         let distanceElement = document.querySelector("#distanceElement");
-        $(distanceElement).html("We're " + roundedMiles + " miles from each other");
-
+        $(distanceElement).html(
+          "We're " + roundedMiles + " miles from each other"
+        );
       } else {
-        alert('not found');
+        alert("not found");
       }
-    }
+    },
   });
-}
+};

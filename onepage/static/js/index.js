@@ -19,7 +19,7 @@ let skillBars = document.querySelectorAll(".skills__box__loader__inner");
 
 let logo = document.getElementById("logo");
 
-$(document).ready(function() {
+$(document).ready(function () {
   hamburger.addEventListener("click", navStatus);
   themeToggleInput.addEventListener("click", themeClassChanges);
   document.querySelector("#emailCopy").addEventListener("click", copy);
@@ -33,7 +33,7 @@ $(document).ready(function() {
   }
 
   $(upChevron).on("click", function () {
-   $('html, body').animate({scrollTop: $("#body").offset().top}, 500);
+    $("html, body").animate({ scrollTop: $("#body").offset().top }, 500);
   });
 
   $(themeBox).on("click", function () {
@@ -66,7 +66,7 @@ function navClose() {
   $(mobileNav).removeClass("active");
   $(mobileMenuBg).removeClass("active");
   $(hamburger).removeClass("active");
-  setTimeout(function() {
+  setTimeout(function () {
     $(logo).removeClass("active");
   }, 200);
 }
@@ -75,8 +75,8 @@ function navOpen() {
   $(mobileNav).addClass("active");
   $(mobileMenuBg).addClass("active");
   $(hamburger).addClass("active");
-  setTimeout(function() {
-  $(logo).addClass("active");
+  setTimeout(function () {
+    $(logo).addClass("active");
   }, 200);
 }
 
@@ -90,7 +90,9 @@ function mobileNavUnderline() {
   $(this).addClass("active");
 }
 
-function setMapStyle(mapStyle) { map.setOptions({styles: mapStyle}); } 
+function setMapStyle(mapStyle) {
+  map.setOptions({ styles: mapStyle });
+}
 
 function themeClassChanges() {
   if ($(themeToggleInput).is(":checked")) {
@@ -98,7 +100,7 @@ function themeClassChanges() {
     setMapStyle(darkTheme);
   } else {
     $(body).removeClass("dark");
-   setMapStyle(lightTheme);
+    setMapStyle(lightTheme);
   }
 }
 
