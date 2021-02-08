@@ -21,11 +21,11 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass), ("fa-js-square", $js),
 
 .skills {
   position: relative;
-  margin: 0 2% 50px;
+  margin: 0 2% 100px;
 
   &__box {
     position: relative;
-    padding: 40px;
+    padding: 30px 60px;
     text-align: center;
 
     img {

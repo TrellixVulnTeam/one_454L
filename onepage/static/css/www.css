@@ -790,11 +790,11 @@ html, body {
 
 .skills {
   position: relative;
-  margin: 0 2% 50px;
+  margin: 0 2% 100px;
 }
 .skills__box {
   position: relative;
-  padding: 40px;
+  padding: 30px 60px;
   text-align: center;
 }
 .skills__box img {
@@ -1238,7 +1238,7 @@ html, body {
   display: none;
   cursor: pointer;
   background: #000;
-  opacity: 85%;
+  opacity: 0.85;
 }
 @media only screen and (max-width: 799px) {
   .projects__modal p {
