@@ -141,11 +141,21 @@ $labels: "HTML", "SASS", "Javascript", "Python Django", "Github", "Illustrator",
 
       &__loader {
         width: 100%;
+
+          &:before {
+            top: -115px;
+          }
+        }
       }
-    }
 
     &__text {
       text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 639px) {
+    &__box {
+      padding: 30px;
     }
   }
 }

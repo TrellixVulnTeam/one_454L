@@ -1014,8 +1014,16 @@ html, body {
   .skills__box__loader {
     width: 100%;
   }
+  .skills__box__loader:before {
+    top: -115px;
+  }
   .skills__text {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .skills__box {
+    padding: 30px;
   }
 }
 
