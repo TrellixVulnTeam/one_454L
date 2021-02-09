@@ -35,7 +35,7 @@ html, body {
   font-family: "Rubik-Bold", Geneva, Verdana, sans-serif;
 }
 .core h3.centered {
-  font-family: "Rubik-Bold";
+  font-family: "Rubik-Bold", Geneva, Verdana, sans-serif;
   padding-bottom: 15px;
   border-bottom: 1px solid #d1d1d1;
   width: fit-content;
