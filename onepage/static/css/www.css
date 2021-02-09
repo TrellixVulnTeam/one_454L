@@ -68,13 +68,13 @@ html, body {
   left: 20px;
   font-size: 36px;
   cursor: pointer;
-  opacity: 100%;
+  opacity: 1;
   z-index: 10;
   transition: all 0.2s ease;
 }
 .core__theme-switch .far {
   color: #9a9a9a;
-  opacity: 60%;
+  opacity: 0.6;
 }
 .core__theme-switch .fas {
   color: #6ddcbd;
@@ -172,6 +172,9 @@ html, body {
 }
 .core.dark .nav__mobile__items__item.active:after {
   background: #fff;
+}
+.core.dark .nav__mobile__items__item__social i {
+  color: #5e4ae3;
 }
 .core.dark .nav__mobile.active .nav__mobile__items__item {
   color: #5e4ae3;
@@ -661,6 +664,9 @@ html, body {
 @media only screen and (max-width: 639px) {
   .map__text__container {
     margin: 40px 0;
+  }
+  .map__text.loaded {
+    top: 50%;
   }
   .map__text h1 {
     font-size: 40px;

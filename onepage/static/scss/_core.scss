@@ -89,13 +89,13 @@ html, body {
     left: 20px;
     font-size: 36px;
     cursor: pointer;
-    opacity: 100%;
+    opacity: 1;
     z-index: 10;
     transition: all 0.2s ease;
 
     .far {
       color: #9a9a9a;
-      opacity: 60%;
+      opacity: 0.6;
     }
 
     .fas {
@@ -236,6 +236,12 @@ html, body {
           background: #fff;
         }
       }
+
+      &__social {
+        i {
+        color: $blue;
+      }
+    }
     }
 
     .nav__mobile {

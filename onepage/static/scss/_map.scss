@@ -115,7 +115,11 @@
         margin: 40px 0;
       }
 
-      h1{
+      &.loaded {
+        top: 50%;
+      }
+
+      h1 {
         font-size: 40px;
         line-height: 3.5rem;
         margin: 40px 0 20px;
