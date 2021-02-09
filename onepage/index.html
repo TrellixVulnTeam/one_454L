@@ -21,32 +21,20 @@
 <script type="module" src="/static/js/maps.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<!-- <script type="module" src="/static/js/loader.js"></script> -->
 <script type="module" src="/static/js/projects.js"></script>
-<script type="module" src="/static/js/lottie.js"></script>
 <script type="module" src="/static/js/index.js"></script>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNN0p5CJzhe0skik4v41UYCcTgmoiTFIk&callback=ipLocation&libraries=geometry&v=weekly" type="text/javascript"></script>
 </head>
-<body class="core" id="body">
 
-<!-- <div class="loader">
-    <div class="loader__progress-bar"></div>
-    <h1 class="loader__count"></h1>
-</div> -->
+<body class="core" id="body">
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
 </div>
 
-<div id="themeBox" class="core__toggle__box">
-    <div id="themeChevronContainer" class="core__toggle__box__outer">
-        <i id="themeChevron" class="fas fa-chevron-left"></i>
-    </div>
-    <label id="themeToggle" class="core__toggle">
-        <input id="themeToggleInput" type="checkbox">
-        <span id="themeToggleSlider" class="core__toggle__slider"></span>
-    </label>
+<div class="core__theme-switch">
+    <i id="themeToggleInput" class="fas fa-lightbulb"></i>
 </div>
 
 <div class="nav__mobile__background"></div>
@@ -352,24 +340,6 @@
         </div>
     </div>
 </div>
-
-<section class="lottie" id="lottie-section">
-    <div class="grid-x">
-        <div class="cell large-6 medium-12">
-            <div class="lottie__text">
-            <h3>AN AFTER EFFECTS ANIMATION IN THE WILD</h3>
-            <p class="large">Designed in Illustrator, animated in After Effects and then exported and configured using lottie.</p>
-            </div>
-        </div>
-        <div class="cell large-6 medium-12" id="lottie-container">
-            <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" speed="1"></lottie-player>
-            <div id="lottie-mobile">
-                <img class="lottie-white" src="/static/images/tech-lottie-white.gif">
-                <img class="lottie-black" src="/static/images/tech-lottie-blk.gif">
-            </div>
-        </div>
-    </div>
-</section>
 
 <section id="binary-section" class="binary">
     <canvas id="canvas"></canvas>
