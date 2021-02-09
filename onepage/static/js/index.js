@@ -21,11 +21,24 @@ $(document).ready(function () {
 
   setTimeout(function() {
     $(".map__text").addClass("loaded");
-  }, 500);
+  }, 350);
 
-  setTimeout(function() {
-    $("themeLabel").fadeIn();
-  }, 5000);
+  function themeLabelAppear() {
+    return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      $(themeLabel).fadeIn();
+      resolve("Label appeared!");
+    }, 5000);
+  });
+  };
+
+  function themeLabelDissapear() {
+    setTimeout(function() {
+      $(themeLabel).fadeOut();
+    }, 10000);
+  };
+
+  themeLabelAppear().then(themeLabelDissapear);
 
   for (let i = 0; i < menuItem.length; i++) {
     menuItem[i].addEventListener("click", navUnderline);
@@ -99,8 +112,8 @@ $(themeToggleInput).on("click", function() {
     setMapStyle(lightTheme);
     $(themeToggleInput).removeClass("far").addClass("fas");
   }
-  if ($("themeLabel").is(":visible")) {
-    $("themeLabel").fadeOut();
+  if ($(themeLabel).is(":visible")) {
+    $(themeLabel).fadeOut();
   }
 })
 
