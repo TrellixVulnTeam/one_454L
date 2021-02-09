@@ -19,6 +19,8 @@ $skills: ("html", $html, "100"), ("sass", $sass, "80"), ("js", $js, "75"),
 $icons: ("fa-html5", $html), ("fa-sass", $sass), ("fa-js-square", $js),
   ("fa-python", $python), ("fa-github", $github);
 
+$labels: "HTML", "SASS", "Javascript", "Python Django", "Github", "Illustrator", "Photoshop", "After Effects";
+
 .skills {
   position: relative;
   margin: 0 2% 100px;
@@ -56,6 +58,36 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass), ("fa-js-square", $js),
       border-radius: 23px;
       background: #ffffff;
       box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
+
+      &:before {
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        background: #fff;
+        box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;        
+        color: #9a9a9a;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        opacity: 0;
+      }
+  
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      @each $label in $labels {
+        &[data-label='#{$label}'] {
+        
+        &:before {
+          content: "#{$label}";
+        }
+      }
+    }
 
       &__inner {
         position: relative;
@@ -97,6 +129,7 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass), ("fa-js-square", $js),
       }
     }
   }
+  
 
   @media only screen and (max-width: 1024px) {
     &__box {
@@ -108,11 +141,21 @@ $icons: ("fa-html5", $html), ("fa-sass", $sass), ("fa-js-square", $js),
 
       &__loader {
         width: 100%;
+
+          &:before {
+            top: -115px;
+          }
+        }
       }
-    }
 
     &__text {
       text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 639px) {
+    &__box {
+      padding: 30px;
     }
   }
 }
