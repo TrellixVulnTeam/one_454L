@@ -79,6 +79,18 @@ html, body {
 .core__theme-switch .fas {
   color: #6ddcbd;
 }
+.core__theme-switch__label {
+  position: fixed;
+  left: 60px;
+  bottom: 20px;
+  font-size: 16px;
+  background: #6ddcbd;
+  border-radius: 20px;
+  color: #fff;
+  padding: 4px 8px;
+  display: none;
+  z-index: 10;
+}
 .core__footer {
   position: absolute;
   bottom: 20px;
@@ -129,6 +141,9 @@ html, body {
 .core.dark .skills__box__loader {
   box-shadow: none;
   color: #0a0a0a;
+}
+.core.dark .skills__box__loader:before {
+  box-shadow: none;
 }
 .core.dark .projects__inner__box {
   box-shadow: none;
@@ -192,6 +207,16 @@ html, body {
   .core.dark .nav__logo {
     color: #fff;
   }
+  .core__footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+  }
+  .core__footer p {
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 639px) {
   .core__toggle {
@@ -213,15 +238,6 @@ html, body {
   .core__toggle__slider:before {
     height: 23px;
     width: 23px;
-  }
-  .core__footer {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-  }
-  .core__footer p {
-    font-size: 12px;
   }
 }
 
@@ -342,7 +358,7 @@ html, body {
 }
 .nav__mobile__hamburger-icon-container {
   position: absolute;
-  right: 4%;
+  right: 3%;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -497,7 +513,6 @@ html, body {
     height: 85px;
     width: 70px;
     top: 20%;
-    right: 5%;
   }
   .nav__mobile__hamburger-icon:before, .nav__mobile__hamburger-icon:after {
     height: 7px;
@@ -557,9 +572,15 @@ html, body {
 }
 .map__text {
   position: absolute;
-  top: 40%;
+  top: 0%;
   transform: translateY(-50%);
   padding: 0 0 0 45px;
+  opacity: 0;
+}
+.map__text.loaded {
+  top: 40%;
+  transition: all 0.5s ease-out;
+  opacity: 1;
 }
 .map__text__container {
   position: relative;

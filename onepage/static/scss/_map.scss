@@ -9,9 +9,16 @@
 
   &__text {
     position: absolute;
-    top: 40%;
+    top: 0%;
     transform: translateY(-50%);
     padding: 0 0 0 45px;
+    opacity: 0;
+
+    &.loaded {
+      top: 40%;
+      transition: all 0.5s ease-out;
+      opacity: 1;
+    }
 
     &__container {
       position: relative;

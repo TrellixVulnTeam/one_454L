@@ -10,6 +10,7 @@ let menuItem = document.getElementsByClassName("nav__desktop__items__item");
 let menuItems = document.getElementsByClassName("nav__desktop__items");
 let upChevron = document.getElementsByClassName("core__scroll-top");
 let themeToggleInput = document.getElementById("themeToggleInput");
+let themeLabel = document.getElementById("themeLabel");
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
 let sections = document.querySelectorAll("section");
 let logo = document.getElementById("logo");
@@ -17,6 +18,14 @@ let logo = document.getElementById("logo");
 $(document).ready(function () {
   hamburger.addEventListener("click", navStatus);
   document.querySelector("#emailCopy").addEventListener("click", copy);
+
+  setTimeout(function() {
+    $(".map__text").addClass("loaded");
+  }, 500);
+
+  setTimeout(function() {
+    $("themeLabel").fadeIn();
+  }, 5000);
 
   for (let i = 0; i < menuItem.length; i++) {
     menuItem[i].addEventListener("click", navUnderline);
@@ -89,6 +98,9 @@ $(themeToggleInput).on("click", function() {
     $(body).removeClass("dark");
     setMapStyle(lightTheme);
     $(themeToggleInput).removeClass("far").addClass("fas");
+  }
+  if ($("themeLabel").is(":visible")) {
+    $("themeLabel").fadeOut();
   }
 })
 

@@ -101,6 +101,19 @@ html, body {
     .fas {
       color: #6ddcbd;
     }
+
+    &__label {
+      position: fixed;
+      left: 60px;
+      bottom: 20px;
+      font-size: 16px;
+      background: $green;
+      border-radius: 20px;
+      color: #fff;
+      padding: 4px 8px;
+      display: none;
+      z-index: 10;
+    }
   }
 
   &__footer {
@@ -171,6 +184,10 @@ html, body {
       &__loader {
         box-shadow: none;
         color: $font-black;
+
+        &:before {
+          box-shadow: none;
+        }
       }
     }
 
@@ -270,6 +287,18 @@ html, body {
       color:#fff;
     }
   }
+
+  &__footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+
+    p {
+      font-size: 12px;
+    }
+  }
 }
 
   @media only screen and (max-width: 639px) {
@@ -297,17 +326,6 @@ html, body {
           height: 23px;
           width: 23px;
         }
-      }
-    }
-
-    &__footer {
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-      right: 0;
-
-      p {
-        font-size: 12px;
       }
     }
   }
