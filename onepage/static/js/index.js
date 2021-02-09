@@ -1,5 +1,4 @@
 let body = document.getElementsByClassName("core");
-
 let mobileNav = document.getElementById("mobile-nav");
 let mobileMenuBg = document.getElementsByClassName("nav__mobile__background");
 let mobileNavItems = document.getElementsByClassName("nav__mobile__items");
@@ -7,23 +6,16 @@ let mobileMenuItem = document.getElementsByClassName(
   "nav__mobile__items__item"
 );
 let hamburger = document.getElementById("hamburger");
-
 let menuItem = document.getElementsByClassName("nav__desktop__items__item");
 let menuItems = document.getElementsByClassName("nav__desktop__items");
-
 let upChevron = document.getElementsByClassName("core__scroll-top");
-
-let themeBox = document.getElementById("themeBox");
 let themeToggleInput = document.getElementById("themeToggleInput");
-
 let skillBars = document.querySelectorAll(".skills__box__loader__inner");
 let sections = document.querySelectorAll("section");
-
 let logo = document.getElementById("logo");
 
 $(document).ready(function () {
   hamburger.addEventListener("click", navStatus);
-  themeToggleInput.addEventListener("click", themeClassChanges);
   document.querySelector("#emailCopy").addEventListener("click", copy);
 
   for (let i = 0; i < menuItem.length; i++) {
@@ -36,14 +28,6 @@ $(document).ready(function () {
 
   $(upChevron).on("click", function () {
     $("html, body").animate({ scrollTop: $("#body").offset().top }, 500);
-  });
-
-  $(themeBox).on("click", function () {
-    if (themeBox.classList.contains("active")) {
-      $(themeBox).removeClass("active");
-    } else {
-      $(themeBox).addClass("active");
-    }
   });
 
   $(document).scroll(function () {
@@ -96,15 +80,17 @@ function setMapStyle(mapStyle) {
   map.setOptions({ styles: mapStyle });
 }
 
-function themeClassChanges() {
-  if ($(themeToggleInput).is(":checked")) {
+$(themeToggleInput).on("click", function() {
+  if ($(this).hasClass("fas")) {
     $(body).addClass("dark");
     setMapStyle(darkTheme);
+    $(themeToggleInput).removeClass("fas").addClass("far");
   } else {
     $(body).removeClass("dark");
     setMapStyle(lightTheme);
+    $(themeToggleInput).removeClass("far").addClass("fas");
   }
-}
+})
 
 function copy() {
   let copyText = document.querySelector("#emailInput");
@@ -157,7 +143,6 @@ function onChange(changes, observer) {
   });
 }
 } else {
-
 }
 
 $(menuItem).on("click", function () {

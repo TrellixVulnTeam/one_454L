@@ -49,7 +49,7 @@ html, body {
 .core__scroll-top {
   position: fixed;
   bottom: 0;
-  left: 20px;
+  right: 20px;
   color: #6ddcbd;
   font-size: 40px;
   cursor: pointer;
@@ -62,96 +62,22 @@ html, body {
   bottom: 6%;
   transition: all 0.2s ease;
 }
-.core__toggle {
-  position: absolute;
-  top: 25px;
-  left: 15px;
-  transform: rotate(90deg);
-  width: 50px;
-  height: 26px;
-  opacity: 0;
-  transition: 0.4s ease;
-}
-.core__toggle__box {
+.core__theme-switch {
   position: fixed;
-  left: -65px;
-  width: 90px;
-  height: 185px;
-  background: #5e4ae3;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  top: 50vh;
-  transform: translateY(-50%) rotate(180deg);
-  z-index: 12;
-  transition: 0.4s ease;
-}
-.core__toggle__box.active {
-  left: -25px;
-  transition: 0.4s ease;
-}
-.core__toggle__box.active .core__toggle {
-  opacity: 1;
-  transition: 0.4s ease;
-}
-.core__toggle__box.active .core__toggle__box__outer i {
-  transform: rotate(180deg);
-  transition: 0.4s ease;
-}
-.core__toggle__box__outer {
-  color: #fff;
-  font-size: 14px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 8px;
-}
-.core__toggle__box__outer i {
-  transition: 0.4s ease;
-}
-.core__toggle input[type=checkbox] {
-  opacity: 0;
-  width: 50px;
-  height: 20px;
-}
-.core__toggle input[type=checkbox]:checked + .core__toggle__slider:before {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
-  transform: translateX(24px);
-}
-.core__toggle__slider {
-  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 36px;
   cursor: pointer;
-  border-radius: 34px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f1f1f1;
-  transition: 0.4s;
-  --webkit-transition: 0.4s;
+  opacity: 100%;
+  z-index: 10;
+  transition: all 0.2s ease;
 }
-.core__toggle__slider:before {
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  box-shadow: 0 0 1px #fafafa;
-  height: 20px;
-  width: 20px;
-  left: 3px;
-  bottom: 3px;
-  background-color: #5e4ae3;
-  transition: 0.4s;
-  --webkit-transition: 0.4s;
+.core__theme-switch .far {
+  color: #9a9a9a;
+  opacity: 60%;
 }
-.core__toggle__slider:after {
-  content: "THEME TOGGLE";
-  position: absolute;
-  right: -105px;
-  line-height: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 12px;
+.core__theme-switch .fas {
+  color: #6ddcbd;
 }
 .core__footer {
   position: absolute;
@@ -1052,42 +978,6 @@ html, body {
   }
 }
 
-.loader {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 100;
-  background: #5e4ae3;
-  opacity: 1;
-}
-.loader.dissapear {
-  opacity: 0;
-  z-index: -10;
-  transition: all 0.33s ease-out;
-}
-.loader__progress-bar {
-  position: absolute;
-  top: 50%;
-  height: 2px;
-  background: #fff;
-}
-.loader__done {
-  top: 0;
-  height: 100%;
-  width: 100%;
-  transition: all 0.33s ease;
-}
-.loader__count {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  font-weight: 100;
-  font-size: 3em;
-  margin-top: -1.33em;
-  color: #fff;
-}
-
 .edex {
   position: relative;
   margin-bottom: 100px;
@@ -1266,63 +1156,5 @@ html, body {
   }
   .projects__modal__title i {
     font-size: 24px;
-  }
-}
-
-.lottie {
-  position: relative;
-  height: 775px;
-  overflow: hidden;
-}
-.lottie #lottie-mobile {
-  position: absolute;
-  opacity: 0;
-}
-.lottie-black {
-  display: none;
-}
-.lottie lottie-player {
-  position: absolute;
-  top: -100px;
-  right: -35%;
-  width: auto;
-  height: 100%;
-  display: block;
-}
-.lottie__text {
-  position: relative;
-  left: 10%;
-  top: 0;
-  max-width: 90%;
-}
-@media only screen and (min-width: 639px) and (max-width: 1023px) {
-  .lottie__text {
-    max-width: 50%;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  .lottie__text {
-    left: 5%;
-  }
-}
-@media only screen and (max-width: 639px) {
-  .lottie {
-    height: 625px;
-  }
-  .lottie lottie-player {
-    opacity: 0;
-  }
-  .lottie #lottie-mobile {
-    opacity: 1;
-  }
-  .lottie__text {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .lottie__text p {
-    font-size: 20px;
   }
 }

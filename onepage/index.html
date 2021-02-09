@@ -21,32 +21,20 @@
 <script type="module" src="/static/js/maps.js"></script>
 <script type="module" src="/static/js/binary.js"></script>
 <script type="module" src="/static/js/edex.js"></script>
-<!-- <script type="module" src="/static/js/loader.js"></script> -->
 <script type="module" src="/static/js/projects.js"></script>
-<script type="module" src="/static/js/lottie.js"></script>
 <script type="module" src="/static/js/index.js"></script>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNN0p5CJzhe0skik4v41UYCcTgmoiTFIk&callback=ipLocation&libraries=geometry&v=weekly" type="text/javascript"></script>
 </head>
-<body class="core" id="body">
 
-<!-- <div class="loader">
-    <div class="loader__progress-bar"></div>
-    <h1 class="loader__count"></h1>
-</div> -->
+<body class="core" id="body">
 
 <div class="core__scroll-top" id="upChevron">
 <i class="fa fa-chevron-up"></i>
 </div>
 
-<div id="themeBox" class="core__toggle__box">
-    <div id="themeChevronContainer" class="core__toggle__box__outer">
-        <i id="themeChevron" class="fas fa-chevron-left"></i>
-    </div>
-    <label id="themeToggle" class="core__toggle">
-        <input id="themeToggleInput" type="checkbox">
-        <span id="themeToggleSlider" class="core__toggle__slider"></span>
-    </label>
+<div class="core__theme-switch">
+    <i id="themeToggleInput" class="fas fa-lightbulb"></i>
 </div>
 
 <div class="nav__mobile__background"></div>
@@ -256,7 +244,7 @@
         <h3>ABSTRACTION</h3>
     </div>
     <p>This was my final year project during my BA in Digital Art and Design, in which I received a First Class Honours for both project and overall.<br>
-    The concept was interactive library for futuristic augmentations, in which the user picked up the individual item from the podium and scanned it, resulting in the accompanying informative animation being played on the screen in front of the user.<br>
+    The concept was an interactive library for futuristic augmentations, in which the user picked up the individual item from the podium and scanned it, resulting in the accompanying informative animation being played on the screen in front of the user.<br>
     I began with 2D designs of each augmentation, developing these into 3D designs, and finally created an animation for each. The scanning system was created using a RaspberryPi connected to an RFID reader. I attached an RFID sticker to the bottom of each item, which upon scanning passed parameters to the URL of the browser, loading the correct animation. 
     </p>
     <div class="projects__modal__tiles">
@@ -298,7 +286,7 @@
         was seeking someone who could learn quickly and work well with other developers, collaborating on larger tasks and taking 
         on smaller ones themselves.<br> 
         Three months into the role, after getting up to speed with the codebase structure and common patterns, I was tasked with 
-        re-designing the site and re-building the front of house. This was a huge responsibility, but I thoroughly enjoyed it from 
+        re-designing the site and re-building the front of house. This was a huge responsibility, which I thoroughly enjoyed from 
         start to finish. I created new design assets such as phone mockups and animations and mixed these with CSS animation and 
         structural changes for a brighter and more contemporary feel.<br>
         The remaining months have consisted of building new features, learning to use API's in a variety of ways (from Google Maps 
@@ -334,7 +322,7 @@
         The concept was to take a seemingly analog item and hide a digital element within it. We chose to take an old typewriter and install a flexible bar sensor on 
         the underside of the piece of metal that each key arm moved toward on each stroke. The sensor had a range from 0 to 1550 once in place, this was mapped from 0 
         to 88 to make assigning values to each key cleaner. With installation complete and functions written to handle converting the sensor values to keys, we 
-        connected a small shredder and used it as our 'trigger'. The act of putting paper through the teeth causing the most recent message typed to be sent to our database and then 
+        connected a small shredder and used it as our 'trigger'. The act of putting paper through the teeth caused the most recent message typed to be sent to our database and then 
         printed out at another location (in this case in another room). We invited users to enter a room and answer personal questions presented to them on a screen infront 
         of the podium on which the typewriter was placed - allowing us to hide wires and the RaspberryPi it was connected to inside the podium itself. The physical act of 
         'destroying' their answers became the antithetical action, essentially handing them to us.
@@ -352,24 +340,6 @@
         </div>
     </div>
 </div>
-
-<section class="lottie" id="lottie-section">
-    <div class="grid-x">
-        <div class="cell large-6 medium-12">
-            <div class="lottie__text">
-            <h3>AN AFTER EFFECTS ANIMATION IN THE WILD</h3>
-            <p class="large">Designed in Illustrator, animated in After Effects and then exported and configured using lottie.</p>
-            </div>
-        </div>
-        <div class="cell large-6 medium-12" id="lottie-container">
-            <lottie-player id="myLottie" src="https://assets8.lottiefiles.com/private_files/lf30_websxrua.json" background="transparent" speed="1"></lottie-player>
-            <div id="lottie-mobile">
-                <img class="lottie-white" src="/static/images/tech-lottie-white.gif">
-                <img class="lottie-black" src="/static/images/tech-lottie-blk.gif">
-            </div>
-        </div>
-    </div>
-</section>
 
 <section id="binary-section" class="binary">
     <canvas id="canvas"></canvas>
