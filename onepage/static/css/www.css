@@ -764,6 +764,47 @@ html, body {
   background: #ffffff;
   box-shadow: 5px 5px 24px #e8e8e8, -5px -5px 24px #ffffff;
 }
+.skills__box__loader:before {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: #fff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  color: #9a9a9a;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  opacity: 0;
+}
+.skills__box__loader:hover:before {
+  opacity: 1;
+}
+.skills__box__loader[data-label=HTML]:before {
+  content: "HTML";
+}
+.skills__box__loader[data-label=SASS]:before {
+  content: "SASS";
+}
+.skills__box__loader[data-label=Javascript]:before {
+  content: "Javascript";
+}
+.skills__box__loader[data-label="Python Django"]:before {
+  content: "Python Django";
+}
+.skills__box__loader[data-label=Github]:before {
+  content: "Github";
+}
+.skills__box__loader[data-label=Illustrator]:before {
+  content: "Illustrator";
+}
+.skills__box__loader[data-label=Photoshop]:before {
+  content: "Photoshop";
+}
+.skills__box__loader[data-label="After Effects"]:before {
+  content: "After Effects";
+}
 .skills__box__loader__inner {
   position: relative;
   left: 0;
