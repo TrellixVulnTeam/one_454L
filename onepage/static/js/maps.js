@@ -363,7 +363,7 @@ function computeDistance(latitude, longitude) {
 function materialiseMap(userLoc) {
   let options = {
     center: userLoc,
-    zoom: 6,
+    zoom: 5.5,
     disableDefaultUI: true,
     styles: lightTheme,
   };
@@ -375,6 +375,13 @@ function materialiseMap(userLoc) {
     draggable: false,
     animation: google.maps.Animation.DROP,
     position: userLoc,
+  });
+
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: false,
+    animation: google.maps.Animation.DROP,
+    position: myLoc,
   });
 }
 

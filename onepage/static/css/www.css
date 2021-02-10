@@ -93,7 +93,7 @@ html, body {
 }
 .core__footer {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   right: 2%;
 }
 .core__footer p {
@@ -581,9 +581,9 @@ html, body {
   opacity: 0;
 }
 .map__text.loaded {
-  top: 40%;
-  transition: all 0.4s ease-in-out;
-  opacity: 1;
+  animation: textDropIn;
+  animation-duration: 0.85s;
+  animation-fill-mode: forwards;
 }
 .map__text__container {
   position: relative;
@@ -675,6 +675,19 @@ html, body {
   }
 }
 
+@keyframes textDropIn {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  50% {
+    top: 42%;
+  }
+  100% {
+    top: 40%;
+    opacity: 1;
+  }
+}
 .binary {
   position: relative;
   width: 100%;
