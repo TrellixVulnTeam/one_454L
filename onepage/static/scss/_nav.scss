@@ -68,7 +68,7 @@
     display: none;
 
     &.active {
-    .nav__mobile__items {
+      .nav__mobile__items {
         right: 0;
         top: 85px;
         z-index: 3;
@@ -291,7 +291,6 @@
   }
 
   @media only screen and (max-width: 1023px) {
-
     &__container {
       position: relative;
       box-shadow: none;
@@ -337,7 +336,7 @@
     &__mobile {
       &__items {
         &__item#smallscreen-particles {
-            display: none;
+          display: none;
         }
       }
     }

@@ -19,24 +19,24 @@ $(document).ready(function () {
   hamburger.addEventListener("click", navStatus);
   document.querySelector("#emailCopy").addEventListener("click", copy);
 
-  setTimeout(function() {
+  setTimeout(function () {
     $(".map__text").addClass("loaded");
   }, 350);
 
   function themeLabelAppear() {
-    return new Promise(function(resolve, reject) {
-    setTimeout(function() {
-      $(themeLabel).fadeIn();
-      resolve("Label appeared!");
-    }, 5000);
-  });
-  };
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        $(themeLabel).fadeIn();
+        resolve("Label appeared!");
+      }, 5000);
+    });
+  }
 
   function themeLabelDissapear() {
-    setTimeout(function() {
+    setTimeout(function () {
       $(themeLabel).fadeOut();
     }, 10000);
-  };
+  }
 
   themeLabelAppear().then(themeLabelDissapear);
 
@@ -102,7 +102,7 @@ function setMapStyle(mapStyle) {
   map.setOptions({ styles: mapStyle });
 }
 
-$(themeToggleInput).on("click", function() {
+$(themeToggleInput).on("click", function () {
   if ($(this).hasClass("fas")) {
     $(body).addClass("dark");
     setMapStyle(darkTheme);
@@ -115,7 +115,7 @@ $(themeToggleInput).on("click", function() {
   if ($(themeLabel).is(":visible")) {
     $(themeLabel).fadeOut();
   }
-})
+});
 
 function copy() {
   let copyText = document.querySelector("#emailInput");
@@ -142,31 +142,32 @@ skillBars.forEach((bar) => {
   skillsObserver.observe(bar);
 });
 
-if ('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   let config = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5
-      };
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
 
-let observer = new IntersectionObserver(onChange, config);
+  let observer = new IntersectionObserver(onChange, config);
 
-sections.forEach(section => observer.observe(section));
+  sections.forEach((section) => observer.observe(section));
 
-function onChange(changes, observer) {
-  changes.forEach(change => {
+  function onChange(changes, observer) {
+    changes.forEach((change) => {
       if (change.intersectionRatio > 0.5) {
+        let hash = change.target.id;
+        let newStr = hash.replace("-section", "");
 
-          let hash = change.target.id;
-          let newStr = hash.replace("-section", "");
-    
-          $(menuItem).removeClass('active');
-         
-          let navEl = document.querySelector('.nav__desktop__items__item#' + newStr);
-          navEl.classList.add('active');
+        $(menuItem).removeClass("active");
+
+        let navEl = document.querySelector(
+          ".nav__desktop__items__item#" + newStr
+        );
+        navEl.classList.add("active");
       }
-  });
-}
+    });
+  }
 } else {
 }
 

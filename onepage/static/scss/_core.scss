@@ -27,7 +27,8 @@ $blue: #5e4ae3;
 $linkedin: #0e76a8;
 $green: #6ddcbd;
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -49,7 +50,7 @@ html, body {
 
   h3 {
     font-family: "Rubik-Bold", $fallbackFonts;
-    
+
     &.centered {
       font-family: "Rubik-Bold", $fallbackFonts;
       padding-bottom: 15px;
@@ -239,73 +240,73 @@ html, body {
 
       &__social {
         i {
-        color: $blue;
+          color: $blue;
+        }
       }
-    }
     }
 
     .nav__mobile {
       &.active {
         .nav__mobile__items__item {
           color: $blue;
-        
-            &.active {
-              color: #fff;
-              --webkit-transition: all 0.7s ease-in-out;
-              -moz-transition: all 0.7s ease-in-out;
-              -o-transition: all 0.7s ease-in-out;
-              transition: all 0.7s ease-in-out;
 
-              &:after {
-                background: $blue;
-                width: 80%;
-                --webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-              }
+          &.active {
+            color: #fff;
+            --webkit-transition: all 0.7s ease-in-out;
+            -moz-transition: all 0.7s ease-in-out;
+            -o-transition: all 0.7s ease-in-out;
+            transition: all 0.7s ease-in-out;
+
+            &:after {
+              background: $blue;
+              width: 80%;
+              --webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
             }
+          }
         }
       }
     }
 
     .lottie {
-    &-white {
-      display: none;
+      &-white {
+        display: none;
+      }
+      &-black {
+        display: block;
+      }
     }
-    &-black {
+  }
+
+  @media only screen and (max-width: 1023px) {
+    &__scroll-top {
       display: block;
+
+      &:hover {
+        bottom: 2%;
+      }
+    }
+
+    &.dark {
+      .nav__logo {
+        color: #fff;
+      }
+    }
+
+    &__footer {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      right: 0;
+      bottom: 0;
+
+      p {
+        font-size: 12px;
+      }
     }
   }
-  }
-
-@media only screen and (max-width: 1023px) {
-  &__scroll-top {
-    display: block;
-
-    &:hover {
-      bottom: 2%;
-    }
-  }
-
-  &.dark {
-    .nav__logo {
-      color:#fff;
-    }
-  }
-
-  &__footer {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-    bottom: 0;
-
-    p {
-      font-size: 12px;
-    }
-  }
-}
 
   @media only screen and (max-width: 639px) {
     &__toggle {
