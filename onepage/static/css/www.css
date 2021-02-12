@@ -22,6 +22,11 @@ body {
 .core {
   position: relative;
 }
+.core__content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .core__main {
   max-height: 100vh;
   overflow-y: scroll;
@@ -35,10 +40,6 @@ body {
   scroll-snap-align: start;
   position: relative;
   height: 100vh;
-  scroll-margin-top: 80px;
-}
-.core section.binary {
-  scroll-margin-top: 0;
 }
 .core.no-scroll {
   overflow: hidden;
@@ -103,11 +104,12 @@ body {
   left: 60px;
   bottom: 20px;
   font-size: 16px;
-  background: #6ddcbd;
+  background: transparent;
   border-radius: 20px;
-  color: #fff;
+  color: #6ddcbd;
   padding: 4px 8px;
   display: none;
+  border: 2px solid #6ddcbd;
   z-index: 10;
 }
 .core__footer {
@@ -220,6 +222,10 @@ body {
   display: block;
 }
 @media only screen and (max-width: 1023px) {
+  .core__content {
+    top: 0;
+    transform: none;
+  }
   .core__scroll-top {
     display: block;
   }
@@ -607,7 +613,6 @@ body {
   top: 0%;
   position: absolute;
   opacity: 0;
-  padding: 0 0 0 45px;
 }
 .map__name h2 {
   font-family: "Rubik-Bold", Geneva, Verdana, sans-serif;
@@ -626,7 +631,6 @@ body {
   position: absolute;
   top: 0%;
   transform: translateY(-50%);
-  padding: 0 0 0 45px;
   opacity: 0;
 }
 .map__text.loaded {
@@ -640,6 +644,8 @@ body {
   width: 50%;
   top: 20%;
   z-index: 3;
+  max-width: 750px;
+  left: 5%;
 }
 .map__text h1 {
   font-family: "Rubik-Bold", Geneva, Verdana, sans-serif;
@@ -652,7 +658,7 @@ body {
   width: 99%;
   right: 2px;
   position: absolute;
-  height: 99%;
+  height: 96%;
   top: 15px;
   border-radius: 27%;
 }

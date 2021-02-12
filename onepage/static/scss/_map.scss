@@ -10,7 +10,6 @@
     top: 0%;
     position: absolute;
     opacity: 0;
-    padding: 0 0 0 45px;
 
     h2 { 
       font-family: "Rubik-Bold", $fallbackFonts;
@@ -32,7 +31,6 @@
     position: absolute;
     top: 0%;
     transform: translateY(-50%);
-    padding: 0 0 0 45px;
     opacity: 0;
 
     &.loaded {
@@ -47,6 +45,8 @@
       width: 50%;
       top: 20%;
       z-index: 3;
+      max-width: 750px;
+      left: 5%;
     }
 
     h1 {
@@ -62,7 +62,7 @@
     width: 99%; // Fixes slight overflow problem
     right: 2px; // see above
     position: absolute;
-    height: 99%;
+    height: 96%;
     top: 15px;
     border-radius: 27%;
   }

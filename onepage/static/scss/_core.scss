@@ -35,6 +35,12 @@ body {
 .core {
   position: relative;
 
+  &__content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   &__main {
     max-height: 100vh;
     overflow-y: scroll;
@@ -47,11 +53,6 @@ body {
     scroll-snap-align: start;
     position: relative;
     height: 100vh;
-    scroll-margin-top: 80px;
-
-    &.binary {
-      scroll-margin-top: 0;
-    }
   }
 
   &.no-scroll {
@@ -127,11 +128,12 @@ body {
       left: 60px;
       bottom: 20px;
       font-size: 16px;
-      background: $green;
+      background: transparent;
       border-radius: 20px;
-      color: #fff;
+      color: $green;
       padding: 4px 8px;
       display: none;
+      border: 2px solid $green;
       z-index: 10;
     }
   }
@@ -300,6 +302,11 @@ body {
   }
 
   @media only screen and (max-width: 1023px) {
+    &__content {
+      top: 0;
+      transform: none;
+    }
+
     &__scroll-top {
       display: block;
 
