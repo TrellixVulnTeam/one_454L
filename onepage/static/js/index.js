@@ -21,6 +21,7 @@ $(document).ready(function () {
 
   setTimeout(function () {
     $(".map__text").addClass("loaded");
+    $(".map__name").addClass("loaded");
   }, 350);
 
   function themeLabelAppear() {

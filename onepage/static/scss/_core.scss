@@ -35,6 +35,25 @@ body {
 .core {
   position: relative;
 
+  &__main {
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory; /* for older browsers */
+    scroll-snap-points-y: repeat(100vh); /* for older browsers */
+    scroll-snap-type: y mandatory;
+  }
+
+  section {
+    scroll-snap-align: start;
+    position: relative;
+    height: 100vh;
+    scroll-margin-top: 80px;
+
+    &.binary {
+      scroll-margin-top: 0;
+    }
+  }
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -304,6 +323,21 @@ body {
 
       p {
         font-size: 12px;
+      }
+    }
+
+    &__main {
+      max-height: none;
+      scroll-snap-type: none;
+
+      section {
+        scroll-snap-align: none;
+        scroll-snap-type: none;
+        height: auto;
+
+        &.binary {
+          height: 100vh;
+        }
       }
     }
   }

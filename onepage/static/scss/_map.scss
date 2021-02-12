@@ -5,7 +5,28 @@
 
   position: relative;
   overflow: hidden;
-  padding-top: 90px;
+
+  &__name {
+    top: 0%;
+    position: absolute;
+    opacity: 0;
+    padding: 0 0 0 45px;
+
+    h2 { 
+      font-family: "Rubik-Bold", $fallbackFonts;
+      text-transform: uppercase;
+      color: $blue;
+      margin-bottom: 20px;
+      font-size: 40px;
+    }
+
+    &.loaded {
+      animation: textDropIn-10;
+      animation-duration: 0.85s;
+      animation-delay: .2s;
+      animation-fill-mode: forwards;
+    }
+  }
 
   &__text {
     position: absolute;
@@ -15,15 +36,17 @@
     opacity: 0;
 
     &.loaded {
-      animation: textDropIn;
+      animation: textDropIn-50;
       animation-duration: 0.85s;
       animation-fill-mode: forwards;
     }
 
     &__container {
-      position: relative;
+      position: absolute;
       height: 400px;
-      width: 500px;
+      width: 50%;
+      top: 20%;
+      z-index: 3;
     }
 
     h1 {
@@ -31,6 +54,7 @@
       text-transform: uppercase;
       line-height: 3.5rem;
       font-weight: 600;
+      font-size: 50px;
     }
   }
 
@@ -40,6 +64,7 @@
     position: absolute;
     height: 99%;
     top: 15px;
+    border-radius: 27%;
   }
 
   &__shadow {
@@ -47,98 +72,104 @@
     top: 0;
     right: 0;
     width: 100%;
-    height: 300px;
+    height: 100%;
     box-shadow: inset 0 -10px 50px 85px #fff;
     z-index: 2;
+    border-radius: 25%;
   }
 
   &__container {
     position: relative;
-    height: 300px;
+    height: 100%;
     width: 100%;
-    margin: 30px auto;
+    right: -120px;
+    margin: 0 auto;
+    border-radius: 25%;
     pointer-events: none;
     overflow: hidden;
     padding: 60px 36px;
-    max-width: 1300px;
   }
 
   @media only screen and (max-width: 1023px) {
-    margin-bottom: 50px;
-    padding-top: 0;
+  height: auto;
 
     &__container {
       height: 400px;
+      right: 0;
+      border-radius: 0;
+    }
+
+    &__name {
+      position: relative;
+      padding: 0;
+
+      h2 {
+        line-height: 1rem;
+      }
     }
 
     &__googlemap {
+      width: 149%;
       left: 50%;
       transform: translateX(-50%);
-      width: 149%;
+      border-radius: 0;
     }
 
     &__shadow {
-      height: 450px;
+      border-radius: 0;
       left: 50%;
       transform: translateX(-50%);
       width: 150%;
     }
 
     &__text {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 45px;
-      text-align: center;
-      position: relative;
+      padding: 0;
 
       &__container {
-        margin: 0 0 40px;
-        height: auto;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        top: 100px;
+        width: 90%;
       }
-    }
-
-    h1 {
-      line-height: 5.5rem;
-      font-size: 85px;
-      margin: 80px 0 20px;
-    }
-
-    p {
-      font-size: 26px;
     }
   }
 
-  @media only screen and (max-width: 639px) {
-    &__text {
-      &__container {
-        margin: 40px 0;
-      }
+@media only screen and (max-width: 639px) {
+  &__name {
+    h2 {
+      font-size: 2em;
+      line-height: 1em;
+    }
+  }
 
-      &.loaded {
-        top: 50%;
-      }
+  &__text {
+    h1 {
+      font-size: 36px;
+      line-height: 1.2em;
+    }
 
-      h1 {
-        font-size: 40px;
-        line-height: 3.5rem;
-        margin: 40px 0 20px;
-      }
+    &__container {
+      width: 95%;
     }
   }
 }
+}
 
-@keyframes textDropIn {
-  0% {
-    top: 0%;
-    opacity: 0;
-  }
+$tops: (50, 3), (10, 1);
 
-  50% {
-    top: 42%;
-  }
-
-  100% {
-    top: 40%;
-    opacity: 1;
+@each $top, $offset in $tops {
+  @keyframes textDropIn-#{$top} {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+    50% {
+      top: unquote($string: $top + $offset + "%");
+    }
+    100% {
+      top: unquote($string: $top + "%");
+      opacity: 1;
+    }
   }
 }
