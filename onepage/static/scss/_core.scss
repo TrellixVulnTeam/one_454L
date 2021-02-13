@@ -73,7 +73,7 @@ body {
     }
   }
 
-  h3 {
+  h2, h3 {
     font-family: "Rubik-Bold", $fallbackFonts;
 
     &.centered {
@@ -125,7 +125,7 @@ body {
     }
 
     .fas {
-      color: #6ddcbd;
+      color: $blue;
     }
 
     &__label {
@@ -135,10 +135,10 @@ body {
       font-size: 16px;
       background: transparent;
       border-radius: 20px;
-      color: $green;
+      color: $blue;
       padding: 4px 8px;
       display: none;
-      border: 2px solid $green;
+      border: 2px solid $blue;
       z-index: 10;
     }
   }

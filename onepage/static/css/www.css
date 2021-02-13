@@ -55,10 +55,10 @@ body {
 .core p.large {
   font-size: 20px;
 }
-.core h3 {
+.core h2, .core h3 {
   font-family: "Rubik-Bold", Geneva, Verdana, sans-serif;
 }
-.core h3.centered {
+.core h2.centered, .core h3.centered {
   font-family: "Rubik-Bold", Geneva, Verdana, sans-serif;
   padding-bottom: 15px;
   border-bottom: 1px solid #d1d1d1;
@@ -101,7 +101,7 @@ body {
   opacity: 0.6;
 }
 .core__theme-switch .fas {
-  color: #6ddcbd;
+  color: #5e4ae3;
 }
 .core__theme-switch__label {
   position: fixed;
@@ -110,10 +110,10 @@ body {
   font-size: 16px;
   background: transparent;
   border-radius: 20px;
-  color: #6ddcbd;
+  color: #5e4ae3;
   padding: 4px 8px;
   display: none;
-  border: 2px solid #6ddcbd;
+  border: 2px solid #5e4ae3;
   z-index: 10;
 }
 .core__footer {
@@ -1200,15 +1200,14 @@ body {
   max-width: 90%;
 }
 .edex__inner__roles {
-  height: 50px;
-  font-size: 30px;
+  height: 75px;
   vertical-align: middle;
   overflow: hidden;
 }
-.edex__inner__roles h3 {
+.edex__inner__roles h2 {
   transition: margin-top 1s ease-in-out;
   text-transform: uppercase;
-  height: 50px;
+  height: 75px;
   margin: 0;
 }
 .edex__inner p {

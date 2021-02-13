@@ -28,15 +28,15 @@
     max-width: 90%;
 
     &__roles {
-      height: 50px;
-      font-size: 30px;
+      height: 75px;
+      // font-size: 40px;
       vertical-align: middle;
       overflow: hidden;
 
-      h3 {
+      h2 {
         transition: margin-top 1s ease-in-out;
         text-transform: uppercase;
-        height: 50px;
+        height: 75px;
         margin: 0;
       }
     }
