@@ -43,7 +43,8 @@
       position: absolute;
       height: 400px;
       width: 50%;
-      top: 20%;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 3;
       max-width: 750px;
       left: 5%;
@@ -59,35 +60,33 @@
   }
 
   &__googlemap {
-    width: 99%; // Fixes slight overflow problem
-    right: 2px; // see above
+    width: 100%;
+    right: 0;
     position: absolute;
-    height: 96%;
+    height: 101%;
     top: 15px;
-    border-radius: 27%;
   }
 
   &__shadow {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
     height: 100%;
     box-shadow: inset 0 -10px 50px 85px #fff;
     z-index: 2;
-    border-radius: 25%;
+    display: none;
   }
 
   &__container {
     position: relative;
     height: 100%;
     width: 100%;
-    right: -120px;
+    right: 0;
     margin: 0 auto;
-    border-radius: 25%;
     pointer-events: none;
     overflow: hidden;
-    padding: 60px 36px;
   }
 
   @media only screen and (max-width: 1023px) {
@@ -116,10 +115,7 @@
     }
 
     &__shadow {
-      border-radius: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 150%;
+      display: block;
     }
 
     &__text {
@@ -131,6 +127,7 @@
         text-align: center;
         top: 100px;
         width: 90%;
+        transform: none;
       }
     }
   }

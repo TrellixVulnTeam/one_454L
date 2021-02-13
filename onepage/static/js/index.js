@@ -175,16 +175,19 @@ if ("IntersectionObserver" in window) {
 $(menuItem).on("click", function () {
   let data = $(this).data("section");
   let matchingSection = $("body").find("section#" + data + "-section");
+  $(".core__main").addClass("visible");
 
   setTimeout(function () {
     $("html, body").animate(
       {
-        scrollTop: $(matchingSection).offset().top - 150,
+        scrollTop: $(matchingSection).offset().top,
       },
-      500
-    );
-  }, 500);
-});
+      500, () => setTimeout(function() {
+        $(".core__main").removeClass("visible")
+      }, 1000)
+    )
+  });
+})
 
 $(mobileMenuItem).on("click", function () {
   let data = $(this).data("section");
