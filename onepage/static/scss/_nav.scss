@@ -186,7 +186,7 @@
           background: #fff;
           width: 0;
           position: absolute;
-          right: -5px;
+          right: -18px;
           z-index: -10;
           height: 115px;
           transition-delay: .5s;
@@ -360,6 +360,12 @@
             height: 48px;
           }
         }
+      }
+
+      &__hamburger-icon-container {
+        height: 60px;
+        width: 60px;
+        top: 50%;
       }
     }
   }
