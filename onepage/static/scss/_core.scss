@@ -28,7 +28,7 @@ $linkedin: #0e76a8;
 $green: #6ddcbd;
 
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
   height: auto;
 }
 
@@ -43,7 +43,7 @@ html, body {
 
   &__main {
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     scroll-snap-type: mandatory; /* for older browsers */
     scroll-snap-points-y: repeat(100vh); /* for older browsers */
     scroll-snap-type: y mandatory;
@@ -244,6 +244,10 @@ html, body {
       box-shadow: 0 0 20px #000;
     }
 
+    .nav__scroll-down, .nav__name {
+      color: #fff;
+    }
+
     .nav__social__item {
         i.fa-github {
           color: #fff;
@@ -421,17 +425,5 @@ html, body {
         }
       }
     }
-  }
-}
-
-@keyframes bounce {
-  0% {
-    bottom: 2%;
-  }
-  50% {
-    bottom: 3%;
-  }
-  100% {
-    bottom: 2%;
   }
 }

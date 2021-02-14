@@ -9,6 +9,35 @@
   font-size: 14px;
   font-family: "Rubik-Light", $fallbackFonts;
 
+  &__name {
+    display: none;
+  }
+
+  &__scroll-down, &__name {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #0a0a0a;
+    margin-bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    p {
+    font-family: "Rubik-Bold", $fallbackFonts;
+    display: inline-block;
+    margin: 0 15px;
+    }
+
+    i {
+      position: absolute;
+      margin-left: -5px;
+    display: inline-block;
+    animation: bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    }
+  }
+
   &__container {
     position: fixed;
     width: 100%;
@@ -18,7 +47,7 @@
   }
 
   &__logo {
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     position: absolute;
     display: inline;
@@ -401,5 +430,17 @@
 
   to {
     color: #fff;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    top: 10%;
   }
 }

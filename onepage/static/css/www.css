@@ -15,7 +15,7 @@
   src: url("../fonts/Karla-Regular.ttf") format("TrueType");
 }
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
   height: auto;
 }
 
@@ -29,7 +29,7 @@ html, body {
 }
 .core__main {
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-snap-type: mandatory;
   /* for older browsers */
   scroll-snap-points-y: repeat(100vh);
@@ -188,6 +188,9 @@ html, body {
   background: #141414;
   box-shadow: 0 0 20px #000;
 }
+.core.dark .nav__scroll-down, .core.dark .nav__name {
+  color: #fff;
+}
 .core.dark .nav__social__item i.fa-github {
   color: #fff;
 }
@@ -314,23 +317,37 @@ html, body {
   }
 }
 
-@keyframes bounce {
-  0% {
-    bottom: 2%;
-  }
-  50% {
-    bottom: 3%;
-  }
-  100% {
-    bottom: 2%;
-  }
-}
 .nav {
   width: 100%;
   position: relative;
   padding: 15px 40px;
   font-size: 14px;
   font-family: "Rubik-Light", Geneva, Verdana, sans-serif;
+}
+.nav__name {
+  display: none;
+}
+.nav__scroll-down, .nav__name {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #0a0a0a;
+  margin-bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav__scroll-down p, .nav__name p {
+  font-family: "Rubik-Bold", Geneva, Verdana, sans-serif;
+  display: inline-block;
+  margin: 0 15px;
+}
+.nav__scroll-down i, .nav__name i {
+  position: absolute;
+  margin-left: -5px;
+  display: inline-block;
+  animation: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
 .nav__container {
   position: fixed;
@@ -340,7 +357,7 @@ html, body {
   box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
 }
 .nav__logo {
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   position: absolute;
   display: inline;
@@ -654,6 +671,17 @@ html, body {
   }
   to {
     color: #fff;
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    top: 10%;
   }
 }
 .map {
