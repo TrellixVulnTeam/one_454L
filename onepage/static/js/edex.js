@@ -1,7 +1,7 @@
 let current = 1; //keeps track of the current div
 let height = $(".edex__inner__roles").height(); //the height of the roles div
 let numberDivs = $(".edex__inner__roles").children().length; //the number of children of the roles div
-let first = $(".edex__inner__roles h2:nth-child(1)"); //the first div nested in roles div
+let first = $(".edex__inner__roles h3:nth-child(1)"); //the first div nested in roles div
 
 setInterval(function () {
   let number = current * -height;

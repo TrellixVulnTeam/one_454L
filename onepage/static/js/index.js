@@ -22,6 +22,7 @@ $(document).ready(function () {
   setTimeout(function () {
     $(".map__text").addClass("loaded");
     $(".map__name").addClass("loaded");
+    loadTheme();
   }, 350);
 
   function themeLabelAppear() {
@@ -105,10 +106,13 @@ function setMapStyle(mapStyle) {
 
 $(themeToggleInput).on("click", function () {
   if ($(this).hasClass("fas")) {
+    localStorage.setItem('theme', 'dark');
     $(body).addClass("dark");
     setMapStyle(darkTheme);
     $(themeToggleInput).removeClass("fas").addClass("far");
   } else {
+    $(body).removeClass("dark");
+    localStorage.setItem('theme', 'light');
     $(body).removeClass("dark");
     setMapStyle(lightTheme);
     $(themeToggleInput).removeClass("far").addClass("fas");
@@ -228,3 +232,27 @@ $(mobileMenuItem).on("click", function (event) {
 $(menuItem).on("click", function (event) {
   soulmate(event);
 });
+
+let theme = localStorage.getItem('theme');
+
+if (!theme) {
+  theme = 'light';
+  localStorage.setItem('theme', 'light');
+}
+
+function loadTheme() {
+  if (localStorage && localStorage.getItem('theme')) { 
+      var storedTheme = localStorage.getItem('theme');
+      console.log("stored = " + storedTheme);
+
+      if (storedTheme == "light") {
+        $(body).removeClass("dark");
+        setMapStyle(lightTheme);
+        $(themeToggleInput).removeClass("far").addClass("fas");
+      } else {
+        $(body).addClass("dark");
+        setMapStyle(darkTheme);
+        $(themeToggleInput).removeClass("fas").addClass("far");
+      }
+    } 
+}

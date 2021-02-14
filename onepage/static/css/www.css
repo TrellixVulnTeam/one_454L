@@ -1200,14 +1200,15 @@ body {
   max-width: 90%;
 }
 .edex__inner__roles {
-  height: 75px;
+  height: 50px;
+  font-size: 30px;
   vertical-align: middle;
   overflow: hidden;
 }
-.edex__inner__roles h2 {
+.edex__inner__roles h3 {
   transition: margin-top 1s ease-in-out;
   text-transform: uppercase;
-  height: 75px;
+  height: 50px;
   margin: 0;
 }
 .edex__inner p {
