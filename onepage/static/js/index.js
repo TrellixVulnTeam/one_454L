@@ -6,8 +6,6 @@ let mobileMenuItem = document.getElementsByClassName(
   "nav__mobile__items__item"
 );
 let hamburger = document.getElementById("hamburger");
-// let menuItem = document.getElementsByClassName("nav__desktop__items__item");
-// let menuItems = document.getElementsByClassName("nav__desktop__items");
 let upChevron = document.getElementsByClassName("core__scroll-top");
 let themeToggleInput = document.getElementById("themeToggleInput");
 let themeLabel = document.getElementById("themeLabel");
@@ -23,12 +21,6 @@ $(document).ready(function () {
    localStorage.setItem("theme", "light");
   }
 
-  // $(window).on("scroll", function () {
-    // setTimeout(function () {
-    //   $(".core__main").removeClass("visible");
-    // }, 2000)
-  // });
-
   hamburger.addEventListener("click", navStatus);
   document.querySelector("#emailCopy").addEventListener("click", copy);
 
@@ -36,28 +28,24 @@ $(document).ready(function () {
     $(".map__text").addClass("loaded");
     $(".map__name").addClass("loaded");
     loadTheme();
-  }, 350);
+  }, 200);
 
   function themeLabelAppear() {
     return new Promise(function (resolve, reject) {
       setTimeout(function () {
         $(themeLabel).fadeIn();
         resolve("Label appeared!");
-      }, 5000);
+      }, 2000);
     });
   }
 
   function themeLabelDissapear() {
     setTimeout(function () {
       $(themeLabel).fadeOut();
-    }, 10000);
+    }, 5000);
   }
 
   themeLabelAppear().then(themeLabelDissapear);
-
-  // for (let i = 0; i < menuItem.length; i++) {
-  //   menuItem[i].addEventListener("click", navUnderline);
-  // }
 
   for (let i = 0; i < mobileMenuItem.length; i++) {
     mobileMenuItem[i].addEventListener("click", mobileNavUnderline);
@@ -71,7 +59,6 @@ $(document).ready(function () {
     let y = $(this).scrollTop();
     if (y > 100) {
       $(upChevron).css("opacity", "100%");
-      // $(".nav__scroll-down").fadeOut();
     } else {
       $(upChevron).css("opacity", "0");
     }
@@ -103,11 +90,6 @@ function navOpen() {
     $(logo).addClass("active");
   }, 200);
 }
-
-// function navUnderline() {
-//   $(menuItem).removeClass("active");
-//   $(this).addClass("active");
-// }
 
 function mobileNavUnderline() {
   $(mobileMenuItem).removeClass("active");
@@ -164,53 +146,6 @@ skillBars.forEach((bar) => {
   skillsObserver.observe(bar);
 });
 
-// if ("IntersectionObserver" in window) {
-//   let config = {
-//     root: null,
-//     rootMargin: "0px",
-//     threshold: 0.5,
-//   };
-
-//   let observer = new IntersectionObserver(onChange, config);
-
-//   sections.forEach((section) => observer.observe(section));
-
-//   function onChange(changes, observer) {
-//     changes.forEach((change) => {
-//       if (change.intersectionRatio > 0.5) {
-//         let hash = change.target.id;
-//         let newStr = hash.replace("-section", "");
-
-//         $(menuItem).removeClass("active");
-
-//         let navEl = document.querySelector(
-//           ".nav__desktop__items__item#" + newStr
-//         );
-//         navEl.classList.add("active");
-//       }
-//     });
-//   }
-// } else {
-// }
-
-// $(menuItem).on("click", function () {
-//   let data = $(this).data("section");
-//   let matchingSection = $("body").find("section#" + data + "-section");
-//   $(".core__main").addClass("visible");
-
-//   setTimeout(function () {
-//     $([document.documentElement, document.body]).animate(
-//       {
-//         scrollTop: $(matchingSection).offset().top,
-//       },
-//       2000
-//     );
-//     setTimeout(function () {
-//   $(".core__main").removeClass("visible");
-//     }, 3000);
-//   })
-// });
-
 $(mobileMenuItem).on("click", function () {
   let data = $(this).data("section");
   let section = $("body").find("section#" + data + "-section");
@@ -226,30 +161,6 @@ $(mobileMenuItem).on("click", function () {
     );
   }, 1000);
 });
-
-// function soulmate(event) {
-//   let element = $(event.target);
-//   let element_id = element.attr("id");
-//   let sid;
-
-//   if (element_id.indexOf("smallscreen-") >= 0) {
-//     sid = "#" + element_id.replace("smallscreen-", "");
-//     $(menuItem).removeClass("active");
-//     $(sid).addClass("active");
-//   } else {
-//     sid = "#" + "smallscreen-" + element_id;
-//     $(mobileMenuItem).removeClass("active");
-//     $(sid).addClass("active");
-//   }
-// }
-
-// $(mobileMenuItem).on("click", function (event) {
-//   soulmate(event);
-// });
-
-// $(menuItem).on("click", function (event) {
-//   soulmate(event);
-// });
 
 function loadTheme() {
   if (localStorage && localStorage.getItem('theme')) { 

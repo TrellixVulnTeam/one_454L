@@ -28,7 +28,7 @@ $linkedin: #0e76a8;
 $green: #6ddcbd;
 
 html, body {
-  overflow: hidden;
+  overflow-x: hidden;
   height: auto;
 }
 
@@ -199,6 +199,10 @@ html, body {
       }
     }
 
+    .edex {
+      background: #090909;
+    }
+
     .map__shadow {
       box-shadow: inset 0 -10px 50px 85px #141414;
     }
@@ -214,6 +218,12 @@ html, body {
 
         &:before {
           box-shadow: none;
+        }
+
+        &__inner {
+          &.github {
+            background: #ffffff;
+          }
         }
       }
     }

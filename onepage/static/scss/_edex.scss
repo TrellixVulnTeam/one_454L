@@ -3,6 +3,7 @@
 .edex {
   position: relative;
   margin-bottom: 100px;
+  background: #f5f5f5;
 
   &__image {
     position: relative;
@@ -47,6 +48,12 @@
   }
 
   @media only screen and (max-width: 1023px) {
+    padding: 100px 0;
+
+    &__image {
+      margin-top: 20px;
+    }
+
     &__inner {
       text-align: center;
       margin: 50px auto 0;

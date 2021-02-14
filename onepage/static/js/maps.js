@@ -22,7 +22,7 @@ window.lightTheme = [
     elementType: "geometry",
     stylers: [
       {
-        color: "#f5f5f5",
+        color: "#fff",
       },
     ],
   },
@@ -163,7 +163,7 @@ window.lightTheme = [
     elementType: "geometry",
     stylers: [
       {
-        color: "#c9c9c9",
+        color: "#f5f5f5",
       },
     ],
   },
@@ -172,7 +172,7 @@ window.lightTheme = [
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#9e9e9e",
+        color: "#e9e9e9",
       },
     ],
   },
@@ -324,7 +324,7 @@ window.darkTheme = [
     elementType: "geometry",
     stylers: [
       {
-        color: "#141414",
+        color: "#090909",
       },
     ],
   },
