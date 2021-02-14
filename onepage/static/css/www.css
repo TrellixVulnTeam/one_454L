@@ -14,9 +14,9 @@
   font-family: "Karla-Regular";
   src: url("../fonts/Karla-Regular.ttf") format("TrueType");
 }
-html,
-body {
+html, body {
   overflow-x: hidden;
+  height: auto;
 }
 
 .core {
@@ -28,8 +28,8 @@ body {
   transform: translateY(-50%);
 }
 .core__main {
-  max-height: 100vh;
-  overflow-y: scroll;
+  height: 100vh;
+  overflow-y: auto;
   scroll-snap-type: mandatory;
   /* for older browsers */
   scroll-snap-points-y: repeat(100vh);
@@ -37,8 +37,7 @@ body {
   scroll-snap-type: y mandatory;
 }
 .core__main.visible {
-  overflow-y: visible;
-  scroll-snap-type: none;
+  max-height: none;
 }
 .core section {
   scroll-snap-align: start;
@@ -138,7 +137,7 @@ body {
   cursor: pointer;
 }
 .core.dark {
-  background: #0a0a0a;
+  background: #141414;
   color: #fff;
 }
 .core.dark .core__toggle__box {
@@ -158,36 +157,36 @@ body {
   color: #5e4ae3;
 }
 .core.dark .map__shadow {
-  box-shadow: inset 0 -10px 50px 85px #0a0a0a;
+  box-shadow: inset 0 -10px 50px 85px #141414;
 }
 .core.dark .skills__box i.fa-github {
   color: #fff;
 }
 .core.dark .skills__box__loader {
-  box-shadow: 0 0 50px #000;
-  background: #0a0a0a;
+  box-shadow: 0 0 20px #000;
+  background: #141414;
 }
 .core.dark .skills__box__loader:before {
   box-shadow: none;
 }
 .core.dark .projects__modal {
-  background: #0a0a0a;
+  background: #141414;
   color: #fff;
 }
 .core.dark .projects__modal__title {
-  background: #0a0a0a;
+  background: #141414;
 }
 .core.dark .projects__inner__box {
   box-shadow: 0 0 60px #000;
-  background: #0a0a0a;
+  background: #141414;
   color: #fff;
 }
 .core.dark .projects__inner__box__text a, .core.dark .projects__inner__box__text i {
   color: #6ddcbd;
 }
 .core.dark .nav__container {
-  background: #0a0a0a;
-  box-shadow: 0 0 50px #000;
+  background: #141414;
+  box-shadow: 0 0 20px #000;
 }
 .core.dark .nav__social__item i.fa-github {
   color: #fff;
@@ -196,7 +195,7 @@ body {
   color: #fff;
 }
 .core.dark .nav__mobile__background {
-  background: #0a0a0a;
+  background: #141414;
   box-shadow: 0 0 25px #000;
 }
 .core.dark .nav__mobile__hamburger-icon {
@@ -218,7 +217,7 @@ body {
   color: #fff;
 }
 .core.dark .nav__mobile.active .nav__mobile__items__item.active {
-  color: #0a0a0a;
+  color: #141414;
   --webkit-transition: all 0.7s ease-in-out;
   -moz-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
@@ -234,7 +233,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .core.dark .binary__content {
-  background: #0a0a0a;
+  background: #141414;
   color: #fff;
 }
 .core.dark .binary__content input {
@@ -259,7 +258,7 @@ body {
     box-shadow: none;
   }
   .core.dark .map__shadow {
-    box-shadow: inset 0 0 25px 80px #0a0a0a;
+    box-shadow: inset 0 0 25px 80px #141414;
     height: 105%;
   }
   .core.dark .skills__box__loader {
@@ -280,6 +279,7 @@ body {
   }
   .core__main {
     max-height: none;
+    height: auto;
     scroll-snap-type: none;
   }
   .core__main section {
@@ -314,6 +314,17 @@ body {
   }
 }
 
+@keyframes bounce {
+  0% {
+    bottom: 2%;
+  }
+  50% {
+    bottom: 3%;
+  }
+  100% {
+    bottom: 2%;
+  }
+}
 .nav {
   width: 100%;
   position: relative;
@@ -699,8 +710,8 @@ body {
   width: 100%;
   right: 0;
   position: absolute;
-  height: 101%;
-  top: 15px;
+  height: 104%;
+  top: 0;
 }
 .map__shadow {
   position: absolute;
@@ -743,6 +754,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0;
+    top: 15px;
+    height: 100%;
   }
   .map__shadow {
     display: block;
@@ -756,7 +769,9 @@ body {
     text-align: center;
     top: 100px;
     width: 90%;
-    transform: none;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media only screen and (max-width: 639px) {
@@ -770,9 +785,6 @@ body {
   }
   .map__text__container {
     width: 95%;
-    margin: 0;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
@@ -1161,6 +1173,9 @@ body {
   transform: translateX(-50%);
 }
 @media only screen and (max-width: 1024px) {
+  .skills {
+    margin-top: 50px;
+  }
   .skills__box i,
 .skills__box img {
     margin: 0 auto 20px;

@@ -324,7 +324,7 @@ window.darkTheme = [
     elementType: "geometry",
     stylers: [
       {
-        color: "#0a0a0a",
+        color: "#141414",
       },
     ],
   },

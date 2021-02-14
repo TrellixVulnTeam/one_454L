@@ -16,6 +16,19 @@ let sections = document.querySelectorAll("section");
 let logo = document.getElementById("logo");
 
 $(document).ready(function () {
+  let theme = localStorage.getItem('theme');
+
+  if (!theme) {
+   theme = "light";
+   localStorage.setItem("theme", "light");
+  }
+
+  // $(window).on("scroll", function () {
+    // setTimeout(function () {
+    //   $(".core__main").removeClass("visible");
+    // }, 2000)
+  // });
+
   hamburger.addEventListener("click", navStatus);
   document.querySelector("#emailCopy").addEventListener("click", copy);
 
@@ -176,27 +189,29 @@ if ("IntersectionObserver" in window) {
 } else {
 }
 
-$(menuItem).on("click", function () {
-  let data = $(this).data("section");
-  let matchingSection = $("body").find("section#" + data + "-section");
-  $(".core__main").addClass("visible");
+// $(menuItem).on("click", function () {
+//   let data = $(this).data("section");
+//   let matchingSection = $("body").find("section#" + data + "-section");
+//   $(".core__main").addClass("visible");
 
-  setTimeout(function () {
-    $("html, body").animate(
-      {
-        scrollTop: $(matchingSection).offset().top,
-      },
-      500, () => setTimeout(function() {
-        $(".core__main").removeClass("visible")
-      }, 1000)
-    )
-  });
-})
+//   setTimeout(function () {
+//     $([document.documentElement, document.body]).animate(
+//       {
+//         scrollTop: $(matchingSection).offset().top,
+//       },
+//       2000
+//     );
+//     setTimeout(function () {
+//   $(".core__main").removeClass("visible");
+//     }, 3000);
+//   })
+// });
 
 $(mobileMenuItem).on("click", function () {
   let data = $(this).data("section");
   let section = $("body").find("section#" + data + "-section");
 
+$(".core__main").addClass("visible");
   navStatus();
 
   setTimeout(function () {
@@ -233,17 +248,9 @@ $(menuItem).on("click", function (event) {
   soulmate(event);
 });
 
-let theme = localStorage.getItem('theme');
-
-if (!theme) {
-  theme = 'light';
-  localStorage.setItem('theme', 'light');
-}
-
 function loadTheme() {
   if (localStorage && localStorage.getItem('theme')) { 
       var storedTheme = localStorage.getItem('theme');
-      console.log("stored = " + storedTheme);
 
       if (storedTheme == "light") {
         $(body).removeClass("dark");

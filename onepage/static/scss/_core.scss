@@ -27,9 +27,9 @@ $blue: #5e4ae3;
 $linkedin: #0e76a8;
 $green: #6ddcbd;
 
-html,
-body {
+html, body {
   overflow-x: hidden;
+  height: auto;
 }
 
 .core {
@@ -42,15 +42,15 @@ body {
   }
 
   &__main {
-    max-height: 100vh;
-    overflow-y: scroll;
+    height: 100vh;
+    overflow-y: auto;
     scroll-snap-type: mandatory; /* for older browsers */
     scroll-snap-points-y: repeat(100vh); /* for older browsers */
     scroll-snap-type: y mandatory;
 
     &.visible {
-      overflow-y: visible;
-      scroll-snap-type: none;
+      // scroll-snap-type: none;
+      max-height: none;
     }
   }
 
@@ -171,7 +171,7 @@ body {
   }
 
   &.dark {
-    background: #0a0a0a;
+    background: #141414;
     color: #fff;
 
     .core {
@@ -200,7 +200,7 @@ body {
     }
 
     .map__shadow {
-      box-shadow: inset 0 -10px 50px 85px #0a0a0a;
+      box-shadow: inset 0 -10px 50px 85px #141414;
     }
 
     .skills__box {
@@ -209,8 +209,8 @@ body {
       }
 
       &__loader {
-        box-shadow: 0 0 50px #000;
-        background: #0a0a0a;
+        box-shadow: 0 0 20px #000;
+        background: #141414;
 
         &:before {
           box-shadow: none;
@@ -219,17 +219,17 @@ body {
     }
 
     .projects__modal {
-      background: #0a0a0a;
+      background: #141414;
       color: #fff;
 
       &__title {
-        background: #0a0a0a;
+        background: #141414;
       }
     }
 
     .projects__inner__box {
       box-shadow: 0 0 60px #000;
-      background: #0a0a0a;
+      background: #141414;
       color: #fff;
 
       &__text {
@@ -240,8 +240,8 @@ body {
     }
 
     .nav__container {
-      background: #0a0a0a;
-      box-shadow: 0 0 50px #000;
+      background: #141414;
+      box-shadow: 0 0 20px #000;
     }
 
     .nav__social__item {
@@ -255,7 +255,7 @@ body {
     }
 
     .nav__mobile__background {
-      background: #0a0a0a;
+      background: #141414;
       box-shadow: 0 0 25px #000;
     }
 
@@ -295,7 +295,7 @@ body {
           color: #fff;
 
           &.active {
-            color: #0a0a0a;
+            color: #141414;
             --webkit-transition: all 0.7s ease-in-out;
             -moz-transition: all 0.7s ease-in-out;
             -o-transition: all 0.7s ease-in-out;
@@ -316,7 +316,7 @@ body {
     }
 
     .binary__content {
-      background: #0a0a0a;
+      background: #141414;
       color: #fff;
 
       input {
@@ -352,7 +352,7 @@ body {
     }
 
     .map__shadow {
-      box-shadow: inset 0 0 25px 80px #0a0a0a;
+      box-shadow: inset 0 0 25px 80px #141414;
       height: 105%;
     }
 
@@ -379,6 +379,7 @@ body {
 
     &__main {
       max-height: none;
+      height: auto;
       scroll-snap-type: none;
 
       section {
@@ -420,5 +421,17 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 2%;
+  }
+  50% {
+    bottom: 3%;
+  }
+  100% {
+    bottom: 2%;
   }
 }

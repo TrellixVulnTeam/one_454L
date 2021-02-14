@@ -63,8 +63,8 @@
     width: 100%;
     right: 0;
     position: absolute;
-    height: 101%;
-    top: 15px;
+    height: 104%;
+    top: 0;
   }
 
   &__shadow {
@@ -112,6 +112,8 @@
       left: 50%;
       transform: translateX(-50%);
       border-radius: 0;
+      top: 15px;
+      height: 100%;
     }
 
     &__shadow {
@@ -127,7 +129,9 @@
         text-align: center;
         top: 100px;
         width: 90%;
-        transform: none;
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
@@ -148,9 +152,6 @@
 
     &__container {
       width: 95%;
-      margin: 0;
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
 }
