@@ -91,7 +91,7 @@ window.lightTheme = [
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#9e9e9e",
+        color: "#f5f5f5",
       },
     ],
   },
@@ -100,7 +100,7 @@ window.lightTheme = [
     elementType: "geometry",
     stylers: [
       {
-        color: "#ffffff",
+        color: "#f5f5f5",
       },
     ],
   },
@@ -136,7 +136,7 @@ window.lightTheme = [
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#9e9e9e",
+        color: "#6ddcbd",
       },
     ],
   },
