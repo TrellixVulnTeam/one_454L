@@ -363,7 +363,7 @@ function computeDistance(latitude, longitude) {
 function materialiseMap(userLoc) {
   let options = {
     center: userLoc,
-    zoom: 5.5,
+    zoom: 5,
     disableDefaultUI: true,
     styles: lightTheme,
   };
@@ -394,7 +394,6 @@ window.ipLocation = function () {
     success: function (data) {
       if (data.location) {
         userLoc = new google.maps.LatLng(data.location.lat, data.location.lng);
-
         materialiseMap(userLoc);
 
         computeDistance(data.location.lat, data.location.lng);

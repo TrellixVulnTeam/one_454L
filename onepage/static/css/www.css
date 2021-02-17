@@ -696,7 +696,7 @@ html, body {
 }
 .map__name {
   top: 0%;
-  position: absolute;
+  position: relative;
   opacity: 0;
 }
 .map__name h2 {
@@ -705,6 +705,14 @@ html, body {
   color: #5e4ae3;
   margin-bottom: 20px;
   font-size: 40px;
+}
+.map__name:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #141414;
+  height: 25px;
 }
 .map__name.loaded {
   animation: textDropIn-10;
