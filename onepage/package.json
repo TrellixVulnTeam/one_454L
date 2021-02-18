@@ -1,7 +1,7 @@
 {
   "name": "onepage",
   "version": "1.0.0",
-  "description": "portfolio project.",
+  "description": "Portfolio project.",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html",

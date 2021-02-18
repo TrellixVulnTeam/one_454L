@@ -1,25 +1,25 @@
 $(document).ready(function () {
-  var container = document.querySelector("section#binary-section");
+  let container = document.querySelector("section#binary-section");
 
-  var c = document.getElementById("canvas");
-  var ctx = c.getContext("2d");
+  let c = document.getElementById("canvas");
+  let ctx = c.getContext("2d");
 
-  var sectionHeight = container.offsetHeight;
-  var sectionWidth = container.offsetWidth;
+  let sectionHeight = container.offsetHeight;
+  let sectionWidth = container.offsetWidth;
 
   c.height = sectionHeight;
   c.width = sectionWidth;
 
-  var values = "01010101></$=+.#(){}[]|*";
+  let values = "01010101></$=+.#(){}[]|*";
 
   values = values.split("");
 
-  var font_size = 12;
-  var columns = c.width / font_size;
+  let font_size = 12;
+  let columns = c.width / font_size;
 
-  var drops = [];
+  let drops = [];
 
-  for (var x = 0; x < columns; x++) drops[x] = 1;
+  for (let x = 0; x < columns; x++) drops[x] = 1;
 
   function draw() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
@@ -28,9 +28,9 @@ $(document).ready(function () {
     ctx.fillStyle = "#8a78ff";
     ctx.font = font_size + "px arial";
 
-    for (var i = 0; i < drops.length; i++) {
+    for (let i = 0; i < drops.length; i++) {
       //a random values character to print
-      var text = values[Math.floor(Math.random() * values.length)];
+      let text = values[Math.floor(Math.random() * values.length)];
       //x = i*font_size, y = value of drops[i]*font_size
       ctx.fillText(text, i * font_size, drops[i] * font_size);
 
