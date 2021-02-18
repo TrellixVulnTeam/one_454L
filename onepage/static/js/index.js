@@ -14,6 +14,22 @@ let sections = document.querySelectorAll("section");
 let logo = document.getElementById("logo");
 
 $(document).ready(function () {
+
+ $(window).scroll(function () {
+  var s = $(window).scrollTop(),
+    d = $(document).height(),
+    c = $(window).height();
+   
+   console.log(s);
+
+   let scrollPercent = (s / (d - c)) * 100;
+   let position = scrollPercent + "%";
+
+   console.log(position);
+   
+   $(".core__scroll-progress").css("width", position);
+ });
+    
   let theme = localStorage.getItem('theme');
 
   if (!theme) {

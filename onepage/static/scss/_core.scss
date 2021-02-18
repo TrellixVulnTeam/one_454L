@@ -22,7 +22,8 @@ $fallbackFonts: Geneva, Verdana, sans-serif;
 
 $font-black: #0a0a0a;
 
-$black: #2d2d2a;
+$white: #ffffff;
+$black: #141414;
 $blue: #5e4ae3;
 $linkedin: #0e76a8;
 $green: #6ddcbd;
@@ -34,6 +35,26 @@ html, body {
 
 .core {
   position: relative;
+
+  &__scroll-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    background: $green;
+
+    &__container {
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 4px;
+      background: #e4e4e4;
+      z-index: 100;
+    }
+  }
 
   &__content {
     position: relative;
@@ -157,7 +178,7 @@ html, body {
     }
 
     i {
-      color: #fff;
+      color: $white;
 
       &.fa-heart {
         color: red;
@@ -171,13 +192,13 @@ html, body {
   }
 
   &.dark {
-    background: #141414;
-    color: #fff;
+    background: $black;
+    color: $white;
 
     .core {
       &__toggle {
         &__box {
-          background: #fff;
+          background: $white;
           border-color: $blue;
 
           &__outer {
@@ -189,13 +210,17 @@ html, body {
           background-color: $blue;
 
           &:before {
-            background: #fff;
+            background: $white;
           }
 
           &:after {
             color: $blue;
           }
         }
+      }
+
+      &__scroll-progress__container {
+        background: $black;
       }
     }
 
@@ -204,17 +229,17 @@ html, body {
     }
 
     .map__shadow {
-      box-shadow: inset 0 -10px 50px 85px #141414;
+      box-shadow: inset 0 -10px 50px 85px $black;
     }
 
     .skills__box {
       i.fa-github {
-        color: #fff;
+        color: $white;
       }
 
       &__loader {
         box-shadow: 0 0 20px #000;
-        background: #141414;
+        background: $black;
 
         &:before {
           box-shadow: none;
@@ -222,25 +247,25 @@ html, body {
 
         &__inner {
           &.github {
-            background: #ffffff;
+            background: $white;
           }
         }
       }
     }
 
     .projects__modal {
-      background: #141414;
-      color: #fff;
+      background: $black;
+      color: $white;
 
       &__title {
-        background: #141414;
+        background: $black;
       }
     }
 
     .projects__inner__box {
       box-shadow: 0 0 60px #000;
-      background: #141414;
-      color: #fff;
+      background: $black;
+      color: $white;
 
       &__text {
         a, i {
@@ -250,35 +275,35 @@ html, body {
     }
 
     .nav__container {
-      background: #141414;
+      background: $black;
       box-shadow: 0 0 20px #000;
     }
 
     .nav__scroll-down, .nav__name {
-      color: #fff;
+      color: $white;
     }
 
     .nav__social__item {
         i.fa-github {
-          color: #fff;
+          color: $white;
         }
     }
 
     .nav__logo {
-      color: #fff;
+      color: $white;
     }
 
     .nav__mobile__background {
-      background: #141414;
+      background: $black;
       box-shadow: 0 0 25px #000;
     }
 
     .nav__mobile__hamburger-icon {
-      background: #fff;
+      background: $white;
 
       &:before,
       &:after {
-        background: #fff;
+        background: $white;
       }
     }
 
@@ -287,18 +312,18 @@ html, body {
         span {
           &:before,
           &:after {
-            background: #fff;
+            background: $white;
           }
         }
       }
     }
 
     .nav__mobile__items__item {
-      color: #fff;
+      color: $white;
 
       &__social {
         i {
-          color: #fff;
+          color: $white;
         }
       }
     }
@@ -306,17 +331,17 @@ html, body {
     .nav__mobile {
       &.active {
         .nav__mobile__items__item {
-          color: #fff;
+          color: $white;
 
           &.active {
-            color: #141414;
+            color: $black;
             --webkit-transition: all 0.7s ease-in-out;
             -moz-transition: all 0.7s ease-in-out;
             -o-transition: all 0.7s ease-in-out;
             transition: all 0.7s ease-in-out;
 
             &:after {
-              background: #fff;
+              background: $white;
               width: 80%;
               transition-delay: .5s;
               --webkit-transition: all 0.3s ease-in-out;
@@ -330,17 +355,24 @@ html, body {
     }
 
     .binary__content {
-      background: #141414;
-      color: #fff;
+      background: $black;
+      color: $white;
 
       input {
         background: #000;
-        color: #fff;
+        color: $white;
       }
     }
   }
 
   @media only screen and (max-width: 1023px) {
+
+    &__scroll-progress {
+      &__container {
+        display: block;
+      }
+    }
+
     &__content {
       top: 0;
       transform: none;
@@ -357,7 +389,7 @@ html, body {
     &.dark {
       .nav {
         &__logo {
-        color: #fff;
+        color: $white;
       }
 
       &__container {
@@ -366,7 +398,7 @@ html, body {
     }
 
     .map__shadow {
-      box-shadow: inset 0 0 25px 80px #141414;
+      box-shadow: inset 0 0 25px 80px $black;
       height: 105%;
     }
 
