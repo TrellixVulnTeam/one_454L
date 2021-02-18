@@ -144,7 +144,6 @@ let skillsObserver = new IntersectionObserver((entries) => {
       entry.target.classList.add("loaded");
       $(".nav__scroll-down").fadeOut();
       $(".nav__name").fadeIn();
-      console.log("scrolled down");
       skillsObserver.unobserve(entry.target);
     }
   }, config);
