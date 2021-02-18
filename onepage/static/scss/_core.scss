@@ -21,20 +21,68 @@
 $fallbackFonts: Geneva, Verdana, sans-serif;
 
 $font-black: #0a0a0a;
-
 $white: #ffffff;
 $black: #141414;
 $blue: #5e4ae3;
 $linkedin: #0e76a8;
 $green: #6ddcbd;
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   height: auto;
 }
 
 .core {
   position: relative;
+
+  section {
+    scroll-snap-align: start;
+    position: relative;
+    height: 100vh;
+  }
+
+  h2,
+  h3,
+  h5 {
+    font-family: "Rubik-Bold", $fallbackFonts;
+
+    &.centered {
+      font-family: "Rubik-Bold", $fallbackFonts;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #d1d1d1;
+      width: fit-content;
+      position: relative;
+      margin: 0 auto 30px;
+    }
+  }
+
+  h5 {
+    margin: 0 auto 10px;
+  }
+
+  p {
+    font-family: "Karla-Regular", $fallbackFonts;
+    font-size: 16px;
+
+    &.large {
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory; /* for older browsers */
+    scroll-snap-points-y: repeat(100vh); /* for older browsers */
+    scroll-snap-type: y mandatory;
+  }
 
   &__scroll-progress {
     position: absolute;
@@ -54,62 +102,6 @@ html, body {
       background: #e4e4e4;
       z-index: 100;
     }
-  }
-
-  &__content {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__main {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: mandatory; /* for older browsers */
-    scroll-snap-points-y: repeat(100vh); /* for older browsers */
-    scroll-snap-type: y mandatory;
-
-    &.visible {
-      // scroll-snap-type: none;
-      max-height: none;
-    }
-  }
-
-  section {
-    scroll-snap-align: start;
-    position: relative;
-    height: 100vh;
-  }
-
-  &.no-scroll {
-    overflow: hidden;
-  }
-
-  p {
-    font-family: "Karla-Regular", $fallbackFonts;
-    font-size: 16px;
-
-    &.large {
-      font-size: 20px;
-    }
-  }
-
-  h2, h3 {
-    font-family: "Rubik-Bold", $fallbackFonts;
-
-    &.centered {
-      font-family: "Rubik-Bold", $fallbackFonts;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #d1d1d1;
-      width: fit-content;
-      position: relative;
-      margin: 0 auto 30px;
-    }
-  }
-
-  h5 {
-    font-family: "Rubik-Bold", $fallbackFonts;
-    margin: 0 auto 10px;
   }
 
   &__scroll-top {
@@ -253,101 +245,107 @@ html, body {
       }
     }
 
-    .projects__modal {
-      background: $black;
-      color: $white;
-
-      &__title {
+    .projects {
+      &__modal {
         background: $black;
-      }
-    }
+        color: $white;
 
-    .projects__inner__box {
-      box-shadow: 0 0 60px #000;
-      background: $black;
-      color: $white;
-
-      &__text {
-        a, i {
-          color: #6ddcbd;
+        &__title {
+          background: $black;
         }
       }
-    }
 
-    .nav__container {
-      background: $black;
-      box-shadow: 0 0 20px #000;
-    }
+      &__inner__box {
+        box-shadow: 0 0 60px #000;
+        background: $black;
+        color: $white;
 
-    .nav__scroll-down, .nav__name {
-      color: $white;
-    }
-
-    .nav__social__item {
-        i.fa-github {
-          color: $white;
-        }
-    }
-
-    .nav__logo {
-      color: $white;
-    }
-
-    .nav__mobile__background {
-      background: $black;
-      box-shadow: 0 0 25px #000;
-    }
-
-    .nav__mobile__hamburger-icon {
-      background: $white;
-
-      &:before,
-      &:after {
-        background: $white;
-      }
-    }
-
-    .nav__mobile__hamburger-icon-container {
-      &.active {
-        span {
-          &:before,
-          &:after {
-            background: $white;
+        &__text {
+          a,
+          i {
+            color: #6ddcbd;
           }
         }
       }
     }
 
-    .nav__mobile__items__item {
-      color: $white;
+    .nav {
+      &__container {
+        background: $black;
+        box-shadow: 0 0 20px #000;
+      }
 
-      &__social {
-        i {
+      &__scroll-down,
+      &__name {
+        color: $white;
+      }
+
+      &__social__item {
+        i.fa-github {
           color: $white;
         }
       }
-    }
 
-    .nav__mobile {
-      &.active {
-        .nav__mobile__items__item {
+      &__logo {
+        color: $white;
+      }
+
+      &__mobile {
+        &__background {
+          background: $black;
+          box-shadow: 0 0 25px #000;
+        }
+
+        &__hamburger-icon {
+          background: $white;
+
+          &:before,
+          &:after {
+            background: $white;
+          }
+
+          &-container {
+            &.active {
+              span {
+                &:before,
+                &:after {
+                  background: $white;
+                }
+              }
+            }
+          }
+        }
+
+        &__items__item {
           color: $white;
 
-          &.active {
-            color: $black;
-            --webkit-transition: all 0.7s ease-in-out;
-            -moz-transition: all 0.7s ease-in-out;
-            -o-transition: all 0.7s ease-in-out;
-            transition: all 0.7s ease-in-out;
+          &__social {
+            i {
+              color: $white;
+            }
+          }
+        }
 
-            &:after {
-              background: $white;
-              width: 80%;
-              transition-delay: .5s;
-              --webkit-transition: all 0.3s ease-in-out;
-              -moz-transition: all 0.3s ease-in-out;
-              -o-transition: all 0.3s ease-in-out;
-              transition: all 0.3s ease-in-out;
+        &.active {
+          .nav__mobile__items__item {
+            color: $white;
+
+            &.active {
+              color: $black;
+              --webkit-transition: all 0.7s ease-in-out;
+              -moz-transition: all 0.7s ease-in-out;
+              -o-transition: all 0.7s ease-in-out;
+              transition: all 0.7s ease-in-out;
+
+              &:after {
+                background: $white;
+                width: 80%;
+                transition-delay: 0.5s;
+                --webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+              }
             }
           }
         }
@@ -366,7 +364,6 @@ html, body {
   }
 
   @media only screen and (max-width: 1023px) {
-
     &__scroll-progress {
       &__container {
         display: block;
@@ -389,26 +386,26 @@ html, body {
     &.dark {
       .nav {
         &__logo {
-        color: $white;
+          color: $white;
+        }
+
+        &__container {
+          box-shadow: none;
+        }
       }
 
-      &__container {
-        box-shadow: none;
+      .map__shadow {
+        box-shadow: inset 0 0 25px 80px $black;
+        height: 105%;
       }
-    }
 
-    .map__shadow {
-      box-shadow: inset 0 0 25px 80px $black;
-      height: 105%;
-    }
+      .skills__box__loader {
+        box-shadow: 0 0 25px #000;
+      }
 
-    .skills__box__loader {
-      box-shadow: 0 0 25px #000;
-    }
-
-    .projects__inner__box {
-      box-shadow: 0 0 20px #000;
-    }
+      .projects__inner__box {
+        box-shadow: 0 0 20px #000;
+      }
     }
 
     &__footer {

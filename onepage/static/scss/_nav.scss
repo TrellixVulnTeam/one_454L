@@ -13,7 +13,8 @@
     display: none;
   }
 
-  &__scroll-down, &__name {
+  &__scroll-down,
+  &__name {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -23,25 +24,25 @@
     transform: translateX(-50%);
 
     p {
-    font-family: "Rubik-Bold", $fallbackFonts;
-    display: inline-block;
-    margin: 0 15px;
+      font-family: "Rubik-Bold", $fallbackFonts;
+      display: inline-block;
+      margin: 0 15px;
     }
 
     i {
       position: absolute;
       margin-left: -5px;
-    display: inline-block;
-    animation: bounce;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
+      display: inline-block;
+      animation: bounce;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
     }
   }
 
   &__container {
     position: fixed;
     width: 100%;
-    background: #fff;
+    background: $white;
     z-index: 10;
     box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
   }
@@ -59,7 +60,7 @@
     color: #000;
 
     &.active {
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -97,29 +98,31 @@
     display: none;
 
     &.active {
-      .nav__mobile__items {
-        right: 0;
-        top: 85px;
-        z-index: 3;
-        --webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .nav__mobile__hamburger-icon {
-        transform: rotate(45deg) translate(-3px, -3px);
-        transition: all 0.2s ease;
-
-        &:before,
-        &:after {
-          top: 0;
-          background: white;
-          transition: all 0.2s ease;
+      .nav__mobile {
+        &__items {
+          right: 0;
+          top: 85px;
+          z-index: 3;
+          --webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
         }
 
-        &:before {
-          transform: rotate(90deg);
+        &__hamburger-icon {
+          transform: rotate(45deg) translate(-3px, -3px);
+          transition: all 0.2s ease;
+
+          &:before,
+          &:after {
+            top: 0;
+            background: white;
+            transition: all 0.2s ease;
+          }
+
+          &:before {
+            transform: rotate(90deg);
+          }
         }
       }
     }
@@ -195,7 +198,7 @@
         text-align: right;
         margin: 5px 0;
         font-size: 80px;
-        color: #fff;
+        color: $white;
 
         &__social {
           text-align: right;
@@ -203,7 +206,7 @@
           height: 45px;
 
           i {
-            color: #fff;
+            color: $white;
             border-radius: 5px;
             padding: 8px;
             font-size: 30px;
@@ -212,13 +215,13 @@
 
         &:after {
           content: "";
-          background: #fff;
+          background: $white;
           width: 0;
           position: absolute;
           right: -18px;
           z-index: -10;
           height: 115px;
-          transition-delay: .5s;
+          transition-delay: 0.5s;
           --webkit-transition: all 0.2s ease-in-out;
           -moz-transition: all 0.2s ease-in-out;
           -o-transition: all 0.2s ease-in-out;
@@ -234,7 +237,7 @@
 
           &:after {
             width: 80%;
-            transition-delay: .5s;
+            transition-delay: 0.5s;
             --webkit-transition: all 0.2s ease-in-out;
             -moz-transition: all 0.2s ease-in-out;
             -o-transition: all 0.2s ease-in-out;
@@ -267,55 +270,6 @@
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-        }
-      }
-    }
-  }
-
-  &__desktop {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &__items {
-      text-align: center;
-
-      &__item {
-        display: inline-block;
-        padding: 0 10px;
-        position: relative;
-        color: #888888;
-        font-size: 16px;
-
-        &:after {
-          content: "";
-          position: absolute;
-          height: 0;
-          width: 100%;
-          background: $blue;
-          bottom: 0;
-          left: 0;
-          z-index: -1;
-          transition: 0.24 ease-in-out;
-        }
-
-        &:hover {
-          cursor: pointer;
-          color: $black;
-        }
-
-        &.active {
-          animation: navColor;
-          animation-duration: 0.4s;
-          animation-delay: 0.65s;
-          animation-fill-mode: forwards;
-
-          &:after {
-            animation: navItemSelected;
-            animation-duration: 0.4s;
-            animation-delay: 0.65s;
-            animation-fill-mode: forwards;
-          }
         }
       }
     }
@@ -363,16 +317,6 @@
     }
   }
 
-  @media only screen and (max-width: 799px) {
-    &__mobile {
-      &__items {
-        &__item#smallscreen-particles {
-          display: none;
-        }
-      }
-    }
-  }
-
   @media only screen and (max-width: 639px) {
     &__mobile {
       &.active {
@@ -409,27 +353,6 @@
   }
   100% {
     transform: rotate(15deg);
-  }
-}
-
-@keyframes navItemSelected {
-  // default non-selected style of nav item
-  from {
-    height: 0;
-  }
-  // highlighted style of nav item
-  to {
-    height: 100%;
-  }
-}
-
-@keyframes navColor {
-  from {
-    color: #888888;
-  }
-
-  to {
-    color: #fff;
   }
 }
 

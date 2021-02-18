@@ -12,4 +12,4 @@ qr.add_data(input_data)
 qr.make(fit=True)
 
 img = qr.make_image(fill='black', back_color='white')
-img.save('qrcode2.png')
+img.save('qrcode.png')
