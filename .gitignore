@@ -9,6 +9,7 @@
 
 node_modules/
 dist/
+ngrok/
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
