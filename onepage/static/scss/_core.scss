@@ -51,7 +51,7 @@ body {
       font-family: "Rubik-Bold", $fallbackFonts;
       padding-bottom: 15px;
       border-bottom: 1px solid #d1d1d1;
-      width: fit-content;
+      display: table;
       position: relative;
       margin: 0 auto 30px;
     }
